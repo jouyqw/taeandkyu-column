@@ -3,16 +3,9 @@
   <channel>
     <title>법무법인 태앤규 법률칼럼</title>
     <link>https://column.taeandkyu.com/</link>
-    <description>법무법인 태앤규의 전주 형사, 이혼, 경찰조사 관련 법률칼럼</description>
+    <description>법무법인 태앤규의 전주 형사, 성범죄, 이혼, 음주운전, 경찰조사 대응 법률칼럼</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 29 Jun 2026 00:00:00 GMT</lastBuildDate>
-    <item>
-      <title>전주이혼전문변호사, 재산분할과 양육권을 준비할 때 확인할 것</title>
-      <link>https://column.taeandkyu.com/blog/jeonju-divorce-lawyer-property-custody</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/jeonju-divorce-lawyer-property-custody</guid>
-      <description>전주이혼전문변호사 상담 전 재산분할, 양육권, 양육비, 별거, 증거자료를 어떻게 정리해야 하는지 설명합니다.</description>
-      <pubDate>Sun, 28 Jun 2026 15:00:00 GMT</pubDate>
-    </item>
+    <lastBuildDate>Mon, 29 Jun 2026 05:14:22 GMT</lastBuildDate>
     <item>
       <title>전주형사전문변호사, 경찰 연락을 받았을 때 먼저 확인할 것</title>
       <link>https://column.taeandkyu.com/blog/jeonju-criminal-lawyer-early-response</link>
@@ -21,10 +14,17 @@
       <pubDate>Sun, 28 Jun 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>전주이혼전문변호사, 재산분할과 양육권을 준비할 때 확인할 것</title>
+      <link>https://column.taeandkyu.com/blog/jeonju-divorce-lawyer-property-custody</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/jeonju-divorce-lawyer-property-custody</guid>
+      <description>전주이혼전문변호사 상담 전 재산분할, 양육권, 양육비, 별거, 증거자료를 어떻게 정리해야 하는지 설명합니다.</description>
+      <pubDate>Sun, 28 Jun 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>전주형사전문변호사 경찰조사 전 무엇을 준비해야 할까?</title>
       <link>https://column.taeandkyu.com/blog/jeonju-criminal-lawyer-police-investigation-manual</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/jeonju-criminal-lawyer-police-investigation-manual</guid>
-      <description>경찰조사 전 준비할 진술 방향, 증거 정리, 피의자신문조서 확인 기준을 정리했습니다.</description>
+      <description>전주형사전문변호사를 찾는 분들을 위한 경찰조사 전 준비 매뉴얼입니다. 출석 전 진술 방향, 증거 정리, 피의자신문조서 확인, 변호사 동행 기준을 표와 체크리스트로 정리했습니다.</description>
       <pubDate>Fri, 26 Jun 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
