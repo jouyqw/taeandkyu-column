@@ -41,7 +41,8 @@ const groups = [
 ];
 
 const postFor = (group, index) => {
-  const subject = group.subjects[index];
+  const angle = ['기본 준비', '증거 정리', '실무 주의점'][Math.floor(dayIndex / group.subjects.length)] || '상담 체크';
+  const subject = `${group.subjects[index]} ${angle}`;
   const slug = `${group.key}-${subject.replaceAll(' ', '-').replace(/[^\uAC00-\uD7A3a-zA-Z0-9-]/g, '').toLowerCase()}-${publishDate}`;
   const title = `${subject}, 상담 전 무엇을 먼저 정리해야 할까요?`;
   const description = `${group.category} 상담에서는 사실관계, 증거, 일정, 상대방 주장까지 순서대로 정리해야 판단이 흔들리지 않습니다.`;
