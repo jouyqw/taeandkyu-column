@@ -1,0 +1,25 @@
+name: Submit search engines
+
+on:
+  workflow_run:
+    workflows:
+      - Update sitemap and RSS
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  submit-search-engines:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Wait for deployment
+        run: sleep 60
+
+      - name: Submit sitemap to search engines
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: node scripts/submit-search-engines.mjs
