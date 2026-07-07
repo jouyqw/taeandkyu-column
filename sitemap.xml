@@ -2,9 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://column.taeandkyu.com/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://column.taeandkyu.com/blog/civil-답변서-제출-전-정리-기본-준비-2026-07-08</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://column.taeandkyu.com/blog/criminal-출석요구서-받은-뒤-준비-기본-준비-2026-07-08</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://column.taeandkyu.com/blog/divorce-퇴직금과-보험의-재산분할-기본-준비-2026-07-08</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://column.taeandkyu.com/blog/civil-lawsuit-before-filing-checklist</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://column.taeandkyu.com/blog/civil-소장-접수-전-비용-점검-기본-준비-2026-07-07</loc>
@@ -19,14 +43,20 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://column.taeandkyu.com/blog/divorce-property-division-documents</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://column.taeandkyu.com/blog/divorce-양육비-산정-전-체크리스트-기본-준비-2026-07-07</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://column.taeandkyu.com/blog/civil-lawsuit-before-filing-checklist</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://column.taeandkyu.com/blog/police-investigation-first-response</loc>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -43,19 +73,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://column.taeandkyu.com/blog/divorce-property-division-documents</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://column.taeandkyu.com/blog/divorce-위자료-주장-전-필요한-자료-기본-준비-2026-07-06</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://column.taeandkyu.com/blog/police-investigation-first-response</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
