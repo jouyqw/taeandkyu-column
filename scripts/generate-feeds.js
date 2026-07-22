@@ -2,7 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 const site = 'https://column.taeandkyu.com';
-const today = new Date().toISOString().slice(0, 10);
+const today = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Seoul',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit'
+}).format(new Date());
 
 const escapeXml = (value = '') => String(value)
   .replace(/&/g, '&amp;')
@@ -34,7 +39,7 @@ const posts = blogFiles.map((file) => {
   const rawTitle = match(html, /<title>([\s\S]*?)<\/title>/i)
     || match(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i)
     || slug;
-  const title = stripHtml(rawTitle).replace(/\s*\|\s*법무법인[\s\S]*$/i, '');
+  const title = stripHtml(rawTitle).replace(/\s*\|\s*(법무법인|법률칼럼)[\s\S]*$/i, '');
   const description = match(html, /<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i)
     || stripHtml(match(html, /<article[^>]*>([\s\S]*?)<\/article>/i)).slice(0, 180);
   const date = match(html, /"datePublished"\s*:\s*"([^"]+)"/i)
@@ -44,7 +49,7 @@ const posts = blogFiles.map((file) => {
   return { file, url, title, description, date };
 }).sort((a, b) => b.date.localeCompare(a.date) || a.file.localeCompare(b.file));
 
-const indexCards = posts.map((post) => {
+const indexCards = posts.slice(0, 30).map((post) => {
   const slug = post.file.replace(/\.html$/, '');
   return `<a class="card" href="/blog/${slug}"><span class="tag">법률칼럼</span><h3>${escapeXml(post.title)}</h3><p>${escapeXml(post.description)}</p><span class="meta">${escapeXml(post.date)}</span></a>`;
 }).join('\n');
@@ -54,21 +59,33 @@ const indexHtml = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>법무법인 태앤규 법률칼럼</title>
-<meta name="description" content="법무법인 태앤규의 형사, 이혼, 민사소송 법률칼럼입니다.">
+<title>전주변호사 법률칼럼 | 법무법인 태앤규</title>
+<meta name="description" content="전주변호사가 형사·민사·이혼 사건의 준비 자료와 대응 순서를 설명합니다. 전주·완주·군산·익산 법률상담 정보를 확인하세요.">
 <meta name="google-site-verification" content="HfEaRDFGS9DffVHcE_ozGQFs3_G7P80xUwlJF6R12PU">
 <meta name="naver-site-verification" content="2d925953126d9adbdf1535529dc2920148be222c">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="${site}/">
-<link rel="alternate" type="application/rss+xml" title="법무법인 태앤규 법률칼럼 RSS" href="${site}/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="전주변호사 법률칼럼 RSS" href="${site}/rss.xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="전주변호사 법률칼럼 | 법무법인 태앤규">
+<meta property="og:description" content="전주 지역 형사·민사·이혼 사건에서 자주 묻는 준비 자료와 대응 순서를 정리합니다.">
+<meta property="og:url" content="${site}/">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,'Noto Sans KR',sans-serif;color:#111827;background:#f6f7f9;line-height:1.75;word-break:keep-all}.top{background:#111827;color:#fff}.wrap{max-width:1040px;margin:0 auto;padding:0 22px}.top .wrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800}.brand small{display:block;color:#cbd5e1;font-weight:400;font-size:12px}.nav a{color:#fff;text-decoration:none;font-size:14px;margin-left:14px}.hero{background:#fff;border-bottom:1px solid #e5e7eb}.hero .wrap{padding:58px 22px 46px}.badge{display:inline-block;background:#e8d8a8;color:#3f2f0b;padding:5px 10px;border-radius:4px;font-size:12px;font-weight:800;margin-bottom:18px}h1{font-size:clamp(28px,4vw,44px);line-height:1.25;margin:0 0 16px}.lead{max-width:720px;color:#4b5563;font-size:17px;margin:0}.section{padding:42px 0}.section h2{font-size:24px;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}.card{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:22px;text-decoration:none;color:#111827;box-shadow:0 10px 30px rgba(17,24,39,.05)}.card:hover{border-color:#b99b4b;box-shadow:0 12px 34px rgba(17,24,39,.08);transform:translateY(-2px)}.tag{display:inline-block;background:#f6edcf;color:#3f2f0b;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:900;margin-bottom:12px}.card h3{font-size:19px;line-height:1.45;margin:0 0 10px}.card p{font-size:14px;color:#4b5563;margin:0}.meta{display:block;margin-top:14px;color:#6b7280;font-size:13px}.footer{padding:36px 0;color:#6b7280;font-size:13px}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,'Noto Sans KR',sans-serif;color:#111827;background:#f6f7f9;line-height:1.75;word-break:keep-all}.top{background:#111827;color:#fff}.wrap{max-width:1040px;margin:0 auto;padding:0 22px}.top .wrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800}.brand small{display:block;color:#cbd5e1;font-weight:400;font-size:12px}.nav a{color:#fff;text-decoration:none;font-size:14px;margin-left:14px}.hero{background:#fff;border-bottom:1px solid #e5e7eb}.hero .wrap{padding:58px 22px 46px}.badge{display:inline-block;background:#e8d8a8;color:#3f2f0b;padding:5px 10px;border-radius:4px;font-size:12px;font-weight:800;margin-bottom:18px}h1{font-size:clamp(28px,4vw,44px);line-height:1.25;margin:0 0 16px}.lead{max-width:760px;color:#4b5563;font-size:17px;margin:0}.section{padding:42px 0}.section+.section{padding-top:0}.section h2{font-size:24px;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}.card{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:22px;text-decoration:none;color:#111827;box-shadow:0 10px 30px rgba(17,24,39,.05)}.card:hover{border-color:#b99b4b;box-shadow:0 12px 34px rgba(17,24,39,.08);transform:translateY(-2px)}.tag{display:inline-block;background:#f6edcf;color:#3f2f0b;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:900;margin-bottom:12px}.card h3{font-size:19px;line-height:1.45;margin:0 0 10px}.card p{font-size:14px;color:#4b5563;margin:0}.meta{display:block;margin-top:14px;color:#6b7280;font-size:13px}.footer{padding:36px 0;color:#6b7280;font-size:13px}@media(max-width:600px){.top .wrap{align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}.nav a{margin:0 12px 0 0}.hero .wrap{padding-top:42px}.section{padding:32px 0}}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LegalService","name":"법무법인 태앤규","url":"https://taeandkyu.com/","areaServed":["전주시","완주군","군산시","익산시"],"knowsAbout":["형사사건","민사소송","이혼","재산분할"]}
+</script>
 </head>
 <body>
 <header class="top"><div class="wrap"><div class="brand">법무법인 태앤규<small>Legal Column</small></div><nav class="nav"><a href="https://taeandkyu.com/">공식 홈페이지</a><a href="/sitemap.xml">사이트맵</a><a href="/rss.xml">RSS</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap"><span class="badge">LAW COLUMN</span><h1>법무법인 태앤규 법률칼럼</h1><p class="lead">형사사건, 경찰조사, 이혼, 재산분할, 민사소송 등 실제 상담에서 자주 묻는 쟁점을 정리합니다.</p></div></section>
+<section class="hero"><div class="wrap"><span class="badge">JEONJU LAW COLUMN</span><h1>전주변호사 법률칼럼</h1><p class="lead">전주형사전문변호사, 전주민사변호사, 전주이혼변호사 상담을 찾는 분들이 먼저 확인할 자료와 절차를 정리합니다. 각 칼럼은 한 가지 사건 주제에 집중해 설명합니다.</p></div></section>
+<section class="section"><div class="wrap"><h2>전주 법률상담 분야별 안내</h2><div class="grid">
+<a class="card" href="/blog/jeonju-criminal-lawyer-early-response"><span class="tag">형사</span><h3>전주형사전문변호사 상담 안내</h3><p>경찰 연락, 출석요구, 첫 진술과 증거 정리에서 먼저 확인할 사항을 안내합니다.</p></a>
+<a class="card" href="/blog/jeonju-divorce-lawyer-property-custody"><span class="tag">이혼·가사</span><h3>전주이혼변호사·전주이혼전문변호사 상담 안내</h3><p>재산분할, 위자료, 양육권과 양육비 쟁점을 준비하는 방법을 설명합니다.</p></a>
+<a class="card" href="/blog/civil-lawsuit-before-filing-checklist"><span class="tag">민사</span><h3>전주민사변호사 상담 안내</h3><p>대여금, 공사대금, 손해배상과 계약 분쟁에서 필요한 자료를 정리합니다.</p></a>
+</div></div></section>
 <section class="section"><div class="wrap"><h2>최신 칼럼</h2><div class="grid">
 ${indexCards}
 </div></div></section>
@@ -121,9 +138,9 @@ const rss = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<rss version="2.0">',
   '  <channel>',
-  '    <title>법무법인 태앤규 법률칼럼</title>',
+  '    <title>전주변호사 법률칼럼 | 법무법인 태앤규</title>',
   `    <link>${site}/</link>`,
-  '    <description>법무법인 태앤규의 전주 형사, 성범죄, 이혼, 음주운전, 경찰조사 대응 법률칼럼</description>',
+  '    <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>',
   '    <language>ko</language>',
   `    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>`,
   rssPosts,
