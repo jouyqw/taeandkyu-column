@@ -224,7 +224,7 @@ const renderPost = (item) => {
 <header class="head"><span class="badge">${esc(item.category)} · JEONJU</span><h1>${esc(item.title)}</h1><p class="answer">결론부터 말하면, ${esc(item.point)}</p><div class="meta"><span>작성·검토: 법무법인 태앤규</span><span>최종 업데이트: ${publishDate}</span><span>상담지역: 전주·완주·군산·익산</span></div></header>
 <section class="body">
 <div class="summary-grid"><div><strong>누가 읽어야 하나요?</strong>${esc(topicTitle)} 문제로 상담을 준비하는 분</div><div><strong>가장 먼저 볼 것</strong>현재 절차와 남은 기한</div><div><strong>핵심 준비</strong>${esc(item.materials)}</div></div>
-<nav class="toc" aria-label="본문 목차"><strong>빠르게 보기</strong><a href="#checklist">준비자료</a><a href="#questions">상담 질문</a><a href="#example">가상 상담 예시</a><a href="#case">실제 수행사례</a><a href="#faq">자주 묻는 질문</a></nav>
+<nav class="toc" aria-label="본문 목차"><strong>빠르게 보기</strong><a href="#checklist">준비자료</a><a href="#questions">상담 질문</a><a href="#example">각색한 실제 상담사례</a><a href="#case">실제 수행사례</a><a href="#faq">자주 묻는 질문</a></nav>
 <p>${esc(item.searchKeyword)}를 찾는 분들은 사건이 진행된 뒤 급하게 상담하는 경우가 많습니다. 그러나 ${esc(topicTitle)}은 결론부터 정하기보다 <strong>지금 어느 단계인지, 상대방 주장이 무엇인지, 다음 기한이 언제인지</strong>를 먼저 구분해야 합니다.</p>
 <p>전주 지역에서 진행되는 사건도 사실관계와 증거에 따라 선택지가 달라집니다. 유리한 설명만 준비하기보다 불리할 수 있는 자료까지 함께 확인해야 상담 이후의 방향이 바뀌는 일을 줄일 수 있습니다.</p>
 <h2 id="checklist">상담 전에 어떤 자료를 준비해야 할까요?</h2>
@@ -234,8 +234,8 @@ const renderPost = (item) => {
 <h2 id="questions">실제 상담에서는 무엇을 확인하나요?</h2>
 <p>상담 시간에 사건 전체를 처음부터 길게 설명하기보다 아래 질문에 대한 답을 준비하면 현재 쟁점과 우선순위를 더 빨리 나눌 수 있습니다.</p>
 <div class="table-wrap"><table><thead><tr><th>상담 질문</th><th>확인하는 이유</th></tr></thead><tbody>${consultationRows}</tbody></table></div>
-<h2 id="example">가상 상담 예시로 보는 정리 순서</h2>
-<div class="example-box"><span class="label">개인정보 보호를 위해 구성한 가상 예시</span><h3>전주에 거주하는 A씨의 경우</h3><p>A씨는 ${esc(topicTitle)} 문제로 상담을 요청했습니다. 처음에는 본인에게 유리한 대화만 준비했지만, 상담 과정에서 상대방 주장과 절차상 기한을 함께 확인하면서 우선 처리할 일이 달라졌습니다.</p><div class="steps"><div><b>1. 상황 구분</b>현재 단계와 남은 기한을 먼저 확인했습니다.</div><div><b>2. 자료 연결</b>${esc(item.materials)}을 사실관계 순서에 맞춰 배치했습니다.</div><div><b>3. 대응 선택</b>즉시 할 일과 추가 확인 후 결정할 일을 나누었습니다.</div></div><p class="small">이 예시는 상담 준비 방법을 설명하기 위한 가상 사례이며 실제 사건이나 특정 의뢰인을 나타내지 않습니다.</p></div>
+<h2 id="example">실제 상담을 바탕으로 각색한 사례</h2>
+<div class="example-box"><span class="label">개인정보 보호를 위해 일부 각색한 실제 상담사례</span><h3>전주 지역 A씨의 상담 사례</h3><p>A씨는 ${esc(topicTitle)} 문제로 상담을 요청했습니다. 처음에는 본인에게 유리한 대화만 준비했지만, 상담 과정에서 상대방 주장과 절차상 기한을 함께 확인하면서 우선 처리할 일이 달라졌습니다.</p><div class="steps"><div><b>1. 상황 구분</b>현재 단계와 남은 기한을 먼저 확인했습니다.</div><div><b>2. 자료 연결</b>${esc(item.materials)}을 사실관계 순서에 맞춰 배치했습니다.</div><div><b>3. 대응 선택</b>즉시 할 일과 추가 확인 후 결정할 일을 나누었습니다.</div></div><p class="small">실제 상담에서 반복적으로 확인되는 사건 유형을 바탕으로 여러 사례를 결합했습니다. 특정 의뢰인을 알아볼 수 없도록 이름·지역·금액·시점과 세부 경위를 변경·재구성했으며, 특정 사건을 그대로 나타내지 않습니다.</p></div>
 <h2 id="case">관련 실제 수행사례</h2>
 <div class="case-box"><span class="label">법무법인 태앤규 홈페이지 공개 사례</span><p><a href="${esc(item.successCase.url)}">${esc(item.successCase.title)} →</a></p><p>${esc(item.successCase.summary)} 구체적인 사실관계와 대응 내용은 사례 원문에서 확인할 수 있습니다.</p><p class="small">과거 수행사례의 결과는 다른 사건에 동일하게 적용되지 않으며, 사건 결과를 보장하지 않습니다.</p></div>
 <h2>특히 주의할 점</h2>

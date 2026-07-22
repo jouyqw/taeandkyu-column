@@ -82,7 +82,7 @@ const indexHtml = `<!DOCTYPE html>
 <body>
 <header class="top"><div class="wrap"><div class="brand">법무법인 태앤규<small>Legal Column</small></div><nav class="nav"><a href="https://taeandkyu.com/">공식 홈페이지</a><a href="/sitemap.xml">사이트맵</a><a href="/rss.xml">RSS</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap"><span class="badge">JEONJU LAW COLUMN</span><h1>전주변호사 법률칼럼</h1><p class="lead">전주형사전문변호사, 전주민사변호사, 전주이혼변호사 상담을 찾는 분들이 먼저 확인할 자료와 절차를 정리합니다. 실제 공개 수행사례와 가상 상담 예시를 구분해 사건별 준비 기준을 설명합니다.</p><div class="hero-actions"><a class="btn btn-main" href="https://taeandkyu.com/">전주변호사 법무법인 태앤규 공식 홈페이지</a><a class="btn btn-sub" href="https://naver.me/Fy2SbxqM">네이버 상담 예약</a></div></div></section>
+<section class="hero"><div class="wrap"><span class="badge">JEONJU LAW COLUMN</span><h1>전주변호사 법률칼럼</h1><p class="lead">전주형사전문변호사, 전주민사변호사, 전주이혼변호사 상담을 찾는 분들이 먼저 확인할 자료와 절차를 정리합니다. 실제 공개 수행사례와 개인정보 보호를 위해 일부 각색한 실제 상담사례를 구분해 설명합니다.</p><div class="hero-actions"><a class="btn btn-main" href="https://taeandkyu.com/">전주변호사 법무법인 태앤규 공식 홈페이지</a><a class="btn btn-sub" href="https://naver.me/Fy2SbxqM">네이버 상담 예약</a></div></div></section>
 <section class="section"><div class="wrap"><h2>전주 법률상담 분야별 안내</h2><div class="grid">
 <a class="card" href="/blog/jeonju-criminal-lawyer-early-response"><span class="tag">형사</span><h3>전주형사전문변호사 상담 안내</h3><p>경찰 연락, 출석요구, 첫 진술과 증거 정리에서 먼저 확인할 사항을 안내합니다.</p></a>
 <a class="card" href="/blog/jeonju-divorce-lawyer-property-custody"><span class="tag">이혼·가사</span><h3>전주이혼변호사·전주이혼전문변호사 상담 안내</h3><p>재산분할, 위자료, 양육권과 양육비 쟁점을 준비하는 방법을 설명합니다.</p></a>
