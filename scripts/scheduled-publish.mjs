@@ -19,6 +19,12 @@ const groups = [
     key: 'criminal',
     category: '형사사건',
     image: '/assets/criminal-investigation-preparation.webp',
+    imageAlt: '경찰조사 전 휴대전화 대화와 사건 시간표, 증거자료를 정리한 장면',
+    pillarUrl: 'https://column.taeandkyu.com/blog/jeonju-criminal-lawyer-early-response',
+    pillarTitle: '전주형사전문변호사, 경찰 연락을 받았다면',
+    officialSources: [
+      { name: '국가법령정보센터 형사소송법', url: 'https://www.law.go.kr/법령/형사소송법' }
+    ],
     searchKeywords: ['전주형사전문변호사'],
     practiceUrl: 'https://taeandkyu.com/page/page20.php',
     successCase: {
@@ -49,6 +55,12 @@ const groups = [
     key: 'divorce',
     category: '이혼·가사',
     image: '/assets/divorce-property-custody-consultation.webp',
+    imageAlt: '이혼 상담실에서 주택 모형과 재산·양육 자료를 함께 검토하는 장면',
+    pillarUrl: 'https://column.taeandkyu.com/blog/jeonju-divorce-lawyer-property-custody',
+    pillarTitle: '전주이혼전문변호사, 재산분할·양육권 준비',
+    officialSources: [
+      { name: '국가법령정보센터 민법', url: 'https://www.law.go.kr/법령/민법' }
+    ],
     searchKeywords: ['전주이혼변호사', '전주이혼전문변호사'],
     practiceUrl: 'https://taeandkyu.com/page/page21.php',
     successCase: {
@@ -79,6 +91,13 @@ const groups = [
     key: 'civil',
     category: '민사소송',
     image: '/assets/civil-contract-evidence-review.webp',
+    imageAlt: '민사 분쟁 상담을 위해 계약서와 계산서, 부동산 자료를 검토하는 장면',
+    pillarUrl: 'https://column.taeandkyu.com/blog/civil-lawsuit-before-filing-checklist',
+    pillarTitle: '전주민사변호사, 소송 전 확인할 3가지',
+    officialSources: [
+      { name: '국가법령정보센터 민법', url: 'https://www.law.go.kr/법령/민법' },
+      { name: '국가법령정보센터 민사소송법', url: 'https://www.law.go.kr/법령/민사소송법' }
+    ],
     searchKeywords: ['전주민사변호사'],
     practiceUrl: 'https://taeandkyu.com/page/page22.php',
     successCase: {
@@ -106,6 +125,30 @@ const groups = [
     ]
   }
 ];
+
+const planErrors = [];
+const topicCounts = new Set(groups.map((group) => group.topics.length));
+if (topicCounts.size !== 1) planErrors.push('분야별 예약 글 수가 서로 다릅니다.');
+for (const group of groups) {
+  for (const [index, topic] of group.topics.entries()) {
+    const keyword = group.searchKeywords[index % group.searchKeywords.length];
+    const plannedTitle = `${keyword}, ${topic.title} | 법무법인 태앤규`;
+    const plannedDescription = `${keyword} 상담을 알아보는 분들을 위해 ${topic.title}을 정리했습니다. ${topic.point}`;
+    if ([...plannedTitle].length > 50) planErrors.push(`${topic.slug}: title이 50자를 넘습니다.`);
+    if ([...plannedDescription].length < 45 || [...plannedDescription].length > 160) {
+      planErrors.push(`${topic.slug}: description 길이를 확인하세요.`);
+    }
+    if (!topic.point || !topic.materials || !topic.caution) planErrors.push(`${topic.slug}: 핵심 콘텐츠 항목이 비었습니다.`);
+    if (!group.pillarUrl || !group.image || !group.imageAlt || !group.officialSources?.length) {
+      planErrors.push(`${group.key}: 내부링크·이미지·공식 출처 설정이 비었습니다.`);
+    }
+  }
+}
+if (planErrors.length > 0) {
+  console.error(`Scheduled content plan failed with ${planErrors.length} error(s):`);
+  for (const error of planErrors) console.error(`- ${error}`);
+  process.exit(1);
+}
 
 const totalPosts = groups.reduce((sum, group) => sum + group.topics.length, 0);
 
@@ -150,6 +193,9 @@ const renderPost = (item) => {
   const faqHtml = item.faqs.map((faq) =>
     `<details><summary>${esc(faq.question)}</summary><p>${esc(faq.answer)}</p></details>`
   ).join('');
+  const officialSourceHtml = item.officialSources.map((source) =>
+    `<li><a href="${esc(source.url)}">${esc(source.name)}</a></li>`
+  ).join('');
   const topicTitle = item.title.replace(`${item.searchKeyword}, `, '');
   const schema = {
     '@context': 'https://schema.org',
@@ -166,7 +212,8 @@ const renderPost = (item) => {
         dateModified: publishDate,
         mainEntityOfPage: `${site}/blog/${item.slug}`,
         about: [item.searchKeyword, item.category, topicTitle],
-        citation: [item.successCase.url, item.practiceUrl],
+        citation: [item.successCase.url, item.practiceUrl, ...item.officialSources.map((source) => source.url)],
+        isPartOf: { '@id': `${site}/#website` },
         inLanguage: 'ko'
       },
       {
@@ -184,6 +231,14 @@ const renderPost = (item) => {
           name: faq.question,
           acceptedAnswer: { '@type': 'Answer', text: faq.answer }
         }))
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${site}/#website`,
+        url: `${site}/`,
+        name: '전주변호사 법률칼럼',
+        publisher: { '@id': 'https://taeandkyu.com/#legalservice' },
+        inLanguage: 'ko-KR'
       },
       {
         '@type': 'LegalService',
@@ -220,22 +275,25 @@ const renderPost = (item) => {
 <meta property="og:description" content="${esc(item.description)}">
 <meta property="og:url" content="${site}/blog/${item.slug}">
 <meta property="og:image" content="${site}${item.image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(item.title)}">
 <meta name="twitter:description" content="${esc(item.description)}">
 <meta name="twitter:image" content="${site}${item.image}">
 <style>
-:root{--navy:#1a2740;--navy2:#233758;--gold:#b8922a;--gold2:#d4a843;--ink:#182033;--muted:#667085;--line:#e3e8ef;--paper:#fff;--bg:#f3f5f8;--soft:#f8fafc;--gold-soft:#fbf6e8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Noto Sans KR','Apple SD Gothic Neo',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.82;word-break:keep-all}.site-wrap{max-width:980px;margin:0 auto;padding:0 22px}.top{background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}.top .site-wrap{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:900;letter-spacing:-.02em}.top a{color:#fff;text-decoration:none}.home-link{font-size:13px;color:#f4d98d!important}.page{padding:24px 0 80px}.crumb{font-size:13px;color:var(--muted);margin:0 0 16px}.article{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 24px 70px rgba(26,39,64,.09)}.head{padding:52px 54px 38px;background:linear-gradient(145deg,#fff 0%,#fbfcfe 72%,#fbf6e8 100%);border-bottom:1px solid var(--line)}.badge{display:inline-flex;align-items:center;gap:7px;background:var(--gold-soft);color:#6c5014;border:1px solid #ead9a8;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:900;margin-bottom:18px}h1{font-size:clamp(29px,4.5vw,44px);line-height:1.3;letter-spacing:-.035em;margin:0 0 20px;color:var(--navy)}.answer{background:var(--navy);color:#fff;border-left:5px solid var(--gold2);border-radius:10px;padding:20px 22px;margin:0;font-size:17px;font-weight:750}.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;color:var(--muted);font-size:13px}.body{padding:42px 54px 48px}.body h2{font-size:26px;line-height:1.4;letter-spacing:-.025em;margin:54px 0 16px;color:var(--navy)}.body h2:first-of-type{margin-top:32px}.body h3{font-size:19px;color:var(--navy);margin:24px 0 10px}.body p{margin:0 0 18px}.body strong{color:var(--navy);font-weight:900}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 28px}.summary-grid div{border:1px solid var(--line);background:var(--soft);border-radius:12px;padding:18px}.summary-grid strong{display:block;margin-bottom:5px;color:var(--gold)}.toc{border:1px solid var(--line);border-radius:12px;background:#fff;padding:18px 20px;margin:24px 0}.toc strong{display:block;margin-bottom:8px}.toc a{color:var(--navy2);font-size:14px;margin-right:14px}.table-wrap{overflow-x:auto;margin:20px 0 26px;border:1px solid var(--line);border-radius:12px;background:#fff}table{width:100%;border-collapse:collapse;min-width:680px}th,td{padding:15px 17px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead th{background:var(--navy);color:#fff;font-size:14px}tbody th{width:190px;background:var(--soft);color:var(--navy)}tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}.callout,.example-box,.case-box,.warning{border-radius:14px;padding:22px 24px;margin:26px 0}.callout{background:#eef5ff;border:1px solid #c9ddfa}.example-box{background:var(--gold-soft);border:1px solid #ead9a8}.case-box{background:#fff;border:1px solid var(--gold);box-shadow:0 12px 30px rgba(184,146,42,.1)}.case-box a{color:var(--navy);font-size:18px;font-weight:900}.warning{background:#fff2f3;border:1px solid #f1c8cd}.label{display:inline-block;font-size:12px;font-weight:900;color:#755712;margin-bottom:8px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.steps div{background:#fff;border:1px solid rgba(184,146,42,.28);border-radius:10px;padding:15px}.steps b{display:block;color:var(--gold);margin-bottom:5px}.faq details{border-top:1px solid var(--line);padding:16px 2px}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;font-weight:850;color:var(--navy)}.faq details p{margin:10px 0 2px;color:#475467}.local{background:var(--soft);border-left:4px solid var(--gold);padding:18px 20px;margin:24px 0}.cta{margin-top:36px;padding:26px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}.cta a{display:inline-block;color:#f4d98d;font-weight:900;margin-right:16px}.editorial{border-top:1px solid var(--line);background:var(--soft);padding:24px 54px;color:#475467;font-size:14px}.footer{padding:30px 0;color:var(--muted);font-size:13px}.small{font-size:13px;color:var(--muted)}@media(max-width:720px){.top .site-wrap{align-items:flex-start;flex-direction:column;padding-top:15px;padding-bottom:15px}.head,.body,.editorial{padding-left:22px;padding-right:22px}.head{padding-top:38px}.summary-grid,.steps{grid-template-columns:1fr}.body h2{font-size:23px}.answer{font-size:16px}.page{padding-top:16px}.toc a{display:block;margin:5px 0}table{min-width:620px}}
+:root{--navy:#1a2740;--navy2:#233758;--gold:#b8922a;--gold2:#d4a843;--ink:#182033;--muted:#667085;--line:#e3e8ef;--paper:#fff;--bg:#f3f5f8;--soft:#f8fafc;--gold-soft:#fbf6e8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Noto Sans KR','Apple SD Gothic Neo',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.82;word-break:keep-all}.site-wrap{max-width:980px;margin:0 auto;padding:0 22px}.top{background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}.top .site-wrap{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:900;letter-spacing:-.02em}.top a{color:#fff;text-decoration:none}.home-link{font-size:13px;color:#f4d98d!important}.page{padding:24px 0 80px}.crumb{font-size:13px;color:var(--muted);margin:0 0 16px}.article{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 24px 70px rgba(26,39,64,.09)}.hero-img{margin:0;background:#eef1f5}.hero-img img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover}.head{padding:52px 54px 38px;background:linear-gradient(145deg,#fff 0%,#fbfcfe 72%,#fbf6e8 100%);border-bottom:1px solid var(--line)}.badge{display:inline-flex;align-items:center;gap:7px;background:var(--gold-soft);color:#6c5014;border:1px solid #ead9a8;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:900;margin-bottom:18px}h1{font-size:clamp(29px,4.5vw,44px);line-height:1.3;letter-spacing:-.035em;margin:0 0 20px;color:var(--navy)}.answer{background:var(--navy);color:#fff;border-left:5px solid var(--gold2);border-radius:10px;padding:20px 22px;margin:0;font-size:17px;font-weight:750}.meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;color:var(--muted);font-size:13px}.body{padding:42px 54px 48px}.body h2{font-size:26px;line-height:1.4;letter-spacing:-.025em;margin:54px 0 16px;color:var(--navy)}.body h2:first-of-type{margin-top:32px}.body h3{font-size:19px;color:var(--navy);margin:24px 0 10px}.body p{margin:0 0 18px}.body strong{color:var(--navy);font-weight:900}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 28px}.summary-grid div{border:1px solid var(--line);background:var(--soft);border-radius:12px;padding:18px}.summary-grid strong{display:block;margin-bottom:5px;color:var(--gold)}.toc{border:1px solid var(--line);border-radius:12px;background:#fff;padding:18px 20px;margin:24px 0}.toc strong{display:block;margin-bottom:8px}.toc a{color:var(--navy2);font-size:14px;margin-right:14px}.table-wrap{overflow-x:auto;margin:20px 0 26px;border:1px solid var(--line);border-radius:12px;background:#fff}table{width:100%;border-collapse:collapse;min-width:680px}th,td{padding:15px 17px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}thead th{background:var(--navy);color:#fff;font-size:14px}tbody th{width:190px;background:var(--soft);color:var(--navy)}tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}.callout,.example-box,.case-box,.warning,.related-card{border-radius:14px;padding:22px 24px;margin:26px 0}.callout{background:#eef5ff;border:1px solid #c9ddfa}.example-box{background:var(--gold-soft);border:1px solid #ead9a8}.case-box{background:#fff;border:1px solid var(--gold);box-shadow:0 12px 30px rgba(184,146,42,.1)}.case-box a,.related-card a{color:var(--navy);font-size:18px;font-weight:900}.related-card{background:var(--soft);border:1px solid var(--line)}.source-list{padding-left:22px}.source-list li{margin:8px 0}.source-list a{color:var(--navy2);font-weight:800}.warning{background:#fff2f3;border:1px solid #f1c8cd}.label{display:inline-block;font-size:12px;font-weight:900;color:#755712;margin-bottom:8px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.steps div{background:#fff;border:1px solid rgba(184,146,42,.28);border-radius:10px;padding:15px}.steps b{display:block;color:var(--gold);margin-bottom:5px}.faq details{border-top:1px solid var(--line);padding:16px 2px}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;font-weight:850;color:var(--navy)}.faq details p{margin:10px 0 2px;color:#475467}.local{background:var(--soft);border-left:4px solid var(--gold);padding:18px 20px;margin:24px 0}.cta{margin-top:36px;padding:26px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}.cta a{display:inline-block;color:#f4d98d;font-weight:900;margin-right:16px}.editorial{border-top:1px solid var(--line);background:var(--soft);padding:24px 54px;color:#475467;font-size:14px}.editorial a{color:var(--navy);font-weight:800}.footer{padding:30px 0;color:var(--muted);font-size:13px}.small{font-size:13px;color:var(--muted)}@media(max-width:720px){.top .site-wrap{align-items:flex-start;flex-direction:column;padding-top:15px;padding-bottom:15px}.head,.body,.editorial{padding-left:22px;padding-right:22px}.head{padding-top:38px}.summary-grid,.steps{grid-template-columns:1fr}.body h2{font-size:23px}.answer{font-size:16px}.page{padding-top:16px}.toc a{display:block;margin:5px 0}table{min-width:620px}}
 </style>
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body>
 <header class="top"><div class="site-wrap"><a class="brand" href="/">전주변호사 법률칼럼 · 법무법인 태앤규</a><a class="home-link" href="https://taeandkyu.com/">전주변호사 공식 홈페이지 →</a></div></header>
 <main class="page"><div class="site-wrap"><nav class="crumb" aria-label="이동 경로"><a href="/">법률칼럼</a> &gt; ${esc(item.category)} &gt; ${esc(item.searchKeyword)}</nav><article class="article">
-<header class="head"><span class="badge">${esc(item.category)} · JEONJU</span><h1>${esc(item.title)}</h1><p class="answer">결론부터 말하면, ${esc(item.point)}</p><div class="meta"><span>작성·검토: 법무법인 태앤규</span><span>최종 업데이트: ${publishDate}</span><span>상담지역: 전주·완주·군산·익산</span></div></header>
+<figure class="hero-img"><img src="${esc(item.image)}" alt="${esc(item.imageAlt)}" width="1200" height="630" fetchpriority="high"></figure>
+<header class="head"><span class="badge">${esc(item.category)} · JEONJU</span><h1>${esc(item.title)}</h1><p class="answer">결론부터 말하면, ${esc(item.point)}</p><div class="meta"><span>콘텐츠 운영: 법무법인 태앤규</span><span>최종 업데이트: ${publishDate}</span><span>상담지역: 전주·완주·군산·익산</span></div></header>
 <section class="body">
 <div class="summary-grid"><div><strong>누가 읽어야 하나요?</strong>${esc(topicTitle)} 문제로 상담을 준비하는 분</div><div><strong>가장 먼저 볼 것</strong>현재 절차와 남은 기한</div><div><strong>핵심 준비</strong>${esc(item.materials)}</div></div>
-<nav class="toc" aria-label="본문 목차"><strong>빠르게 보기</strong><a href="#checklist">준비자료</a><a href="#questions">상담 질문</a><a href="#example">각색한 실제 상담사례</a><a href="#case">실제 수행사례</a><a href="#faq">자주 묻는 질문</a></nav>
+<nav class="toc" aria-label="본문 목차"><strong>빠르게 보기</strong><a href="#checklist">준비자료</a><a href="#questions">상담 질문</a><a href="#example">각색한 실제 상담사례</a><a href="#case">실제 수행사례</a><a href="#sources">공식 자료</a><a href="#related">관련 칼럼</a><a href="#faq">자주 묻는 질문</a></nav>
 <p>${esc(item.searchKeyword)}를 찾는 분들은 사건이 진행된 뒤 급하게 상담하는 경우가 많습니다. 그러나 ${esc(topicTitle)}은 결론부터 정하기보다 <strong>지금 어느 단계인지, 상대방 주장이 무엇인지, 다음 기한이 언제인지</strong>를 먼저 구분해야 합니다.</p>
 <p>전주 지역에서 진행되는 사건도 사실관계와 증거에 따라 선택지가 달라집니다. 유리한 설명만 준비하기보다 불리할 수 있는 자료까지 함께 확인해야 상담 이후의 방향이 바뀌는 일을 줄일 수 있습니다.</p>
 <h2 id="checklist">상담 전에 어떤 자료를 준비해야 할까요?</h2>
@@ -253,9 +311,11 @@ const renderPost = (item) => {
 <div class="warning"><strong>주의</strong><p>${esc(item.caution)}</p></div>
 <p>인터넷의 일반적인 설명은 준비 방향을 잡는 데에는 도움이 되지만, 개별 사건의 결론을 대신할 수 없습니다. 실제 자료와 현재 절차를 기준으로 가능한 선택지, 예상되는 부담, 추가로 필요한 증거를 나누어 확인해야 합니다.</p>
 <div class="local"><strong>전주·완주·군산·익산 지역 상담</strong><p>법무법인 태앤규는 전주 완산구 사무실을 중심으로 전주지방법원 관할과 전북 지역 사건을 상담합니다. 사건 관할, 조사기관, 재판 일정에 따라 구체적인 진행 방법을 안내합니다.</p></div>
+<h2 id="sources">근거로 확인할 공식 자료</h2><ul class="source-list">${officialSourceHtml}</ul><p class="small">법령은 개정될 수 있으므로 실제 상담 시에는 사건 시점에 적용되는 조문과 시행일을 다시 확인합니다.</p>
+<h2 id="related">함께 읽을 전주 법률칼럼</h2><div class="related-card"><a href="${esc(item.pillarUrl)}">${esc(item.pillarTitle)} →</a><p>해당 분야의 상담 준비 순서와 핵심 자료를 한 번에 정리한 기본 안내 글입니다.</p></div>
 <h2 id="faq">자주 묻는 질문</h2><div class="faq">${faqHtml}</div>
 <div class="cta"><p><strong>${esc(item.category)} 상담 전 자료와 기한부터 확인하세요.</strong></p><p><a href="${esc(item.practiceUrl)}">${esc(item.category)} 업무분야 보기</a><a href="https://taeandkyu.com/">전주변호사 법무법인 태앤규 공식 홈페이지</a></p></div>
-</section><section class="editorial"><strong>작성 및 검토</strong><p>법무법인 태앤규 · 대한민국 현행 법령과 공개된 절차를 기준으로 일반적인 법률정보를 정리했습니다. 법령·제도 변경 시 내용을 갱신합니다.</p></section></article></div></main>
+</section><section class="editorial"><strong>콘텐츠 제작 방식</strong><p>법무법인 태앤규가 실제 상담에서 반복되는 질문과 공개 법령·절차를 바탕으로 주제와 확인 기준을 구성했습니다. 자동화는 정해진 형식에 따른 게시·메타·링크 검사를 담당하며, 개별 사건의 법률 판단과 결과를 대신하지 않습니다.</p><p><a href="https://taeandkyu.com/page/page16.php">김기태 대표변호사 경력 확인</a> · 법령·제도 변경 시 내용을 갱신합니다.</p></section></article></div></main>
 <footer class="footer"><div class="site-wrap">본 글은 일반적인 법률 정보이며, 개별 사건의 결과를 보장하지 않습니다.</div></footer>
 </body></html>
 `;

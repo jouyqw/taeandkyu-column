@@ -8,6 +8,8 @@ on:
       - "blog/**/*.html"
       - "index.html"
       - "scripts/generate-feeds.js"
+      - "scripts/seo-audit.mjs"
+      - "_redirects"
       - ".github/workflows/update-sitemap-rss.yml"
   workflow_dispatch:
 
@@ -23,6 +25,9 @@ jobs:
 
       - name: Generate sitemap and RSS
         run: node scripts/generate-feeds.js
+
+      - name: Validate SEO and content quality
+        run: node scripts/seo-audit.mjs
 
       - name: Commit generated files
         run: |

@@ -53,12 +53,13 @@ const posts = blogFiles.map((file) => {
   const description = match(html, /<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i)
     || stripHtml(match(html, /<article[^>]*>([\s\S]*?)<\/article>/i)).slice(0, 180);
   const robots = match(html, /<meta\s+name=["']robots["']\s+content=["']([^"']+)["']/i);
+  const image = match(html, /<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i);
   const publishedDate = match(html, /"datePublished"\s*:\s*"([^"]+)"/i)
     || match(html, /<time[^>]*datetime=["']([^"']+)["']/i)
     || today;
   const date = match(html, /"dateModified"\s*:\s*"([^"]+)"/i) || publishedDate;
 
-  return { file, slug, url, title, description, date, publishedDate, noindex: /\bnoindex\b/i.test(robots) };
+  return { file, slug, url, title, description, image, date, publishedDate, noindex: /\bnoindex\b/i.test(robots) };
 }).filter((post) => !post.noindex && !redirectedSlugs.has(post.slug))
   .sort((a, b) => b.date.localeCompare(a.date) || a.file.localeCompare(b.file));
 
@@ -110,7 +111,7 @@ const indexHtml = `<!DOCTYPE html>
 <section class="section"><div class="wrap"><h2>최신 칼럼</h2><div class="grid">
 ${indexCards}
 </div></div></section>
-<section class="section"><div class="wrap"><div class="editorial-policy"><strong>법무법인 태앤규 콘텐츠 운영 원칙</strong><p>법무법인 태앤규가 직접 작성·검토합니다. 실제 상담사례는 의뢰인을 알아볼 수 없도록 이름·지역·금액·시점과 일부 사실관계를 변경·재구성하며, 공개 수행사례는 <a href="https://taeandkyu.com/">공식 홈페이지</a> 원문으로 연결합니다. 법령·절차가 바뀌면 내용을 갱신하며 사건 결과를 보장하지 않습니다.</p></div></div></section>
+<section class="section"><div class="wrap"><div class="editorial-policy"><strong>법무법인 태앤규 콘텐츠 운영 원칙</strong><p>법무법인 태앤규가 실제 상담에서 반복되는 질문을 바탕으로 주제와 확인 기준을 구성합니다. 자동화는 정해진 형식에 따른 게시·메타·링크 검사를 담당합니다. 실제 상담사례는 의뢰인을 알아볼 수 없도록 일부 사실관계를 변경·재구성하며, 공개 수행사례는 <a href="https://taeandkyu.com/">공식 홈페이지</a> 원문으로 연결합니다. <a href="https://taeandkyu.com/page/page16.php">대표변호사 경력</a>과 작성 주체를 공개하고 법령·절차 변경 시 내용을 갱신합니다.</p></div></div></section>
 <section class="section"><div class="wrap"><h2>전주변호사 상담 FAQ</h2><div class="faq"><details><summary>전주변호사 상담 전 무엇을 준비해야 하나요?</summary><p>사건 경위를 날짜순으로 적고 계약서, 문자, 계좌내역, 사진 등 관련 자료의 원본을 함께 준비하면 쟁점을 빠르게 확인하는 데 도움이 됩니다.</p></details><details><summary>형사·민사·이혼 중 어떤 분야로 상담해야 하나요?</summary><p>경찰·검찰 연락은 형사, 금전·계약 분쟁은 민사, 재산분할·양육권은 이혼·가사 분야를 먼저 확인하면 됩니다. 여러 문제가 겹치면 사실관계 전체를 설명해야 합니다.</p></details><details><summary>군산이나 익산 사건도 상담할 수 있나요?</summary><p>전주뿐 아니라 군산과 익산 사건도 관할과 진행 방법을 확인해 상담할 수 있습니다.</p></details></div></div></section>
 </main>
 <footer class="footer"><div class="wrap">본 칼럼은 일반적인 법률 정보이며, 개별 사건에 대한 법률 의견이 아닙니다.</div></footer>
@@ -121,9 +122,10 @@ ${indexCards}
 fs.writeFileSync('index.html', indexHtml);
 
 const sitemapUrls = [
-  { loc: `${site}/`, changefreq: 'weekly', priority: '1.0', lastmod: today },
+  { loc: `${site}/`, image: `${site}/assets/lawyer-office-police-investigation.jpg`, changefreq: 'weekly', priority: '1.0', lastmod: today },
   ...posts.map((post) => ({
     loc: post.url,
+    image: post.image,
     changefreq: 'monthly',
     priority: '0.9',
     lastmod: post.date
@@ -133,15 +135,18 @@ const sitemapUrls = [
 const sitemapItems = sitemapUrls.map((item) => [
   '  <url>',
   `    <loc>${escapeXml(item.loc)}</loc>`,
+  item.image ? '    <image:image>' : '',
+  item.image ? `      <image:loc>${escapeXml(item.image)}</image:loc>` : '',
+  item.image ? '    </image:image>' : '',
   `    <lastmod>${escapeXml(item.lastmod)}</lastmod>`,
   `    <changefreq>${item.changefreq}</changefreq>`,
   `    <priority>${item.priority}</priority>`,
   '  </url>'
-].join('\n')).join('\n');
+].filter(Boolean).join('\n')).join('\n');
 
 const sitemap = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
   sitemapItems,
   '</urlset>',
   ''
@@ -159,13 +164,14 @@ const rssPosts = posts.slice(0, 30).map((post) => [
 
 const rss = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<rss version="2.0">',
+  '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
   '  <channel>',
   '    <title>전주변호사 법률칼럼 | 법무법인 태앤규</title>',
   `    <link>${site}/</link>`,
+  `    <atom:link href="${site}/rss.xml" rel="self" type="application/rss+xml" />`,
   '    <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>',
   '    <language>ko</language>',
-  `    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>`,
+  `    <lastBuildDate>${new Date(`${today}T00:00:00+09:00`).toUTCString()}</lastBuildDate>`,
   rssPosts,
   '  </channel>',
   '</rss>',

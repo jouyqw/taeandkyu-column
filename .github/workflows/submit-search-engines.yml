@@ -19,6 +19,9 @@ jobs:
       - name: Wait for deployment
         run: sleep 60
 
+      - name: Validate deployed pages
+        run: node scripts/live-seo-check.mjs
+
       - name: Submit sitemap to search engines
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
