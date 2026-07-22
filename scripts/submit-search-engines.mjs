@@ -13,6 +13,20 @@ function base64url(value) {
 }
 
 async function submitIndexNow() {
+  const sitemapResponse = await fetch(sitemapUrl, { cache: 'no-store' });
+  if (!sitemapResponse.ok) {
+    throw new Error(`Sitemap fetch failed: ${sitemapResponse.status} ${sitemapResponse.statusText}`);
+  }
+  const sitemap = await sitemapResponse.text();
+  const urlList = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
+    .map((match) => match[1].trim())
+    .filter((url, index, urls) => url.startsWith(siteUrl) && urls.indexOf(url) === index)
+    .slice(0, 100);
+
+  if (urlList.length === 0) {
+    throw new Error('IndexNow: sitemap contains no indexable page URLs.');
+  }
+
   const response = await fetch('https://api.indexnow.org/indexnow', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -20,11 +34,11 @@ async function submitIndexNow() {
       host: new URL(siteUrl).host,
       key: indexNowKey,
       keyLocation: `${siteUrl}${indexNowKey}.txt`,
-      urlList: [sitemapUrl],
+      urlList,
     }),
   });
 
-  console.log(`IndexNow ${new URL(siteUrl).host}: ${response.status} ${response.statusText}`);
+  console.log(`IndexNow ${new URL(siteUrl).host}: ${response.status} ${response.statusText} (${urlList.length} URLs)`);
   if (!response.ok && response.status !== 202) {
     throw new Error(await response.text());
   }

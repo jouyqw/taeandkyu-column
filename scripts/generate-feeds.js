@@ -31,6 +31,16 @@ const blogFiles = fs.existsSync(blogDir)
   ? fs.readdirSync(blogDir).filter((file) => file.endsWith('.html')).sort()
   : [];
 
+// These older posts overlap stronger guide pages and permanently redirect there.
+// Keep the redirect sources out of the homepage, sitemap, and RSS.
+const redirectedSlugs = new Set([
+  'civil-lawsuit-evidence-checklist',
+  'criminal-case-first-statement-checklist',
+  'police-investigation-first-response',
+  'divorce-consultation-property-custody-guide',
+  'divorce-property-division-documents'
+]);
+
 const posts = blogFiles.map((file) => {
   const fullPath = path.join(blogDir, file);
   const html = read(fullPath);
@@ -43,17 +53,17 @@ const posts = blogFiles.map((file) => {
   const description = match(html, /<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i)
     || stripHtml(match(html, /<article[^>]*>([\s\S]*?)<\/article>/i)).slice(0, 180);
   const robots = match(html, /<meta\s+name=["']robots["']\s+content=["']([^"']+)["']/i);
-  const date = match(html, /"datePublished"\s*:\s*"([^"]+)"/i)
+  const publishedDate = match(html, /"datePublished"\s*:\s*"([^"]+)"/i)
     || match(html, /<time[^>]*datetime=["']([^"']+)["']/i)
     || today;
+  const date = match(html, /"dateModified"\s*:\s*"([^"]+)"/i) || publishedDate;
 
-  return { file, url, title, description, date, noindex: /\bnoindex\b/i.test(robots) };
-}).filter((post) => !post.noindex)
+  return { file, slug, url, title, description, date, publishedDate, noindex: /\bnoindex\b/i.test(robots) };
+}).filter((post) => !post.noindex && !redirectedSlugs.has(post.slug))
   .sort((a, b) => b.date.localeCompare(a.date) || a.file.localeCompare(b.file));
 
 const indexCards = posts.slice(0, 30).map((post) => {
-  const slug = post.file.replace(/\.html$/, '');
-  return `<a class="card" href="/blog/${slug}"><span class="tag">법률칼럼</span><h3>${escapeXml(post.title)}</h3><p>${escapeXml(post.description)}</p><span class="meta">${escapeXml(post.date)}</span></a>`;
+  return `<a class="card" href="/blog/${post.slug}"><span class="tag">법률칼럼</span><h3>${escapeXml(post.title)}</h3><p>${escapeXml(post.description)}</p><span class="meta">${escapeXml(post.date)}</span></a>`;
 }).join('\n');
 
 const indexHtml = `<!DOCTYPE html>
@@ -66,17 +76,25 @@ const indexHtml = `<!DOCTYPE html>
 <meta name="google-site-verification" content="HfEaRDFGS9DffVHcE_ozGQFs3_G7P80xUwlJF6R12PU">
 <meta name="naver-site-verification" content="2d925953126d9adbdf1535529dc2920148be222c">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#1a2740">
 <link rel="canonical" href="${site}/">
 <link rel="alternate" type="application/rss+xml" title="전주변호사 법률칼럼 RSS" href="${site}/rss.xml">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="법무법인 태앤규 법률칼럼">
 <meta property="og:title" content="전주변호사 법률칼럼 | 법무법인 태앤규">
 <meta property="og:description" content="전주 지역 형사·민사·이혼 사건에서 자주 묻는 준비 자료와 대응 순서를 정리합니다.">
 <meta property="og:url" content="${site}/">
+<meta property="og:image" content="${site}/assets/lawyer-office-police-investigation.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="전주변호사 법률칼럼 | 법무법인 태앤규">
+<meta name="twitter:description" content="전주 지역 형사·민사·이혼 사건의 준비 자료와 대응 순서를 확인하세요.">
+<meta name="twitter:image" content="${site}/assets/lawyer-office-police-investigation.jpg">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,'Noto Sans KR',sans-serif;color:#111827;background:#f6f7f9;line-height:1.75;word-break:keep-all}.top{background:#1a2740;color:#fff}.wrap{max-width:1040px;margin:0 auto;padding:0 22px}.top .wrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800}.brand small{display:block;color:#cbd5e1;font-weight:400;font-size:12px}.nav a{color:#fff;text-decoration:none;font-size:14px;margin-left:14px}.hero{background:linear-gradient(135deg,#fff 56%,#fff8e7);border-bottom:1px solid #e5e7eb}.hero .wrap{padding:58px 22px 52px}.badge{display:inline-block;background:#f6edcf;color:#3f2f0b;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:18px}h1,h2{font-family:'Noto Serif KR',serif;color:#1a2740}h1{font-size:clamp(28px,4vw,44px);line-height:1.25;margin:0 0 16px}.lead{max-width:780px;color:#4b5563;font-size:17px;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{display:inline-block;padding:12px 17px;border-radius:8px;text-decoration:none;font-weight:900}.btn-main{background:#1a2740;color:#fff}.btn-sub{border:1px solid #b8922a;color:#6e5211;background:#fff}.section{padding:42px 0}.section+.section{padding-top:0}.section h2{font-size:24px;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}.card{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:22px;text-decoration:none;color:#111827;box-shadow:0 10px 30px rgba(17,24,39,.05)}.card:hover{border-color:#b8922a;box-shadow:0 12px 34px rgba(17,24,39,.08);transform:translateY(-2px)}.tag{display:inline-block;background:#f6edcf;color:#3f2f0b;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:900;margin-bottom:12px}.card h3{font-size:19px;line-height:1.45;margin:0 0 10px;color:#1a2740}.card p{font-size:14px;color:#4b5563;margin:0}.meta{display:block;margin-top:14px;color:#6b7280;font-size:13px}.case-note{color:#667085;font-size:13px;margin-top:-8px}.faq{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:4px 22px}.faq details{padding:17px 0;border-bottom:1px solid #e5e7eb}.faq details:last-child{border-bottom:0}.faq summary{cursor:pointer;color:#1a2740;font-weight:900}.faq p{margin:9px 0 0;color:#4b5563}.footer{padding:36px 0;color:#6b7280;font-size:13px}@media(max-width:600px){.top .wrap{align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}.nav a{margin:0 12px 0 0}.hero .wrap{padding-top:42px}.section{padding:32px 0}.hero-actions{flex-direction:column}.btn{text-align:center}}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,'Noto Sans KR',sans-serif;color:#111827;background:#f6f7f9;line-height:1.75;word-break:keep-all}.top{background:#1a2740;color:#fff}.wrap{max-width:1040px;margin:0 auto;padding:0 22px}.top .wrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800}.brand small{display:block;color:#cbd5e1;font-weight:400;font-size:12px}.nav a{color:#fff;text-decoration:none;font-size:14px;margin-left:14px}.hero{background:linear-gradient(135deg,#fff 56%,#fff8e7);border-bottom:1px solid #e5e7eb}.hero .wrap{padding:58px 22px 52px}.badge{display:inline-block;background:#f6edcf;color:#3f2f0b;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:18px}h1,h2{font-family:'Noto Serif KR',serif;color:#1a2740}h1{font-size:clamp(28px,4vw,44px);line-height:1.25;margin:0 0 16px}.lead{max-width:780px;color:#4b5563;font-size:17px;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{display:inline-block;padding:12px 17px;border-radius:8px;text-decoration:none;font-weight:900}.btn-main{background:#1a2740;color:#fff}.btn-sub{border:1px solid #b8922a;color:#6e5211;background:#fff}.section{padding:42px 0}.section+.section{padding-top:0}.section h2{font-size:24px;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}.card{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:22px;text-decoration:none;color:#111827;box-shadow:0 10px 30px rgba(17,24,39,.05);transition:border-color .2s,box-shadow .2s,transform .2s}.card:hover{border-color:#b8922a;box-shadow:0 12px 34px rgba(17,24,39,.08);transform:translateY(-2px)}.tag{display:inline-block;background:#f6edcf;color:#3f2f0b;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:900;margin-bottom:12px}.card h3{font-size:19px;line-height:1.45;margin:0 0 10px;color:#1a2740}.card p{font-size:14px;color:#4b5563;margin:0}.meta{display:block;margin-top:14px;color:#6b7280;font-size:13px}.case-note{color:#667085;font-size:13px;margin-top:-8px}.editorial-policy{background:#fff;border-left:4px solid #b8922a;border-radius:0 12px 12px 0;padding:20px 22px;color:#475467}.editorial-policy strong{display:block;color:#1a2740;margin-bottom:7px}.editorial-policy p{margin:0}.faq{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:4px 22px}.faq details{padding:17px 0;border-bottom:1px solid #e5e7eb}.faq details:last-child{border-bottom:0}.faq summary{cursor:pointer;color:#1a2740;font-weight:900}.faq p{margin:9px 0 0;color:#4b5563}.footer{padding:36px 0;color:#6b7280;font-size:13px}@media(max-width:600px){.top .wrap{align-items:flex-start;flex-direction:column;padding-top:16px;padding-bottom:16px}.nav a{margin:0 12px 0 0}.hero .wrap{padding-top:42px}.section{padding:32px 0}.hero-actions{flex-direction:column}.btn{text-align:center}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"LegalService","name":"법무법인 태앤규","url":"https://taeandkyu.com/","telephone":"010-9886-3105","address":{"@type":"PostalAddress","streetAddress":"홍산남로 19","addressLocality":"전주시 완산구","addressRegion":"전북특별자치도","addressCountry":"KR"},"areaServed":["전주시","군산시","익산시"],"knowsAbout":["형사사건","민사소송","이혼","재산분할"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전주변호사 상담 전 무엇을 준비해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"사건 경위를 날짜순으로 적고 계약서, 문자, 계좌내역, 사진 등 관련 자료의 원본을 함께 준비하면 쟁점을 빠르게 확인하는 데 도움이 됩니다."}},{"@type":"Question","name":"형사·민사·이혼 중 어떤 분야로 상담해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"경찰·검찰 연락은 형사, 금전·계약 분쟁은 민사, 재산분할·양육권은 이혼·가사 분야를 먼저 확인하면 됩니다. 여러 문제가 겹치면 사실관계 전체를 설명해야 합니다."}},{"@type":"Question","name":"군산이나 익산 사건도 상담할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"전주뿐 아니라 군산과 익산 사건도 관할과 진행 방법을 확인해 상담할 수 있습니다."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"LegalService","@id":"https://taeandkyu.com/#legalservice","name":"법무법인 태앤규","url":"https://taeandkyu.com/","image":"${site}/assets/lawyer-office-police-investigation.jpg","telephone":"010-9886-3105","address":{"@type":"PostalAddress","streetAddress":"홍산남로 19 즐거운빌딩 3층 302호","addressLocality":"전주시 완산구","addressRegion":"전북특별자치도","addressCountry":"KR"},"areaServed":["전주시","완주군","군산시","익산시"],"knowsAbout":["형사사건","민사소송","이혼","재산분할"]},{"@type":"WebSite","@id":"${site}/#website","url":"${site}/","name":"전주변호사 법률칼럼","publisher":{"@id":"https://taeandkyu.com/#legalservice"},"inLanguage":"ko-KR"},{"@type":"CollectionPage","@id":"${site}/#webpage","url":"${site}/","name":"전주변호사 법률칼럼 | 법무법인 태앤규","isPartOf":{"@id":"${site}/#website"},"about":["전주변호사","전주형사전문변호사","전주민사변호사","전주이혼변호사"],"inLanguage":"ko-KR"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"전주변호사 상담 전 무엇을 준비해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"사건 경위를 날짜순으로 적고 계약서, 문자, 계좌내역, 사진 등 관련 자료의 원본을 함께 준비하면 쟁점을 빠르게 확인하는 데 도움이 됩니다."}},{"@type":"Question","name":"형사·민사·이혼 중 어떤 분야로 상담해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"경찰·검찰 연락은 형사, 금전·계약 분쟁은 민사, 재산분할·양육권은 이혼·가사 분야를 먼저 확인하면 됩니다. 여러 문제가 겹치면 사실관계 전체를 설명해야 합니다."}},{"@type":"Question","name":"군산이나 익산 사건도 상담할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"전주뿐 아니라 군산과 익산 사건도 관할과 진행 방법을 확인해 상담할 수 있습니다."}}]}]}
 </script>
 </head>
 <body>
@@ -92,6 +110,7 @@ const indexHtml = `<!DOCTYPE html>
 <section class="section"><div class="wrap"><h2>최신 칼럼</h2><div class="grid">
 ${indexCards}
 </div></div></section>
+<section class="section"><div class="wrap"><div class="editorial-policy"><strong>법무법인 태앤규 콘텐츠 운영 원칙</strong><p>법무법인 태앤규가 직접 작성·검토합니다. 실제 상담사례는 의뢰인을 알아볼 수 없도록 이름·지역·금액·시점과 일부 사실관계를 변경·재구성하며, 공개 수행사례는 <a href="https://taeandkyu.com/">공식 홈페이지</a> 원문으로 연결합니다. 법령·절차가 바뀌면 내용을 갱신하며 사건 결과를 보장하지 않습니다.</p></div></div></section>
 <section class="section"><div class="wrap"><h2>전주변호사 상담 FAQ</h2><div class="faq"><details><summary>전주변호사 상담 전 무엇을 준비해야 하나요?</summary><p>사건 경위를 날짜순으로 적고 계약서, 문자, 계좌내역, 사진 등 관련 자료의 원본을 함께 준비하면 쟁점을 빠르게 확인하는 데 도움이 됩니다.</p></details><details><summary>형사·민사·이혼 중 어떤 분야로 상담해야 하나요?</summary><p>경찰·검찰 연락은 형사, 금전·계약 분쟁은 민사, 재산분할·양육권은 이혼·가사 분야를 먼저 확인하면 됩니다. 여러 문제가 겹치면 사실관계 전체를 설명해야 합니다.</p></details><details><summary>군산이나 익산 사건도 상담할 수 있나요?</summary><p>전주뿐 아니라 군산과 익산 사건도 관할과 진행 방법을 확인해 상담할 수 있습니다.</p></details></div></div></section>
 </main>
 <footer class="footer"><div class="wrap">본 칼럼은 일반적인 법률 정보이며, 개별 사건에 대한 법률 의견이 아닙니다.</div></footer>
@@ -134,7 +153,7 @@ const rssPosts = posts.slice(0, 30).map((post) => [
   `      <link>${escapeXml(post.url)}</link>`,
   `      <guid isPermaLink="true">${escapeXml(post.url)}</guid>`,
   `      <description>${escapeXml(post.description)}</description>`,
-  `      <pubDate>${new Date(`${post.date}T00:00:00+09:00`).toUTCString()}</pubDate>`,
+  `      <pubDate>${new Date(`${post.publishedDate}T00:00:00+09:00`).toUTCString()}</pubDate>`,
   '    </item>'
 ].join('\n')).join('\n');
 
