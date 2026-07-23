@@ -150,41 +150,54 @@ if (planErrors.length > 0) {
   process.exit(1);
 }
 
-const totalPosts = groups.reduce((sum, group) => sum + group.topics.length, 0);
+const publishGroup = (process.env.PUBLISH_GROUP || 'all').trim().toLowerCase();
+const allowedPublishGroups = new Set(['all', ...groups.map((group) => group.key)]);
+if (!allowedPublishGroups.has(publishGroup)) {
+  console.error(`Unknown PUBLISH_GROUP: ${publishGroup}`);
+  process.exit(1);
+}
 
-if (dayIndex < 0 || dayIndex >= totalPosts) {
-  console.log(`No scheduled post for ${publishDate}`);
+const topicsPerGroup = Math.min(...groups.map((group) => group.topics.length));
+if (dayIndex < 0 || dayIndex >= topicsPerGroup) {
+  console.log(`No scheduled posts for ${publishDate}`);
   process.exit(0);
 }
 
-const group = groups[dayIndex % groups.length];
-const topicIndex = Math.floor(dayIndex / groups.length);
-const topic = group.topics[topicIndex];
-const searchKeyword = group.searchKeywords[topicIndex % group.searchKeywords.length];
-const faqs = [
-  {
-    question: `전주에서 ${group.category} 상담을 받을 때 무엇을 준비해야 하나요?`,
-    answer: `${topic.materials}을 우선 준비하고, 사건이 시작된 날부터 현재까지의 순서를 한 장으로 정리하면 상담에서 핵심 쟁점을 빠르게 확인할 수 있습니다.`
-  },
-  {
-    question: '전화상담만으로 사건 결과를 알 수 있나요?',
-    answer: '전화로 기본 방향은 확인할 수 있지만, 정확한 판단에는 계약서·대화 원본·수사기관 또는 법원 서류 등 실제 자료 검토가 필요합니다.'
-  },
-  {
-    question: '전주 외 군산·익산 사건도 상담할 수 있나요?',
-    answer: '법무법인 태앤규는 전주를 중심으로 완주·군산·익산 등 전북 지역 사건을 상담합니다. 구체적인 진행 가능 여부는 사건 관할과 일정을 확인해 안내합니다.'
-  }
-];
+const selectedGroups = publishGroup === 'all'
+  ? groups
+  : groups.filter((group) => group.key === publishGroup);
 
-const post = {
-  ...group,
-  ...topic,
-  searchKeyword,
-  faqs,
-  slug: `${group.key}-${topic.slug}-${publishDate}`,
-  title: `${searchKeyword}, ${topic.title}`,
-  description: `${searchKeyword} 상담을 알아보는 분들을 위해 ${topic.title}을 정리했습니다. ${topic.point}`
+const createPost = (group) => {
+  const topicIndex = dayIndex;
+  const topic = group.topics[topicIndex];
+  const searchKeyword = group.searchKeywords[topicIndex % group.searchKeywords.length];
+  const faqs = [
+    {
+      question: `전주에서 ${group.category} 상담을 받을 때 무엇을 준비해야 하나요?`,
+      answer: `${topic.materials}을 우선 준비하고, 사건이 시작된 날부터 현재까지의 순서를 한 장으로 정리하면 상담에서 핵심 쟁점을 빠르게 확인할 수 있습니다.`
+    },
+    {
+      question: '전화상담만으로 사건 결과를 알 수 있나요?',
+      answer: '전화로 기본 방향은 확인할 수 있지만, 정확한 판단에는 계약서·대화 원본·수사기관 또는 법원 서류 등 실제 자료 검토가 필요합니다.'
+    },
+    {
+      question: '전주 외 군산·익산 사건도 상담할 수 있나요?',
+      answer: '법무법인 태앤규는 전주를 중심으로 완주·군산·익산 등 전북 지역 사건을 상담합니다. 구체적인 진행 가능 여부는 사건 관할과 일정을 확인해 안내합니다.'
+    }
+  ];
+
+  return {
+    ...group,
+    ...topic,
+    searchKeyword,
+    faqs,
+    slug: `${group.key}-${topic.slug}-${publishDate}`,
+    title: `${searchKeyword}, ${topic.title}`,
+    description: `${searchKeyword} 상담을 알아보는 분들을 위해 ${topic.title}을 정리했습니다. ${topic.point}`
+  };
 };
+
+const posts = selectedGroups.map(createPost);
 
 const renderPost = (item) => {
   const consultationRows = item.consultationQuestions.map(([question, reason]) =>
@@ -323,11 +336,17 @@ const renderPost = (item) => {
 
 mkdirSync('blog', { recursive: true });
 
-const file = `blog/${post.slug}.html`;
-if (existsSync(file)) {
-  console.log(`Already published ${file}`);
-  process.exit(0);
+let publishedCount = 0;
+for (const post of posts) {
+  const file = `blog/${post.slug}.html`;
+  if (existsSync(file)) {
+    console.log(`Already published ${file}`);
+    continue;
+  }
+
+  writeFileSync(file, renderPost(post), 'utf8');
+  publishedCount += 1;
+  console.log(`Scheduled publish completed for ${publishDate} (${post.key}): ${file}`);
 }
 
-writeFileSync(file, renderPost(post), 'utf8');
-console.log(`Scheduled publish completed for ${publishDate}: ${file}`);
+console.log(`Scheduled publish summary for ${publishDate}: ${publishedCount}/${posts.length} new post(s)`);
