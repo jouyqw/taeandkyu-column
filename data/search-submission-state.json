@@ -1,5 +1,14 @@
 {
   "version": 1,
-  "indexNow": {},
-  "googleSitemaps": {}
+  "indexNow": {
+    "https://column.taeandkyu.com/": "2026-07-23",
+    "https://column.taeandkyu.com/blog/criminal-suspect-investigation-checklist-2026-07-23": "2026-07-23",
+    "https://column.taeandkyu.com/blog/civil-lawsuit-before-filing-checklist": "2026-07-22",
+    "https://column.taeandkyu.com/blog/jeonju-criminal-lawyer-early-response": "2026-07-22",
+    "https://column.taeandkyu.com/blog/jeonju-criminal-lawyer-police-investigation-manual": "2026-07-22",
+    "https://column.taeandkyu.com/blog/jeonju-divorce-lawyer-property-custody": "2026-07-22"
+  },
+  "googleSitemaps": {
+    "https://column.taeandkyu.com/|https://column.taeandkyu.com/sitemap.xml": "f010219917aa14b562212684dec08dd91376ea0370869b683500ba59e58d52e5"
+  }
 }
