@@ -182,7 +182,7 @@ async function createGoogleAccessToken() {
 
   const data = await response.json();
   if (!response.ok) throw new Error(`Google token error: ${JSON.stringify(data)}`);
-  return data.access_token;
+  return { accessToken: data.access_token, clientEmail: credentials.client_email };
 }
 
 async function listGoogleProperties(token) {
@@ -219,14 +219,14 @@ async function submitGoogleSitemaps(targetsWithSitemaps, state) {
     return;
   }
 
-  const token = await createGoogleAccessToken();
-  if (!token) return;
-  const properties = await listGoogleProperties(token);
+  const googleAuth = await createGoogleAccessToken();
+  if (!googleAuth) return;
+  const properties = await listGoogleProperties(googleAuth.accessToken);
 
   for (const target of targetsWithSitemaps) {
     const property = findGoogleProperty(properties, target.siteUrl);
     if (!property) {
-      console.log(`::warning::Google Search Console: add the service-account email as a full user of ${target.siteUrl}; ${target.sitemapUrl} remains pending.`);
+      console.log(`::warning::Google Search Console: add ${googleAuth.clientEmail} as a full user of ${target.siteUrl}; ${target.sitemapUrl} remains pending.`);
       continue;
     }
 
@@ -240,7 +240,7 @@ async function submitGoogleSitemaps(targetsWithSitemaps, state) {
     const endpoint = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(property)}/sitemaps/${encodeURIComponent(target.sitemapUrl)}`;
     const response = await fetch(endpoint, {
       method: 'PUT',
-      headers: { authorization: `Bearer ${token}` },
+      headers: { authorization: `Bearer ${googleAuth.accessToken}` },
     });
 
     console.log(`Google sitemap ${target.id}: ${response.status} ${response.statusText}`);
