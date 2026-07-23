@@ -1,6 +1,12 @@
 name: Submit search engines
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/submit-search-engines.mjs"
+      - ".github/workflows/submit-search-engines.yml"
   workflow_run:
     workflows:
       - Update sitemap and RSS
@@ -8,13 +14,22 @@ on:
       - completed
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: search-engine-submit
+  cancel-in-progress: false
+
 jobs:
   submit-search-engines:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Wait for deployment
         run: sleep 60
@@ -26,3 +41,17 @@ jobs:
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
         run: node scripts/submit-search-engines.mjs
+
+      - name: Save successful submission state
+        if: always()
+        run: |
+          if git diff --quiet -- data/search-submission-state.json; then
+            echo "No submission state changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/search-submission-state.json
+          git commit -m "Update search submission state"
+          git pull --rebase origin main
+          git push
