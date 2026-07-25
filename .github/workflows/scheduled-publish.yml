@@ -1,11 +1,13 @@
 name: Scheduled publish
 
 on:
-  schedule:
-    # GitHub cron is UTC: 08:00 / 14:00 / 20:00 KST
-    - cron: "0 23 * * *"
-    - cron: "0 5 * * *"
-    - cron: "0 11 * * *"
+  # 자동 스케줄 비활성화: 매일 칼럼 발행은 Claude(클라우드 예약 세션)가 담당합니다.
+  # 템플릿 기반 예약 발행은 중복·유사도 문제를 피하기 위해 껐습니다.
+  # 필요 시 아래 workflow_dispatch로 수동 실행만 가능합니다.
+  # schedule:
+  #   - cron: "0 23 * * *"
+  #   - cron: "0 5 * * *"
+  #   - cron: "0 11 * * *"
   workflow_dispatch:
     inputs:
       practice_group:

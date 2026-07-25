@@ -1,0 +1,54 @@
+{
+  "note": "일일 자동 발행 시 참고할 주제 후보입니다. 이미 blog/에 유사 슬러그가 있으면 건너뛰고, 없으면 새로 씁니다. 목록이 부족하면 실제 상담에서 자주 나오는 새 주제를 만들어 추가하세요.",
+  "criminal": {
+    "keyword": "전주형사전문변호사",
+    "topics": [
+      { "slug": "criminal-summons-response-order", "title": "출석요구서를 받았다면" },
+      { "slug": "criminal-first-statement-guide", "title": "첫 진술 전 준비" },
+      { "slug": "criminal-settlement-standard", "title": "형사합의 시점과 기준" },
+      { "slug": "criminal-phone-seizure-caution", "title": "휴대폰 압수수색 주의점" },
+      { "slug": "criminal-non-referral-evidence", "title": "불송치를 위한 자료 정리" },
+      { "slug": "criminal-victim-statement-review", "title": "피해자 진술 검토" },
+      { "slug": "criminal-drunk-driving-response", "title": "음주운전 조사 대응" },
+      { "slug": "criminal-fraud-investigation-prep", "title": "사기 혐의 조사 준비" },
+      { "slug": "criminal-assault-defense-prep", "title": "폭행·상해 사건 준비" },
+      { "slug": "criminal-sex-crime-early-response", "title": "성범죄 사건 초기 대응" },
+      { "slug": "criminal-detention-warrant-response", "title": "구속영장 심사 대비" },
+      { "slug": "criminal-youth-first-offense", "title": "소년·초범 사건 대응" }
+    ]
+  },
+  "divorce": {
+    "keyword": "전주이혼변호사",
+    "topics": [
+      { "slug": "divorce-property-document-guide", "title": "재산분할 자료 정리" },
+      { "slug": "divorce-custody-preparation", "title": "양육권 준비" },
+      { "slug": "divorce-child-support-standard", "title": "양육비 산정 기준" },
+      { "slug": "divorce-alimony-evidence-guide", "title": "위자료 청구 자료" },
+      { "slug": "divorce-separation-living-cost", "title": "별거 중 생활비" },
+      { "slug": "divorce-hidden-asset-check", "title": "상대방 숨긴 재산 확인" },
+      { "slug": "divorce-agreement-vs-lawsuit", "title": "협의·조정·재판 선택" },
+      { "slug": "divorce-real-estate-division", "title": "부동산 재산분할" },
+      { "slug": "divorce-retirement-pension-division", "title": "퇴직금·연금 분할" },
+      { "slug": "divorce-domestic-violence-response", "title": "가정폭력 대응" },
+      { "slug": "divorce-visitation-rights-guide", "title": "면접교섭권 정리" },
+      { "slug": "divorce-agreement-draft-caution", "title": "이혼 합의서 주의점" }
+    ]
+  },
+  "civil": {
+    "keyword": "전주민사변호사",
+    "topics": [
+      { "slug": "civil-certified-letter-standard", "title": "내용증명 작성 기준" },
+      { "slug": "civil-loan-lawsuit-evidence", "title": "대여금 소송 증거" },
+      { "slug": "civil-construction-payment-claim", "title": "공사대금 청구" },
+      { "slug": "civil-damage-claim-documents", "title": "손해배상 청구 자료" },
+      { "slug": "civil-no-contract-proof", "title": "계약서 없는 거래 입증" },
+      { "slug": "civil-provisional-seizure-guide", "title": "가압류 준비" },
+      { "slug": "civil-filing-cost-check", "title": "소장 접수 비용 점검" },
+      { "slug": "civil-answer-preparation", "title": "답변서 준비" },
+      { "slug": "civil-recording-evidence-use", "title": "녹음·문자 증거 활용" },
+      { "slug": "civil-post-judgment-enforcement", "title": "강제집행 준비" },
+      { "slug": "civil-deposit-return-lawsuit", "title": "보증금 반환 소송" },
+      { "slug": "civil-goods-payment-dispute", "title": "물품대금 분쟁" }
+    ]
+  }
+}
