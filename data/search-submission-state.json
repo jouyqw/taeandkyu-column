@@ -1,14 +1,19 @@
 {
   "version": 1,
   "indexNow": {
-    "https://column.taeandkyu.com/": "2026-07-23",
+    "https://column.taeandkyu.com/": "2026-07-25",
     "https://column.taeandkyu.com/blog/criminal-suspect-investigation-checklist-2026-07-23": "2026-07-23",
     "https://column.taeandkyu.com/blog/civil-lawsuit-before-filing-checklist": "2026-07-22",
     "https://column.taeandkyu.com/blog/jeonju-criminal-lawyer-early-response": "2026-07-22",
     "https://column.taeandkyu.com/blog/jeonju-criminal-lawyer-police-investigation-manual": "2026-07-22",
-    "https://column.taeandkyu.com/blog/jeonju-divorce-lawyer-property-custody": "2026-07-22"
+    "https://column.taeandkyu.com/blog/jeonju-divorce-lawyer-property-custody": "2026-07-22",
+    "https://column.taeandkyu.com/blog/criminal-summons-response-order": "2026-07-25",
+    "https://column.taeandkyu.com/blog/divorce-custody-consultation-2026-07-24": "2026-07-24",
+    "https://column.taeandkyu.com/blog/civil-certified-letter-2026-07-23": "2026-07-23",
+    "https://taeandkyu.com/page/page30.php": "2026-07-23T00:00:00+09:00"
   },
   "googleSitemaps": {
-    "https://column.taeandkyu.com/|https://column.taeandkyu.com/sitemap.xml": "f010219917aa14b562212684dec08dd91376ea0370869b683500ba59e58d52e5"
+    "https://column.taeandkyu.com/|https://column.taeandkyu.com/sitemap.xml": "72d04a48ea4209da1c3792596db8588896995b45792802b8db06ef2de613ff27",
+    "https://taeandkyu.com/|https://taeandkyu.com/sitemap.xml": "37e9c7c7e83ae41a2038ebbf26fd2fc356db11af601d1048fb85588138bf2a92"
   }
 }
