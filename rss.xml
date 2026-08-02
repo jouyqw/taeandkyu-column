@@ -6,7 +6,28 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 01 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>전주민사변호사, 답변서 제출 전 준비</title>
+      <link>https://column.taeandkyu.com/blog/civil-answer-preparation</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-answer-preparation</guid>
+      <description>민사 소장을 받았을 때 답변서를 어떻게 준비해야 하는지, 전주민사변호사가 제출 기한과 청구 원인 분석, 인정·부인 구분과 반소 검토를 실무 기준으로 정리했습니다.</description>
+      <pubDate>Sun, 02 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주형사전문변호사, 조사 첫 진술 전 준비</title>
+      <link>https://column.taeandkyu.com/blog/criminal-first-statement-guide</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-first-statement-guide</guid>
+      <description>경찰·검찰 조사에서 첫 진술이 왜 사건 전체를 좌우하는지, 전주형사전문변호사가 진술거부권과 기억 정리, 자료 제출 시점을 기준으로 실무에서 점검하는 준비 순서를 정리했습니다.</description>
+      <pubDate>Sun, 02 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주이혼변호사, 별거 중 생활비와 증거 정리</title>
+      <link>https://column.taeandkyu.com/blog/divorce-separation-living-cost</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-separation-living-cost</guid>
+      <description>별거 중에도 생활비를 청구할 수 있는지, 전주이혼변호사가 부양료 청구와 생활비 기록, 별거 기간이 재산분할·양육에 미치는 영향을 실무 기준으로 정리했습니다.</description>
+      <pubDate>Sun, 02 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주민사변호사, 계약서 없는 거래 입증</title>
       <link>https://column.taeandkyu.com/blog/civil-no-contract-proof</link>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-certified-letter-2026-07-23</guid>
       <description>전주민사변호사 상담을 알아보는 분들을 위해 내용증명 보내기 전 확인할 기준을 정리했습니다. 요구 내용과 근거, 이행 기한을 분명히 하고 이후 소송에서 불리한 표현이 없는지 확인해야 합니다.</description>
       <pubDate>Wed, 22 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사, 피의자 조사 전 확인할 사항</title>
-      <link>https://column.taeandkyu.com/blog/criminal-suspect-investigation-checklist-2026-07-23</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-suspect-investigation-checklist-2026-07-23</guid>
-      <description>전주형사전문변호사 상담을 알아보는 분들을 위해 피의자 조사 전 확인할 사항을 정리했습니다. 조사 전에 사건 지위와 혐의 범위부터 확인하고, 기억과 추측을 구분해 진술 순서를 정리해야 합니다.</description>
-      <pubDate>Wed, 22 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사, 소송 전 확인할 3가지</title>
-      <link>https://column.taeandkyu.com/blog/civil-lawsuit-before-filing-checklist</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-lawsuit-before-filing-checklist</guid>
-      <description>전주민사변호사 상담 전 증거, 청구금액, 회수 가능성과 소송비용을 실제 상담사례와 공개 수행사례를 통해 설명합니다.</description>
-      <pubDate>Sun, 28 Jun 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사가 본 대여금 증거 실수</title>
-      <link>https://column.taeandkyu.com/blog/civil-대여금-소송-증거-정리-실무-주의점-2026-07-22</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-대여금-소송-증거-정리-실무-주의점-2026-07-22</guid>
-      <description>빌려준 돈을 받으려다 오히려 불리해지는 경우가 있습니다. 전주민사변호사가 대여금 증거를 다룰 때 자주 나오는 실수와 피해야 할 행동을 정리했습니다.</description>
-      <pubDate>Tue, 21 Jul 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
