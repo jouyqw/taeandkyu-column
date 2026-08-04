@@ -6,7 +6,28 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 03 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>전주민사변호사, 지급명령 신청 전 점검</title>
+      <link>https://column.taeandkyu.com/blog/civil-payment-order-application</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-payment-order-application</guid>
+      <description>돈을 돌려받기 위한 지급명령을 신청하기 전에 무엇을 확인해야 하는지, 이의신청 가능성과 소송 전환까지 전주민사변호사가 실무 기준으로 정리했습니다.</description>
+      <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주형사전문변호사, 피해자 진술 검토의 핵심</title>
+      <link>https://column.taeandkyu.com/blog/criminal-victim-statement-review</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-victim-statement-review</guid>
+      <description>상대방의 피해자 진술이 나왔을 때 무엇을 어떻게 검토해야 하는지, 진술의 일관성과 객관적 정황을 중심으로 전주형사전문변호사가 실무 기준을 정리했습니다.</description>
+      <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주이혼변호사, 상간 위자료 청구의 기준</title>
+      <link>https://column.taeandkyu.com/blog/divorce-adultery-alimony-claim</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-adultery-alimony-claim</guid>
+      <description>배우자의 부정행위 상대방에게 위자료를 청구할 때 무엇을 어떻게 입증해야 하는지, 부정행위 인식과 증거의 적법성을 중심으로 전주이혼변호사가 실무 기준을 정리했습니다.</description>
+      <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주민사변호사, 소장 접수 전 비용 점검</title>
       <link>https://column.taeandkyu.com/blog/civil-filing-cost-check</link>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-domestic-violence-response</guid>
       <description>가정폭력 상황에서 이혼을 고민한다면 무엇부터 해야 할까요. 전주이혼변호사가 안전 확보와 기록, 접근금지 절차를 기준으로 실무에서 안내하는 대응 순서를 정리했습니다.</description>
       <pubDate>Sat, 25 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사, 보증금 반환 준비</title>
-      <link>https://column.taeandkyu.com/blog/civil-deposit-return-lawsuit</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-deposit-return-lawsuit</guid>
-      <description>전세·월세 보증금을 돌려받지 못했을 때 무엇을 먼저 준비해야 하는지, 전주민사변호사가 계약 확인과 증거 정리, 임차권등기·소송 순서를 실무 기준으로 정리했습니다.</description>
-      <pubDate>Fri, 24 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사, 음주운전 조사 대응</title>
-      <link>https://column.taeandkyu.com/blog/criminal-drunk-driving-response</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-drunk-driving-response</guid>
-      <description>음주운전으로 단속·조사를 받게 되었을 때 무엇을 먼저 정리해야 하는지, 전주형사전문변호사가 측정 절차와 진술, 양형 자료를 기준으로 실무에서 점검하는 순서를 정리했습니다.</description>
-      <pubDate>Fri, 24 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사, 출석요구서를 받았다면</title>
-      <link>https://column.taeandkyu.com/blog/criminal-summons-response-order</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-summons-response-order</guid>
-      <description>경찰 출석요구서를 받은 뒤 무엇을 먼저 확인해야 하는지, 전주형사전문변호사가 조사 지위와 사건 단계, 진술 준비를 기준으로 실무에서 점검하는 순서를 정리했습니다.</description>
-      <pubDate>Fri, 24 Jul 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
