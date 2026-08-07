@@ -6,7 +6,28 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 06 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>내용증명, 보내기 전에 정할 기준</title>
+      <link>https://column.taeandkyu.com/blog/civil-certified-letter-standard</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-certified-letter-standard</guid>
+      <description>내용증명을 보내려는데 어떻게 써야 효과가 있을지 고민되시나요. 전주민사변호사가 내용증명의 역할과 문구 기준, 보내는 시점을 상담 경험으로 정리했습니다.</description>
+      <pubDate>Fri, 07 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>명예훼손·모욕 고소를 받았다면</title>
+      <link>https://column.taeandkyu.com/blog/criminal-defamation-insult-response</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-defamation-insult-response</guid>
+      <description>온라인 글이나 말 한마디로 명예훼손·모욕 고소를 받아 당황하셨나요. 전주형사전문변호사가 사실적시와 공연성 판단, 초기 대응 순서를 상담 경험으로 정리했습니다.</description>
+      <pubDate>Fri, 07 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>재산분할, 어떤 자료부터 모아야 할까</title>
+      <link>https://column.taeandkyu.com/blog/divorce-property-document-guide</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-property-document-guide</guid>
+      <description>이혼을 앞두고 재산분할 자료를 어디서부터 챙겨야 할지 막막하신가요. 전주이혼변호사가 자료의 종류와 정리 순서, 놓치기 쉬운 항목을 상담 경험으로 짚어 드립니다.</description>
+      <pubDate>Fri, 07 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주민사변호사, 채권 소멸시효가 임박했다면</title>
       <link>https://column.taeandkyu.com/blog/civil-debt-limitation-period</link>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-retirement-pension-division</guid>
       <description>아직 받지 않은 퇴직금과 국민·공무원연금도 재산분할 대상이 됩니다. 전주이혼변호사가 대상 범위와 분할 시점, 준비 자료를 상담 경험으로 정리했습니다.</description>
       <pubDate>Mon, 27 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>가압류, 소송 전에 재산을 묶어두는 법</title>
-      <link>https://column.taeandkyu.com/blog/civil-provisional-seizure-guide</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-provisional-seizure-guide</guid>
-      <description>돈을 받아야 하는데 상대가 재산을 빼돌릴까 걱정된다면 가압류를 검토합니다. 전주민사변호사가 피보전권리와 보전의 필요성, 담보 공탁까지 실무 관점에서 정리했습니다.</description>
-      <pubDate>Sun, 26 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>구속영장 실질심사, 무엇을 준비해야 하나</title>
-      <link>https://column.taeandkyu.com/blog/criminal-detention-warrant-response</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-detention-warrant-response</guid>
-      <description>구속영장이 청구되면 영장실질심사까지 시간이 많지 않습니다. 전주형사전문변호사가 도주·증거인멸 우려를 줄이는 준비와 심사 당일 태도를 실무 관점에서 정리했습니다.</description>
-      <pubDate>Sun, 26 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>숨긴 재산, 이혼 재산분할에서 찾는 법</title>
-      <link>https://column.taeandkyu.com/blog/divorce-hidden-asset-check</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-hidden-asset-check</guid>
-      <description>배우자가 재산을 빼돌린 것 같다면 어떻게 확인할까요. 전주이혼변호사가 재산명시·재산조회·금융거래정보 제출명령 등 법이 정한 방법을 실무 관점에서 정리했습니다.</description>
-      <pubDate>Sun, 26 Jul 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
