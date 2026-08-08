@@ -6,7 +6,28 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 07 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>전주민사변호사, 보증 섰다가 청구받았다면</title>
+      <link>https://column.taeandkyu.com/blog/civil-guarantor-liability-response</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-guarantor-liability-response</guid>
+      <description>지인 보증을 섰다가 갑자기 돈을 갚으라는 청구를 받았다면 무엇부터 볼까요. 전주민사변호사가 보증의 범위와 소멸시효, 대응 순서를 상담 경험으로 정리했습니다.</description>
+      <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주형사전문변호사가 본 횡령·배임 조사 준비</title>
+      <link>https://column.taeandkyu.com/blog/criminal-embezzlement-breach-of-trust</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-embezzlement-breach-of-trust</guid>
+      <description>회삿돈이나 맡은 돈 문제로 횡령·배임 조사를 앞두었다면 무엇부터 볼까요. 전주형사전문변호사가 보관 관계와 임무, 자금 흐름을 기준으로 조사 전 준비 순서를 정리했습니다.</description>
+      <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주이혼변호사, 결혼 전 재산도 나눠야 하나요</title>
+      <link>https://column.taeandkyu.com/blog/divorce-special-property-division</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-special-property-division</guid>
+      <description>결혼 전부터 있던 재산이나 상속받은 재산은 재산분할에서 어떻게 볼까요. 전주이혼변호사가 특유재산의 원칙과 예외, 기여도 입증을 상담 경험으로 정리했습니다.</description>
+      <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>내용증명, 보내기 전에 정할 기준</title>
       <link>https://column.taeandkyu.com/blog/civil-certified-letter-standard</link>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-child-support-standard</guid>
       <description>양육비를 얼마로, 어떻게 정해야 할지 막막하다면 산정 기준부터 이해해야 합니다. 전주이혼변호사가 상담에서 실제로 확인하는 양육비 산정과 조정 기준을 정리했습니다.</description>
       <pubDate>Wed, 29 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>녹음과 문자, 민사소송 증거로 쓰려면</title>
-      <link>https://column.taeandkyu.com/blog/civil-recording-evidence-use</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-recording-evidence-use</guid>
-      <description>통화 녹음과 문자·카톡은 민사소송에서 유용한 증거지만 방식을 잘못 잡으면 힘을 잃습니다. 전주민사변호사가 증거로 정리하는 방법을 실무 관점에서 안내합니다.</description>
-      <pubDate>Mon, 27 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>폭행·상해 사건, 초기 대응에서 놓치는 것</title>
-      <link>https://column.taeandkyu.com/blog/criminal-assault-defense-prep</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-assault-defense-prep</guid>
-      <description>순간의 다툼이 폭행·상해 사건으로 번지면 초기 대응이 결과를 좌우합니다. 전주형사전문변호사가 진단서, 목격자, 합의 시점을 실무 관점에서 정리했습니다.</description>
-      <pubDate>Mon, 27 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>퇴직금과 연금은 재산분할에서 어떻게 나뉘나</title>
-      <link>https://column.taeandkyu.com/blog/divorce-retirement-pension-division</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-retirement-pension-division</guid>
-      <description>아직 받지 않은 퇴직금과 국민·공무원연금도 재산분할 대상이 됩니다. 전주이혼변호사가 대상 범위와 분할 시점, 준비 자료를 상담 경험으로 정리했습니다.</description>
-      <pubDate>Mon, 27 Jul 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
