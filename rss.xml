@@ -6,7 +6,28 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 08 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>전주민사변호사가 본 공사대금 청구의 순서</title>
+      <link>https://column.taeandkyu.com/blog/civil-construction-payment-claim</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-construction-payment-claim</guid>
+      <description>공사대금을 못 받았을 때 무엇부터 정리해야 할까요. 전주민사변호사가 계약과 추가공사, 하자 주장에 대비한 증거 정리와 청구 순서를 실무 관점에서 짚었습니다.</description>
+      <pubDate>Sun, 09 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주형사전문변호사가 본 집행유예의 갈림길</title>
+      <link>https://column.taeandkyu.com/blog/criminal-suspended-sentence-conditions</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-suspended-sentence-conditions</guid>
+      <description>집행유예는 어떤 기준으로 갈릴까요. 전주형사전문변호사가 형량 요건과 재판부가 실제로 보는 양형 요소, 피해 회복의 무게를 상담 경험을 바탕으로 짚었습니다.</description>
+      <pubDate>Sun, 09 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주이혼변호사가 짚는 합의서 작성 주의점</title>
+      <link>https://column.taeandkyu.com/blog/divorce-agreement-draft-caution</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-agreement-draft-caution</guid>
+      <description>이혼 합의서, 서명 전 무엇을 확인해야 할까요. 전주이혼변호사가 재산분할과 양육비, 위자료 조항에서 자주 생기는 분쟁을 상담 경험으로 정리했습니다.</description>
+      <pubDate>Sun, 09 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주민사변호사, 보증 섰다가 청구받았다면</title>
       <link>https://column.taeandkyu.com/blog/civil-guarantor-liability-response</link>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-agreement-vs-lawsuit</guid>
       <description>이혼을 결심했지만 협의이혼과 조정, 재판 중 무엇을 택할지 막막하신가요. 전주이혼변호사가 각 절차의 차이와 선택 기준을 실제 상담 경험을 바탕으로 정리했습니다.</description>
       <pubDate>Thu, 30 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사, 대여금 소송 증거 정리</title>
-      <link>https://column.taeandkyu.com/blog/civil-loan-lawsuit-evidence</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-loan-lawsuit-evidence</guid>
-      <description>빌려준 돈을 받으려는데 차용증이 없어 막막하다면 증거부터 점검해야 합니다. 전주민사변호사가 대여금 소송에서 실제로 확인하는 증거 정리 순서를 안내합니다.</description>
-      <pubDate>Wed, 29 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사, 형사합의 시점과 기준</title>
-      <link>https://column.taeandkyu.com/blog/criminal-settlement-standard</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-settlement-standard</guid>
-      <description>형사합의를 언제, 어떤 기준으로 진행해야 하는지 고민이라면 순서부터 잡아야 합니다. 전주형사전문변호사가 상담에서 실제로 확인하는 합의 시점과 판단 기준을 정리했습니다.</description>
-      <pubDate>Wed, 29 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사, 양육비 산정 기준 정리</title>
-      <link>https://column.taeandkyu.com/blog/divorce-child-support-standard</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-child-support-standard</guid>
-      <description>양육비를 얼마로, 어떻게 정해야 할지 막막하다면 산정 기준부터 이해해야 합니다. 전주이혼변호사가 상담에서 실제로 확인하는 양육비 산정과 조정 기준을 정리했습니다.</description>
-      <pubDate>Wed, 29 Jul 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
