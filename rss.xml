@@ -6,7 +6,28 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 09 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>전주민사변호사가 본 상가 원상복구 분쟁</title>
+      <link>https://column.taeandkyu.com/blog/civil-lease-restoration-dispute</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-lease-restoration-dispute</guid>
+      <description>상가 임대차가 끝날 때 원상복구 범위로 다투는 경우가 많습니다. 전주민사변호사가 복구 의무의 기준과 보증금 공제, 자료 정리 순서를 실무 관점에서 짚었습니다.</description>
+      <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주형사전문변호사가 본 스토킹 신고 대응</title>
+      <link>https://column.taeandkyu.com/blog/criminal-stalking-report-response</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-stalking-report-response</guid>
+      <description>스토킹처벌법 신고를 받았다면 무엇부터 확인해야 할까요. 전주형사전문변호사가 지속·반복성 판단과 초기 진술, 접근금지 결정 대응까지 실무 관점에서 짚었습니다.</description>
+      <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주이혼변호사가 본 황혼이혼 재산분할</title>
+      <link>https://column.taeandkyu.com/blog/divorce-later-life-property-division</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-later-life-property-division</guid>
+      <description>오랜 결혼 생활 끝의 황혼이혼, 재산분할은 무엇이 다를까요. 전주이혼변호사가 기여도 판단과 연금·퇴직금, 자료 정리 순서를 실무 관점에서 짚었습니다.</description>
+      <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주민사변호사가 본 공사대금 청구의 순서</title>
       <link>https://column.taeandkyu.com/blog/civil-construction-payment-claim</link>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-alimony-evidence-guide</guid>
       <description>위자료를 청구하고 싶은데 무엇부터 모아야 할지 막막하다면 자료 정리 순서가 먼저입니다. 전주이혼변호사가 상담에서 실제로 확인하는 위자료 청구 자료 준비 방법을 정리했습니다.</description>
       <pubDate>Fri, 31 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사가 짚는 손해배상 청구 자료 정리</title>
-      <link>https://column.taeandkyu.com/blog/civil-damage-claim-documents</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-damage-claim-documents</guid>
-      <description>손해배상을 청구하려는데 무엇부터 준비해야 할지 막막하신가요. 전주민사변호사가 책임과 손해, 인과관계를 기준으로 청구 전 자료 정리 순서를 실무 관점에서 짚었습니다.</description>
-      <pubDate>Thu, 30 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사가 본 성범죄 사건 초기 대응</title>
-      <link>https://column.taeandkyu.com/blog/criminal-sex-crime-early-response</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-sex-crime-early-response</guid>
-      <description>성범죄 혐의로 조사를 앞두었다면 초기 며칠이 사건의 방향을 좌우합니다. 전주형사전문변호사가 진술 준비와 증거 정리, 피해자 접촉의 위험을 실무 관점에서 짚었습니다.</description>
-      <pubDate>Thu, 30 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사가 정리한 협의·조정·재판 선택</title>
-      <link>https://column.taeandkyu.com/blog/divorce-agreement-vs-lawsuit</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-agreement-vs-lawsuit</guid>
-      <description>이혼을 결심했지만 협의이혼과 조정, 재판 중 무엇을 택할지 막막하신가요. 전주이혼변호사가 각 절차의 차이와 선택 기준을 실제 상담 경험을 바탕으로 정리했습니다.</description>
-      <pubDate>Thu, 30 Jul 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
