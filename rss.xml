@@ -6,7 +6,28 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 11 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>전주민사변호사가 본 부당이득 반환 청구</title>
+      <link>https://column.taeandkyu.com/blog/civil-unjust-enrichment-return</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-unjust-enrichment-return</guid>
+      <description>잘못 보낸 돈이나 근거 없이 넘어간 이익을 돌려받으려면 어떻게 준비할까요. 전주민사변호사가 법률상 원인, 이익과 손해, 반환 범위를 기준으로 부당이득 반환 청구 준비를 실무 관점에서 정리했습니다.</description>
+      <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주형사전문변호사가 본 절도 혐의 초기 대응</title>
+      <link>https://column.taeandkyu.com/blog/criminal-theft-early-response</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-theft-early-response</guid>
+      <description>절도 혐의로 연락을 받았다면 무엇부터 해야 할까요. 전주형사전문변호사가 불법영득의사와 초기 진술, CCTV 자료 정리를 기준으로 절도 사건 초기 대응 순서를 실무 관점에서 정리했습니다.</description>
+      <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주이혼변호사, 사업하는 배우자와 재산분할</title>
+      <link>https://column.taeandkyu.com/blog/divorce-business-owner-property-division</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-business-owner-property-division</guid>
+      <description>배우자가 자영업이나 사업체를 운영한다면 재산분할은 어떻게 준비할까요. 전주이혼변호사가 사업소득 파악과 명의, 부채 정리를 기준으로 사업하는 배우자와의 재산분할 준비를 짚었습니다.</description>
+      <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주민사변호사가 본 상가 원상복구 분쟁</title>
       <link>https://column.taeandkyu.com/blog/civil-lease-restoration-dispute</link>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-custody-preparation</guid>
       <description>이혼을 앞두고 양육권을 준비할 때 법원이 무엇을 보는지, 전주이혼변호사가 양육 환경과 실제 돌봄 기록, 아이의 의사를 기준으로 실무에서 정리하는 순서를 짚었습니다.</description>
       <pubDate>Sat, 01 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사, 판결 후 강제집행 준비</title>
-      <link>https://column.taeandkyu.com/blog/civil-post-judgment-enforcement</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-post-judgment-enforcement</guid>
-      <description>승소 판결을 받았는데 상대가 돈을 주지 않는다면 강제집행 준비가 다음 단계입니다. 전주민사변호사가 상담에서 실제로 확인하는 판결 후 집행 준비 순서를 정리했습니다.</description>
-      <pubDate>Fri, 31 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사, 소년·초범 사건 대응</title>
-      <link>https://column.taeandkyu.com/blog/criminal-youth-first-offense</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-youth-first-offense</guid>
-      <description>자녀가 처음 형사사건에 연루됐거나 초범이라면 첫 대응이 이후를 좌우합니다. 전주형사전문변호사가 상담에서 실제로 확인하는 소년·초범 사건 준비 순서를 정리했습니다.</description>
-      <pubDate>Fri, 31 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사, 위자료 청구 자료 준비</title>
-      <link>https://column.taeandkyu.com/blog/divorce-alimony-evidence-guide</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-alimony-evidence-guide</guid>
-      <description>위자료를 청구하고 싶은데 무엇부터 모아야 할지 막막하다면 자료 정리 순서가 먼저입니다. 전주이혼변호사가 상담에서 실제로 확인하는 위자료 청구 자료 준비 방법을 정리했습니다.</description>
-      <pubDate>Fri, 31 Jul 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
