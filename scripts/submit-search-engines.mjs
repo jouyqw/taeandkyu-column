@@ -255,11 +255,24 @@ const state = loadState();
 const errors = [];
 const targetsWithSitemaps = [];
 
-try {
-  await validateMainPage();
-  for (const target of targets) targetsWithSitemaps.push(await fetchTarget(target));
-} catch (error) {
-  console.error(error.message);
+// 본 홈페이지(taeandkyu.com)는 우리가 관리하는 서버가 아니고, 실행 위치에 따라
+// 다른 응답을 주기도 한다. 그쪽 점검이 막힌다고 칼럼 사이트 색인 요청까지
+// 멈추면 안 되므로 대상별로 나눠서 처리한다.
+for (const target of targets) {
+  try {
+    if (target.id === 'main') await validateMainPage();
+    targetsWithSitemaps.push(await fetchTarget(target));
+  } catch (error) {
+    if (target.id === 'column') {
+      console.error(error.message);
+      process.exit(1);
+    }
+    console.log(`::warning::${target.id}: ${error.message} — 이 대상만 건너뜁니다.`);
+  }
+}
+
+if (targetsWithSitemaps.length === 0) {
+  console.error('제출할 대상이 없습니다.');
   process.exit(1);
 }
 
