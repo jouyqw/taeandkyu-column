@@ -1,0 +1,33 @@
+name: SEO crosscheck
+
+# 세 사이트를 실제로 크롤해서 색인을 막는 구조적 문제를 찾는다.
+# 문제가 있으면 실패해서 알림이 오게 한다.
+
+on:
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: "쉼표로 구분한 사이트 목록"
+        required: false
+        default: "https://column.taeandkyu.com/,https://column.lawfirmyeyul.com/,https://ulsanlawyer.kr/"
+  schedule:
+    - cron: "30 20 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-crosscheck
+  cancel-in-progress: false
+
+jobs:
+  crosscheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Crawl and check
+        env:
+          SEO_SITES: ${{ github.event.inputs.sites || 'https://column.taeandkyu.com/,https://column.lawfirmyeyul.com/,https://ulsanlawyer.kr/' }}
+        run: node scripts/seo-crosscheck.mjs

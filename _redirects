@@ -1,3 +1,7 @@
+# 칼럼 목록은 홈이 겸한다. /blog/ 자체는 페이지가 아니다.
+/blog / 301
+/blog/ / 301
+
 /blog/civil-lawsuit-evidence-checklist /blog/civil-lawsuit-before-filing-checklist 301
 /blog/criminal-case-first-statement-checklist /blog/jeonju-criminal-lawyer-early-response 301
 /blog/police-investigation-first-response /blog/jeonju-criminal-lawyer-early-response 301

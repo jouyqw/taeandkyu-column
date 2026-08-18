@@ -159,7 +159,7 @@ export function renderArticle(draft) {
 </head>
 <body>
 <header class="top"><div class="site-wrap"><a class="brand" href="/">전주변호사 법률칼럼 · 법무법인 태앤규</a><a class="home-link" href="${officialHome}">전주변호사 공식 홈페이지 →</a></div></header>
-<main class="page"><div class="site-wrap"><nav class="crumb" aria-label="이동 경로"><a href="/">법률칼럼</a> &gt; <a href="/blog/">${esc(group.category)}</a> &gt; ${esc(keyword)}</nav><article class="article">
+<main class="page"><div class="site-wrap"><nav class="crumb" aria-label="이동 경로"><a href="/">법률칼럼</a> &gt; <a href="/">${esc(group.category)}</a> &gt; ${esc(keyword)}</nav><article class="article">
 <figure class="hero-img"><img src="${esc(group.image)}" alt="${esc(group.imageAlt)}" width="1200" height="630" fetchpriority="high"></figure>
 <header class="head"><span class="badge">${esc(group.category)} · JEONJU</span><h1>${esc(title)}</h1><p class="answer">${esc(lead)}</p><div class="meta"><span>작성 법무법인 태앤규</span><span>최종 검토 ${publishDate}</span><span>상담지역 전주·완주·군산·익산</span></div></header>
 <section class="body">
