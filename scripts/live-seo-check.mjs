@@ -13,6 +13,8 @@ const fetchFresh = (url, options = {}) => fetch(url, {
   headers: { 'cache-control': 'no-cache', ...(options.headers || {}) }
 });
 const match = (html, regex) => (html.match(regex) || [])[1]?.trim() || '';
+const plain = (url) => { try { return decodeURI(url); } catch (_) { return url; } };
+const samePath = (left, right) => Boolean(left) && plain(left) === plain(right);
 
 const sitemapResponse = await fetchFresh(`${site}/sitemap.xml?check=${Date.now()}`);
 if (!sitemapResponse.ok) {
@@ -31,7 +33,9 @@ if (!sitemapResponse.ok) {
     const ogImage = match(html, /<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i);
 
     if (!response.ok) errors.push(`${url}: HTTP ${response.status}`);
-    if (canonical !== url) errors.push(`${url}: canonical 불일치 (${canonical})`);
+    // 사이트맵은 퍼센트 인코딩, 문서의 canonical 은 한글 그대로라 같은 주소라도 글자가 다르다.
+    if (samePath(canonical, url)) { /* 같은 주소다 */ }
+    else errors.push(`${url}: canonical 불일치 (${canonical})`);
     if (/\bnoindex\b/i.test(robots)) errors.push(`${url}: 공개 URL에 noindex가 있습니다.`);
     if (!ogImage) errors.push(`${url}: og:image가 없습니다.`);
     if (html.includes('${')) errors.push(`${url}: 치환되지 않은 템플릿 문구가 있습니다.`);

@@ -151,24 +151,36 @@ for (let i = 0; i < searchableTexts.length; i += 1) {
 }
 
 for (const [source, target] of redirects) {
+  // 글끼리 옮기는 규칙만 파일 존재를 확인한다. /blog → / 처럼 목록 주소를 정리하는
+  // 규칙은 대응하는 파일이 없는 것이 정상이다.
+  if (!source.startsWith('/blog/') || !target.startsWith('/blog/')) continue;
   const sourceSlug = source.replace(/^\/blog\//, '');
   const targetSlug = target.replace(/^\/blog\//, '');
+  if (!sourceSlug || !targetSlug) continue;
   if (!existsSync(`blog/${sourceSlug}.html`)) fail('_redirects', `원본 파일이 없습니다: ${source}`);
   if (!existsSync(`blog/${targetSlug}.html`)) fail('_redirects', `대상 파일이 없습니다: ${target}`);
 }
 
 if (existsSync('sitemap.xml')) {
   const sitemap = read('sitemap.xml');
-  const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((item) => decodeXml(item[1])));
+  // 사이트맵은 퍼센트 인코딩해서 내보내므로, 비교 전에 양쪽을 같은 형태로 되돌린다.
+  const plain = (url) => { try { return decodeURI(url); } catch (_) { return url; } };
+  const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((item) => plain(decodeXml(item[1])));
+  const sitemapUrls = new Set(locs);
   const expectedUrls = new Set(publicPages.map((page) => page.expectedUrl));
   for (const url of expectedUrls) if (!sitemapUrls.has(url)) fail('sitemap.xml', `공개 URL이 빠졌습니다: ${url}`);
   for (const url of sitemapUrls) if (!expectedUrls.has(url) && !url.includes('/assets/')) fail('sitemap.xml', `불필요한 URL이 있습니다: ${url}`);
-  for (const source of redirects.keys()) if (sitemap.includes(source)) fail('sitemap.xml', `리디렉션 원본이 포함됐습니다: ${source}`);
+  // 부분 문자열이 아니라 주소 전체로 비교해야 /blog 가 /blog/글 을 잘못 잡지 않는다.
+  for (const source of redirects.keys()) {
+    if (sitemapUrls.has(`${site}${source}`)) fail('sitemap.xml', `리디렉션 원본이 포함됐습니다: ${source}`);
+  }
 }
 
+// 글끼리 통합한 301 만 센다. /blog → / 같은 목록 주소 정리는 통합이 아니다.
+const mergedPosts = [...redirects.keys()].filter((source) => /^\/blog\/.+/.test(source));
 notices.push(`공개 문서 ${publicPages.length}개`);
-notices.push(`검색 제외 문서 ${blogFiles.length - publicPages.length + 1 - redirects.size}개`);
-notices.push(`301 통합 ${redirects.size}개`);
+notices.push(`검색 제외 문서 ${blogFiles.length - publicPages.length + 1 - mergedPosts.length}개`);
+notices.push(`301 통합 ${mergedPosts.length}개`);
 
 if (errors.length > 0) {
   console.error(`SEO audit failed with ${errors.length} error(s):`);
