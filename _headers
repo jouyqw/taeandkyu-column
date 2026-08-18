@@ -1,0 +1,11 @@
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+
+# 미리보기 도메인은 본 도메인과 같은 내용이라 색인에서 빼야 중복으로 잡히지 않는다.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
