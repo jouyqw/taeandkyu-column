@@ -45,7 +45,9 @@ const posts = blogFiles.map((file) => {
   const fullPath = path.join(blogDir, file);
   const html = read(fullPath);
   const slug = file.replace(/\.html$/, '');
-  const url = `${site}/blog/${slug}`;
+  // 사이트맵과 RSS 의 주소는 퍼센트 인코딩해야 한다. 한글 슬러그를 날것으로 적으면
+  // 규격에 맞지 않아 크롤러가 그 항목을 건너뛴다.
+  const url = `${site}/blog/${encodeURIComponent(slug)}`;
   const rawTitle = match(html, /<title>([\s\S]*?)<\/title>/i)
     || match(html, /<h1[^>]*>([\s\S]*?)<\/h1>/i)
     || slug;
