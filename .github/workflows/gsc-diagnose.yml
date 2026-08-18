@@ -1,0 +1,36 @@
+name: GSC index diagnose
+
+on:
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: "쉼표로 구분한 사이트 목록"
+        required: false
+        default: "https://column.taeandkyu.com/,https://column.lawfirmyeyul.com/,https://ulsanlawyer.kr/"
+      limit:
+        description: "사이트당 검사할 URL 수"
+        required: false
+        default: "200"
+  schedule:
+    - cron: "0 20 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gsc-diagnose
+  cancel-in-progress: false
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inspect index status
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITES: ${{ github.event.inputs.sites || 'https://column.taeandkyu.com/,https://column.lawfirmyeyul.com/,https://ulsanlawyer.kr/' }}
+          GSC_LIMIT: ${{ github.event.inputs.limit || '200' }}
+        run: node scripts/gsc-diagnose.mjs
