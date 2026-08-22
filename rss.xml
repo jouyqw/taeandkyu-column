@@ -6,7 +6,28 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 17 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>익산·군산 사건, 어느 법원으로 갈까</title>
+      <link>https://column.taeandkyu.com/blog/civil-jeonbuk-court-jurisdiction-guide</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-jeonbuk-court-jurisdiction-guide</guid>
+      <description>소송을 내려는데 어느 법원에 접수해야 하는지 헷갈리신다면, 익산변호사가 전북 지역 관할의 기본 원칙과 실제로 자주 어긋나는 지점을 사례와 함께 정리했습니다.</description>
+      <pubDate>Fri, 21 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>성범죄 사건, 동의 여부가 다투어질 때</title>
+      <link>https://column.taeandkyu.com/blog/criminal-sex-crime-consent-dispute</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-sex-crime-consent-dispute</guid>
+      <description>합의가 있었다는 주장과 없었다는 주장이 정면으로 맞설 때 수사기관은 무엇을 보는지, 전주성범죄변호사가 조사 전 정리해야 할 자료와 진술의 순서를 상담 경험을 바탕으로 짚었습니다.</description>
+      <pubDate>Fri, 21 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>이혼 소송, 실제로 얼마나 걸릴까</title>
+      <link>https://column.taeandkyu.com/blog/divorce-lawsuit-process-timeline</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-lawsuit-process-timeline</guid>
+      <description>협의가 되지 않아 소송으로 가면 절차가 어떻게 흘러가는지, 전주이혼전문변호사가 조정부터 변론과 판결까지의 단계와 기간을 좌우하는 요인을 상담 경험을 바탕으로 정리했습니다.</description>
+      <pubDate>Fri, 21 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>재산을 빼돌린 채무자, 사해행위취소란</title>
       <link>https://column.taeandkyu.com/blog/civil-fraudulent-transfer-cancellation</link>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-real-estate-division</guid>
       <description>이혼 재산분할에서 집이나 상가 같은 부동산을 어떻게 나누는지, 명의와 기여도, 대출과 실거래가를 어떻게 따지는지 전주이혼변호사가 상담 실무를 바탕으로 정리했습니다.</description>
       <pubDate>Mon, 03 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사, 답변서 제출 전 준비</title>
-      <link>https://column.taeandkyu.com/blog/civil-answer-preparation</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-answer-preparation</guid>
-      <description>민사 소장을 받았을 때 답변서를 어떻게 준비해야 하는지, 전주민사변호사가 제출 기한과 청구 원인 분석, 인정·부인 구분과 반소 검토를 실무 기준으로 정리했습니다.</description>
-      <pubDate>Sun, 02 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사, 조사 첫 진술 전 준비</title>
-      <link>https://column.taeandkyu.com/blog/criminal-first-statement-guide</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-first-statement-guide</guid>
-      <description>경찰·검찰 조사에서 첫 진술이 왜 사건 전체를 좌우하는지, 전주형사전문변호사가 진술거부권과 기억 정리, 자료 제출 시점을 기준으로 실무에서 점검하는 준비 순서를 정리했습니다.</description>
-      <pubDate>Sun, 02 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사, 별거 중 생활비와 증거 정리</title>
-      <link>https://column.taeandkyu.com/blog/divorce-separation-living-cost</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-separation-living-cost</guid>
-      <description>별거 중에도 생활비를 청구할 수 있는지, 전주이혼변호사가 부양료 청구와 생활비 기록, 별거 기간이 재산분할·양육에 미치는 영향을 실무 기준으로 정리했습니다.</description>
-      <pubDate>Sun, 02 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
