@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 21 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>첫 공판을 앞두고 무엇을 준비하나</title>
+      <link>https://column.taeandkyu.com/blog/criminal-first-trial-preparation</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-first-trial-preparation</guid>
+      <description>공소장을 받고 첫 재판일이 잡히면 무엇부터 해야 하는지, 전주형사변호사가 공소사실 인부와 증거 동의, 양형자료 준비를 상담 경험을 바탕으로 순서대로 정리했습니다.</description>
+      <pubDate>Mon, 24 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>익산·군산 사건, 어느 법원으로 갈까</title>
       <link>https://column.taeandkyu.com/blog/civil-jeonbuk-court-jurisdiction-guide</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/criminal-non-referral-evidence</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-non-referral-evidence</guid>
       <description>경찰 수사 단계에서 불송치 결정 가능성을 높이려면 어떤 자료를 어떻게 정리해야 하는지, 전주형사전문변호사가 진술의 일관성과 객관적 근거를 중심으로 실무 기준을 정리했습니다.</description>
-      <pubDate>Mon, 03 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사, 부동산 재산분할 정리 기준</title>
-      <link>https://column.taeandkyu.com/blog/divorce-real-estate-division</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-real-estate-division</guid>
-      <description>이혼 재산분할에서 집이나 상가 같은 부동산을 어떻게 나누는지, 명의와 기여도, 대출과 실거래가를 어떻게 따지는지 전주이혼변호사가 상담 실무를 바탕으로 정리했습니다.</description>
       <pubDate>Mon, 03 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>

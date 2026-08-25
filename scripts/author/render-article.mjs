@@ -4,6 +4,7 @@
 // blog/<slug>.html 파일로 변환합니다. 자동화 고지 문구는 넣지 않습니다.
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
 
 const site = 'https://column.taeandkyu.com';
 const officialHome = 'https://taeandkyu.com/';
@@ -177,8 +178,10 @@ ${faqs.length ? `<h2>자주 묻는 질문</h2><div class="faq">${faqHtml}</div>`
 </html>`;
 }
 
-// CLI
-const draftPath = process.argv[2];
+// CLI — 다른 스크립트가 renderArticle 을 import 할 때는 실행되면 안 된다.
+const isEntry = process.argv[1]
+  && import.meta.url === pathToFileURL(process.argv[1]).href;
+const draftPath = isEntry ? process.argv[2] : undefined;
 if (draftPath) {
   if (!existsSync(draftPath)) {
     console.error(`Draft not found: ${draftPath}`);

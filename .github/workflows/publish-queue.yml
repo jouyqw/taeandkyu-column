@@ -1,0 +1,65 @@
+name: 예약 칼럼 발행
+
+# 왜 이렇게 하나
+#   매일 칼럼을 쓰던 클라우드 예약 세션이 조용히 실패하는 날이 많았다. 세션은 정상적으로
+#   실행됐는데(last_fired_at 은 매일 찍힘) 커밋이 들어오지 않아, 8/15 이후 발행이 끊겼다.
+#   그래서 "글을 쓰는 일"과 "글을 내보내는 일"을 분리한다.
+#
+#   글쓰기 : content/queue/<slug>.json 에 publishAt 을 박아 미리 채워 둔다(사람 또는 세션).
+#   발행   : 이 워크플로가 매일 발행일 도래분을 렌더링해 커밋한다. LLM 이 끼지 않으므로
+#            실패할 여지가 거의 없고, 실패하면 여기 로그에 그대로 남는다.
+
+on:
+  schedule:
+    - cron: "10 15 * * *" # 매일 00:10 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-queue
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: 발행일 도래분 렌더링
+        id: promote
+        run: node scripts/publish-queue.mjs
+
+      - name: 피드 재생성
+        if: steps.promote.outputs.published != '0'
+        run: node scripts/generate-feeds.js
+
+      - name: 품질 게이트
+        if: steps.promote.outputs.published != '0'
+        run: node scripts/seo-audit.mjs
+
+      - name: 커밋
+        if: steps.promote.outputs.published != '0'
+        run: |
+          if git diff --quiet; then
+            echo "변경 없음"
+            exit 0
+          fi
+          git config user.name "publish-bot"
+          git config user.email "bot@auto.local"
+          git add -A
+          git commit -m "칼럼 발행: ${{ steps.promote.outputs.summary }}"
+          git push
+
+      - name: 큐 잔량 알림
+        run: |
+          left=$(node -e "const q=require('fs').existsSync('content/queue')?require('fs').readdirSync('content/queue').filter(f=>f.endsWith('.json')).length:0;console.log(q)")
+          echo "### 큐 잔량: ${left}편" >> $GITHUB_STEP_SUMMARY
+          if [ "$left" -lt 7 ]; then
+            echo "큐가 7편 미만입니다. 채워 두세요." >> $GITHUB_STEP_SUMMARY
+          fi
