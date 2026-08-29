@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 24 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>1심 판결 뒤 항소를 정하는 기준</title>
+      <link>https://column.taeandkyu.com/blog/criminal-appeal-decision-guide</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-appeal-decision-guide</guid>
+      <description>1심 선고를 받고 항소할지 고민이라면 항소기간 7일과 항소이유서 20일, 불이익변경금지의 범위를 먼저 확인해야 합니다. 전주형사전문변호사가 판단 순서를 정리했습니다.</description>
+      <pubDate>Sat, 29 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>첫 공판을 앞두고 무엇을 준비하나</title>
       <link>https://column.taeandkyu.com/blog/criminal-first-trial-preparation</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/civil-filing-cost-check</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-filing-cost-check</guid>
       <description>민사소송을 시작하기 전에 인지대와 송달료, 회수 가능성까지 어떻게 따져봐야 하는지, 전주민사변호사가 소장 접수 전에 점검하는 비용 기준을 실무로 정리했습니다.</description>
-      <pubDate>Mon, 03 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사, 불송치를 좌우하는 자료 정리</title>
-      <link>https://column.taeandkyu.com/blog/criminal-non-referral-evidence</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-non-referral-evidence</guid>
-      <description>경찰 수사 단계에서 불송치 결정 가능성을 높이려면 어떤 자료를 어떻게 정리해야 하는지, 전주형사전문변호사가 진술의 일관성과 객관적 근거를 중심으로 실무 기준을 정리했습니다.</description>
       <pubDate>Mon, 03 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>

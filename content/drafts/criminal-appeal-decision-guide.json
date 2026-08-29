@@ -2,7 +2,6 @@
   "category": "criminal",
   "slug": "criminal-appeal-decision-guide",
   "keyword": "전주형사전문변호사",
-  "publishAt": "2026-08-30",
   "title": "1심 판결 뒤 항소를 정하는 기준",
   "description": "1심 선고를 받고 항소할지 고민이라면 항소기간 7일과 항소이유서 20일, 불이익변경금지의 범위를 먼저 확인해야 합니다. 전주형사전문변호사가 판단 순서를 정리했습니다.",
   "lead": "결론부터 말씀드리면, 항소 여부는 ‘형이 무겁다’는 느낌이 아니라 1심이 무엇을 근거로 그 형을 정했는지를 판결문에서 확인한 뒤에 정해야 합니다.",
@@ -22,7 +21,14 @@
     }
   ],
   "related": [
-    { "href": "/blog/criminal-first-trial-preparation", "label": "첫 공판을 앞두고 무엇을 준비하나" },
-    { "href": "/blog/criminal-suspended-sentence-conditions", "label": "집행유예는 어떤 기준으로 정해지나" }
-  ]
+    {
+      "href": "/blog/criminal-first-trial-preparation",
+      "label": "첫 공판을 앞두고 무엇을 준비하나"
+    },
+    {
+      "href": "/blog/criminal-suspended-sentence-conditions",
+      "label": "집행유예는 어떤 기준으로 정해지나"
+    }
+  ],
+  "date": "2026-08-30"
 }
