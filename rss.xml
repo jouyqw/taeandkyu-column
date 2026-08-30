@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 29 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>이혼 뒤 양육자를 바꾸려면</title>
+      <link>https://column.taeandkyu.com/blog/divorce-parental-authority-change</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-parental-authority-change</guid>
+      <description>이혼할 때 정한 양육자를 나중에 바꿀 수 있는지, 어떤 사정이 필요하고 절차는 어떻게 되는지 전주이혼변호사가 상담에서 자주 받는 질문을 중심으로 정리했습니다.</description>
+      <pubDate>Sun, 30 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>1심 판결 뒤 항소를 정하는 기준</title>
       <link>https://column.taeandkyu.com/blog/criminal-appeal-decision-guide</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-adultery-alimony-claim</guid>
       <description>배우자의 부정행위 상대방에게 위자료를 청구할 때 무엇을 어떻게 입증해야 하는지, 부정행위 인식과 증거의 적법성을 중심으로 전주이혼변호사가 실무 기준을 정리했습니다.</description>
       <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사, 소장 접수 전 비용 점검</title>
-      <link>https://column.taeandkyu.com/blog/civil-filing-cost-check</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-filing-cost-check</guid>
-      <description>민사소송을 시작하기 전에 인지대와 송달료, 회수 가능성까지 어떻게 따져봐야 하는지, 전주민사변호사가 소장 접수 전에 점검하는 비용 기준을 실무로 정리했습니다.</description>
-      <pubDate>Mon, 03 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

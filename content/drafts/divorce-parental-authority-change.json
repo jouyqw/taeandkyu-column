@@ -2,7 +2,6 @@
   "category": "divorce",
   "slug": "divorce-parental-authority-change",
   "keyword": "전주이혼변호사",
-  "publishAt": "2026-08-31",
   "title": "이혼 뒤 양육자를 바꾸려면",
   "description": "이혼할 때 정한 양육자를 나중에 바꿀 수 있는지, 어떤 사정이 필요하고 절차는 어떻게 되는지 전주이혼변호사가 상담에서 자주 받는 질문을 중심으로 정리했습니다.",
   "lead": "결론부터 말씀드리면, 양육자는 한 번 정해지면 끝이 아니라 자녀의 복리를 위해 필요하다고 인정되면 변경을 구할 수 있습니다. 다만 ‘합의 때보다 내 형편이 나아졌다’는 사정만으로는 부족합니다.",
@@ -22,8 +21,18 @@
     }
   ],
   "related": [
-    { "href": "/blog/divorce-custody-preparation", "label": "양육권을 두고 다툴 때 준비할 것" },
-    { "href": "/blog/divorce-visitation-rights-guide", "label": "면접교섭, 어떻게 정하고 지키나" },
-    { "href": "/blog/divorce-unpaid-child-support-response", "label": "양육비가 밀렸을 때의 대응 순서" }
-  ]
+    {
+      "href": "/blog/divorce-custody-preparation",
+      "label": "양육권을 두고 다툴 때 준비할 것"
+    },
+    {
+      "href": "/blog/divorce-visitation-rights-guide",
+      "label": "면접교섭, 어떻게 정하고 지키나"
+    },
+    {
+      "href": "/blog/divorce-unpaid-child-support-response",
+      "label": "양육비가 밀렸을 때의 대응 순서"
+    }
+  ],
+  "date": "2026-08-31"
 }
