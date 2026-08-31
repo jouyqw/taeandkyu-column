@@ -2,7 +2,6 @@
   "category": "civil",
   "slug": "civil-small-claim-procedure",
   "keyword": "전주민사변호사",
-  "publishAt": "2026-09-01",
   "title": "3천만원 이하 소액사건은 어떻게 진행되나",
   "description": "소가 3천만원 이하 소액사건의 절차와 이행권고결정, 가족의 소송대리, 1회 변론 원칙까지 전주민사변호사가 실제 상담에서 자주 나오는 순서대로 정리했습니다.",
   "lead": "결론부터 말씀드리면, 소액사건은 절차가 간단한 대신 준비할 시간도 짧습니다. 첫 기일에 낼 자료를 미리 갖춰 두는 것이 사실상 승부처입니다.",
@@ -22,8 +21,18 @@
     }
   ],
   "related": [
-    { "href": "/blog/civil-payment-order-application", "label": "지급명령 신청, 어떤 경우에 유리한가" },
-    { "href": "/blog/civil-filing-cost-check", "label": "민사소송을 내기 전 비용 확인" },
-    { "href": "/blog/civil-post-judgment-enforcement", "label": "판결을 받은 뒤 집행 절차" }
-  ]
+    {
+      "href": "/blog/civil-payment-order-application",
+      "label": "지급명령 신청, 어떤 경우에 유리한가"
+    },
+    {
+      "href": "/blog/civil-filing-cost-check",
+      "label": "민사소송을 내기 전 비용 확인"
+    },
+    {
+      "href": "/blog/civil-post-judgment-enforcement",
+      "label": "판결을 받은 뒤 집행 절차"
+    }
+  ],
+  "date": "2026-09-01"
 }

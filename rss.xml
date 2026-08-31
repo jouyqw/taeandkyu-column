@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 30 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>3천만원 이하 소액사건은 어떻게 진행되나</title>
+      <link>https://column.taeandkyu.com/blog/civil-small-claim-procedure</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-small-claim-procedure</guid>
+      <description>소가 3천만원 이하 소액사건의 절차와 이행권고결정, 가족의 소송대리, 1회 변론 원칙까지 전주민사변호사가 실제 상담에서 자주 나오는 순서대로 정리했습니다.</description>
+      <pubDate>Mon, 31 Aug 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>이혼 뒤 양육자를 바꾸려면</title>
       <link>https://column.taeandkyu.com/blog/divorce-parental-authority-change</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/criminal-victim-statement-review</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-victim-statement-review</guid>
       <description>상대방의 피해자 진술이 나왔을 때 무엇을 어떻게 검토해야 하는지, 진술의 일관성과 객관적 정황을 중심으로 전주형사전문변호사가 실무 기준을 정리했습니다.</description>
-      <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사, 상간 위자료 청구의 기준</title>
-      <link>https://column.taeandkyu.com/blog/divorce-adultery-alimony-claim</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-adultery-alimony-claim</guid>
-      <description>배우자의 부정행위 상대방에게 위자료를 청구할 때 무엇을 어떻게 입증해야 하는지, 부정행위 인식과 증거의 적법성을 중심으로 전주이혼변호사가 실무 기준을 정리했습니다.</description>
       <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
