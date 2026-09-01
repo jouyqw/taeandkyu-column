@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 31 Aug 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>집행유예 기간 중 사건이 또 생겼다면</title>
+      <link>https://column.taeandkyu.com/blog/criminal-probation-period-new-case</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-probation-period-new-case</guid>
+      <description>집행유예 기간에 새 사건이 생기면 앞선 형까지 함께 문제가 됩니다. 실효와 취소의 차이, 초기 대응에서 무엇을 확인해야 하는지 전주형사전문변호사가 정리했습니다.</description>
+      <pubDate>Tue, 01 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>3천만원 이하 소액사건은 어떻게 진행되나</title>
       <link>https://column.taeandkyu.com/blog/civil-small-claim-procedure</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/civil-payment-order-application</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-payment-order-application</guid>
       <description>돈을 돌려받기 위한 지급명령을 신청하기 전에 무엇을 확인해야 하는지, 이의신청 가능성과 소송 전환까지 전주민사변호사가 실무 기준으로 정리했습니다.</description>
-      <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사, 피해자 진술 검토의 핵심</title>
-      <link>https://column.taeandkyu.com/blog/criminal-victim-statement-review</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-victim-statement-review</guid>
-      <description>상대방의 피해자 진술이 나왔을 때 무엇을 어떻게 검토해야 하는지, 진술의 일관성과 객관적 정황을 중심으로 전주형사전문변호사가 실무 기준을 정리했습니다.</description>
       <pubDate>Tue, 04 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>

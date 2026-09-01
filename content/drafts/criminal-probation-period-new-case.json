@@ -2,7 +2,6 @@
   "category": "criminal",
   "slug": "criminal-probation-period-new-case",
   "keyword": "전주형사전문변호사",
-  "publishAt": "2026-09-02",
   "title": "집행유예 기간 중 사건이 또 생겼다면",
   "description": "집행유예 기간에 새 사건이 생기면 앞선 형까지 함께 문제가 됩니다. 실효와 취소의 차이, 초기 대응에서 무엇을 확인해야 하는지 전주형사전문변호사가 정리했습니다.",
   "lead": "결론부터 말씀드리면, 이때 다투어야 할 것은 새 사건 하나가 아니라 ‘앞선 집행유예가 어떻게 되는가’까지입니다. 두 사건을 따로 보면 대응이 늦어집니다.",
@@ -22,8 +21,18 @@
     }
   ],
   "related": [
-    { "href": "/blog/criminal-suspended-sentence-conditions", "label": "집행유예는 어떤 기준으로 정해지나" },
-    { "href": "/blog/criminal-first-statement-guide", "label": "첫 진술 전에 정리해 둘 것" },
-    { "href": "/blog/criminal-settlement-standard", "label": "형사합의, 언제 어떤 기준으로 하나" }
-  ]
+    {
+      "href": "/blog/criminal-suspended-sentence-conditions",
+      "label": "집행유예는 어떤 기준으로 정해지나"
+    },
+    {
+      "href": "/blog/criminal-first-statement-guide",
+      "label": "첫 진술 전에 정리해 둘 것"
+    },
+    {
+      "href": "/blog/criminal-settlement-standard",
+      "label": "형사합의, 언제 어떤 기준으로 하나"
+    }
+  ],
+  "date": "2026-09-02"
 }
