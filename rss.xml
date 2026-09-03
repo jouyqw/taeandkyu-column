@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 02 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>옆집 담장이 우리 땅을 넘었다면</title>
+      <link>https://column.taeandkyu.com/blog/civil-land-boundary-dispute</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-land-boundary-dispute</guid>
+      <description>토지 경계 분쟁에서 측량부터 경계확정의 소, 철거 청구와 점유취득시효까지 무엇을 순서대로 확인해야 하는지 전주민사변호사가 실제 상담 흐름대로 정리했습니다.</description>
+      <pubDate>Thu, 03 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>빚만 남기고 떠난 가족, 3개월이 갈림길입니다</title>
       <link>https://column.taeandkyu.com/blog/civil-inheritance-renunciation-guide</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/civil-certified-letter-standard</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-certified-letter-standard</guid>
       <description>내용증명을 보내려는데 어떻게 써야 효과가 있을지 고민되시나요. 전주민사변호사가 내용증명의 역할과 문구 기준, 보내는 시점을 상담 경험으로 정리했습니다.</description>
-      <pubDate>Fri, 07 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>명예훼손·모욕 고소를 받았다면</title>
-      <link>https://column.taeandkyu.com/blog/criminal-defamation-insult-response</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-defamation-insult-response</guid>
-      <description>온라인 글이나 말 한마디로 명예훼손·모욕 고소를 받아 당황하셨나요. 전주형사전문변호사가 사실적시와 공연성 판단, 초기 대응 순서를 상담 경험으로 정리했습니다.</description>
       <pubDate>Fri, 07 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>

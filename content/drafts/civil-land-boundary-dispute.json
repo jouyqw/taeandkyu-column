@@ -2,7 +2,6 @@
   "category": "civil",
   "slug": "civil-land-boundary-dispute",
   "keyword": "전주민사변호사",
-  "publishAt": "2026-09-04",
   "title": "옆집 담장이 우리 땅을 넘었다면",
   "description": "토지 경계 분쟁에서 측량부터 경계확정의 소, 철거 청구와 점유취득시효까지 무엇을 순서대로 확인해야 하는지 전주민사변호사가 실제 상담 흐름대로 정리했습니다.",
   "lead": "결론부터 말씀드리면, 경계 다툼은 감정이 아니라 측량 성과로 시작해야 합니다. 어떤 측량을 받았는지에 따라 이후에 낼 수 있는 소송의 종류가 달라집니다.",
@@ -22,7 +21,14 @@
     }
   ],
   "related": [
-    { "href": "/blog/civil-jeonbuk-court-jurisdiction-guide", "label": "전북 지역 민사사건, 어느 법원에 내나" },
-    { "href": "/blog/civil-unjust-enrichment-return", "label": "부당이득 반환은 어떤 경우에 청구하나" }
-  ]
+    {
+      "href": "/blog/civil-jeonbuk-court-jurisdiction-guide",
+      "label": "전북 지역 민사사건, 어느 법원에 내나"
+    },
+    {
+      "href": "/blog/civil-unjust-enrichment-return",
+      "label": "부당이득 반환은 어떤 경우에 청구하나"
+    }
+  ],
+  "date": "2026-09-04"
 }
