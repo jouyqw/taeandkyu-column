@@ -141,7 +141,7 @@ ${indexCards}
 <section class="section"><div class="wrap"><div class="editorial-policy"><strong>법무법인 태앤규 칼럼 운영 원칙</strong><p>법무법인 태앤규가 전주·완주·군산·익산 지역에서 실제 상담하며 자주 받는 질문을 바탕으로 칼럼의 주제와 확인 기준을 정합니다. 실제 상담사례는 의뢰인을 알아볼 수 없도록 일부 사실관계를 변경·재구성하며, 공개 수행사례는 <a href="https://taeandkyu.com/">공식 홈페이지</a> 원문으로 연결합니다. <a href="https://taeandkyu.com/page/page16.php">대표변호사 경력</a>과 작성 주체를 공개하고 법령·절차 변경 시 내용을 갱신합니다.</p></div></div></section>
 <section class="section"><div class="wrap"><h2>전주변호사 상담 FAQ</h2><div class="faq"><details><summary>전주변호사 상담 전 무엇을 준비해야 하나요?</summary><p>사건 경위를 날짜순으로 적고 계약서, 문자, 계좌내역, 사진 등 관련 자료의 원본을 함께 준비하면 쟁점을 빠르게 확인하는 데 도움이 됩니다.</p></details><details><summary>형사·민사·이혼 중 어떤 분야로 상담해야 하나요?</summary><p>경찰·검찰 연락은 형사, 금전·계약 분쟁은 민사, 재산분할·양육권은 이혼·가사 분야를 먼저 확인하면 됩니다. 여러 문제가 겹치면 사실관계 전체를 설명해야 합니다.</p></details><details><summary>군산이나 익산 사건도 상담할 수 있나요?</summary><p>전주뿐 아니라 군산과 익산 사건도 관할과 진행 방법을 확인해 상담할 수 있습니다.</p></details></div></div></section>
 </main>
-<footer class="footer"><div class="wrap">본 칼럼은 일반적인 법률 정보이며, 개별 사건에 대한 법률 의견이 아닙니다.</div></footer>
+<footer class="footer"><div class="wrap">본 칼럼은 일반적인 법률 정보이며, 개별 사건에 대한 법률 의견이 아닙니다.<br>사이트 제작 및 운영 <a href="https://aubcompany.com/" rel="noopener" style="color:#6b7280">아비컴퍼니</a></div></footer>
 <script>
 (function(){
   var cards=[].slice.call(document.querySelectorAll('#colGrid .card'));
