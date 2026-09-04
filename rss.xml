@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 03 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>고소했는데 불송치 통지를 받았다면</title>
+      <link>https://column.taeandkyu.com/blog/criminal-victim-objection-guide</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-victim-objection-guide</guid>
+      <description>고소인이 불송치 통지를 받았을 때 이의신청 방법과 기한, 검사의 불기소 이후 항고·재정신청까지 이어지는 단계를 전주형사전문변호사가 순서대로 정리했습니다.</description>
+      <pubDate>Fri, 04 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>옆집 담장이 우리 땅을 넘었다면</title>
       <link>https://column.taeandkyu.com/blog/civil-land-boundary-dispute</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-special-property-division</guid>
       <description>결혼 전부터 있던 재산이나 상속받은 재산은 재산분할에서 어떻게 볼까요. 전주이혼변호사가 특유재산의 원칙과 예외, 기여도 입증을 상담 경험으로 정리했습니다.</description>
       <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>내용증명, 보내기 전에 정할 기준</title>
-      <link>https://column.taeandkyu.com/blog/civil-certified-letter-standard</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-certified-letter-standard</guid>
-      <description>내용증명을 보내려는데 어떻게 써야 효과가 있을지 고민되시나요. 전주민사변호사가 내용증명의 역할과 문구 기준, 보내는 시점을 상담 경험으로 정리했습니다.</description>
-      <pubDate>Fri, 07 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

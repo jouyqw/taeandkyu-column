@@ -2,7 +2,6 @@
   "category": "criminal",
   "slug": "criminal-victim-objection-guide",
   "keyword": "전주형사전문변호사",
-  "publishAt": "2026-09-05",
   "title": "고소했는데 불송치 통지를 받았다면",
   "description": "고소인이 불송치 통지를 받았을 때 이의신청 방법과 기한, 검사의 불기소 이후 항고·재정신청까지 이어지는 단계를 전주형사전문변호사가 순서대로 정리했습니다.",
   "lead": "결론부터 말씀드리면, 불송치 통지는 사건이 끝났다는 뜻이 아니라 다음 단계를 선택할 시점이 왔다는 뜻입니다. 다만 그 선택은 통지서에 적힌 이유를 읽고 나서 해야 합니다.",
@@ -22,7 +21,14 @@
     }
   ],
   "related": [
-    { "href": "/blog/criminal-victim-statement-review", "label": "피해자 진술은 어떻게 검토되나" },
-    { "href": "/blog/criminal-non-referral-evidence", "label": "불송치를 위한 자료 정리" }
-  ]
+    {
+      "href": "/blog/criminal-victim-statement-review",
+      "label": "피해자 진술은 어떻게 검토되나"
+    },
+    {
+      "href": "/blog/criminal-non-referral-evidence",
+      "label": "불송치를 위한 자료 정리"
+    }
+  ],
+  "date": "2026-09-05"
 }
