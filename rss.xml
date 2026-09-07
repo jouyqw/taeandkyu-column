@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 04 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>약식명령 벌금, 정식재판을 청구할까</title>
+      <link>https://column.taeandkyu.com/blog/criminal-summary-order-objection</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-summary-order-objection</guid>
+      <description>법원에서 약식명령 벌금 고지를 받았을 때 정식재판청구 기한 7일과 형종 상향 금지의 의미, 청구 실익을 따지는 기준을 전주형사전문변호사가 순서대로 정리했습니다.</description>
+      <pubDate>Sun, 06 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>고소했는데 불송치 통지를 받았다면</title>
       <link>https://column.taeandkyu.com/blog/criminal-victim-objection-guide</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/criminal-embezzlement-breach-of-trust</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-embezzlement-breach-of-trust</guid>
       <description>회삿돈이나 맡은 돈 문제로 횡령·배임 조사를 앞두었다면 무엇부터 볼까요. 전주형사전문변호사가 보관 관계와 임무, 자금 흐름을 기준으로 조사 전 준비 순서를 정리했습니다.</description>
-      <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사, 결혼 전 재산도 나눠야 하나요</title>
-      <link>https://column.taeandkyu.com/blog/divorce-special-property-division</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-special-property-division</guid>
-      <description>결혼 전부터 있던 재산이나 상속받은 재산은 재산분할에서 어떻게 볼까요. 전주이혼변호사가 특유재산의 원칙과 예외, 기여도 입증을 상담 경험으로 정리했습니다.</description>
       <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
