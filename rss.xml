@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 07 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>사실혼도 재산분할을 청구할 수 있을까</title>
+      <link>https://column.taeandkyu.com/blog/divorce-common-law-dissolution</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-common-law-dissolution</guid>
+      <description>혼인신고 없이 함께 살다 헤어질 때 사실혼 인정 기준과 재산분할·위자료 청구, 자녀 문제와 상속·연금까지 전주이혼변호사가 상담에서 자주 받는 순서대로 정리했습니다.</description>
+      <pubDate>Mon, 07 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>약식명령 벌금, 정식재판을 청구할까</title>
       <link>https://column.taeandkyu.com/blog/criminal-summary-order-objection</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/civil-guarantor-liability-response</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-guarantor-liability-response</guid>
       <description>지인 보증을 섰다가 갑자기 돈을 갚으라는 청구를 받았다면 무엇부터 볼까요. 전주민사변호사가 보증의 범위와 소멸시효, 대응 순서를 상담 경험으로 정리했습니다.</description>
-      <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사가 본 횡령·배임 조사 준비</title>
-      <link>https://column.taeandkyu.com/blog/criminal-embezzlement-breach-of-trust</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-embezzlement-breach-of-trust</guid>
-      <description>회삿돈이나 맡은 돈 문제로 횡령·배임 조사를 앞두었다면 무엇부터 볼까요. 전주형사전문변호사가 보관 관계와 임무, 자금 흐름을 기준으로 조사 전 준비 순서를 정리했습니다.</description>
       <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
