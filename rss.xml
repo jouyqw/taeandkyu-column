@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 08 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>월세가 밀린 세입자를 내보내려면</title>
+      <link>https://column.taeandkyu.com/blog/civil-eviction-lawsuit-guide</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-eviction-lawsuit-guide</guid>
+      <description>차임 연체로 계약을 해지하고 건물 인도를 구할 때 해지 통보와 점유이전금지가처분, 밀린 월세 청구와 인도집행까지 이어지는 순서를 전주민사변호사가 실무 기준으로 정리했습니다.</description>
+      <pubDate>Tue, 08 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>사실혼도 재산분할을 청구할 수 있을까</title>
       <link>https://column.taeandkyu.com/blog/divorce-common-law-dissolution</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-agreement-draft-caution</guid>
       <description>이혼 합의서, 서명 전 무엇을 확인해야 할까요. 전주이혼변호사가 재산분할과 양육비, 위자료 조항에서 자주 생기는 분쟁을 상담 경험으로 정리했습니다.</description>
       <pubDate>Sun, 09 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사, 보증 섰다가 청구받았다면</title>
-      <link>https://column.taeandkyu.com/blog/civil-guarantor-liability-response</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-guarantor-liability-response</guid>
-      <description>지인 보증을 섰다가 갑자기 돈을 갚으라는 청구를 받았다면 무엇부터 볼까요. 전주민사변호사가 보증의 범위와 소멸시효, 대응 순서를 상담 경험으로 정리했습니다.</description>
-      <pubDate>Sat, 08 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
