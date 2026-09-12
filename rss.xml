@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 11 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>상속재산, 형제끼리 협의가 안 될 때</title>
+      <link>https://column.taeandkyu.com/blog/civil-inheritance-division-trial</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-inheritance-division-trial</guid>
+      <description>상속인 사이 협의가 깨졌을 때 상속재산분할 심판으로 넘어가는 순서와 생전 증여·기여분이 계산에 들어가는 방식, 나누기 어려운 부동산의 처리 방법을 전주민사변호사가 정리했습니다.</description>
+      <pubDate>Fri, 11 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>이혼은 했는데 재산분할을 못 했다면</title>
       <link>https://column.taeandkyu.com/blog/divorce-post-divorce-property-claim</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-later-life-property-division</guid>
       <description>오랜 결혼 생활 끝의 황혼이혼, 재산분할은 무엇이 다를까요. 전주이혼변호사가 기여도 판단과 연금·퇴직금, 자료 정리 순서를 실무 관점에서 짚었습니다.</description>
       <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사가 본 공사대금 청구의 순서</title>
-      <link>https://column.taeandkyu.com/blog/civil-construction-payment-claim</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-construction-payment-claim</guid>
-      <description>공사대금을 못 받았을 때 무엇부터 정리해야 할까요. 전주민사변호사가 계약과 추가공사, 하자 주장에 대비한 증거 정리와 청구 순서를 실무 관점에서 짚었습니다.</description>
-      <pubDate>Sun, 09 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
