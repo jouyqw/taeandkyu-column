@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 12 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>기소유예를 기대할 수 있는 사건일까</title>
+      <link>https://column.taeandkyu.com/blog/criminal-prosecution-suspension-standard</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-prosecution-suspension-standard</guid>
+      <description>혐의는 인정되지만 재판에 넘기지 않는 기소유예, 어떤 사건에서 검토되고 처분 전에 무엇을 내야 하며 수사경력은 어떻게 남는지 전주형사전문변호사가 상담 경험을 바탕으로 정리했습니다.</description>
+      <pubDate>Sat, 12 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>상속재산, 형제끼리 협의가 안 될 때</title>
       <link>https://column.taeandkyu.com/blog/civil-inheritance-division-trial</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/criminal-stalking-report-response</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-stalking-report-response</guid>
       <description>스토킹처벌법 신고를 받았다면 무엇부터 확인해야 할까요. 전주형사전문변호사가 지속·반복성 판단과 초기 진술, 접근금지 결정 대응까지 실무 관점에서 짚었습니다.</description>
-      <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사가 본 황혼이혼 재산분할</title>
-      <link>https://column.taeandkyu.com/blog/divorce-later-life-property-division</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-later-life-property-division</guid>
-      <description>오랜 결혼 생활 끝의 황혼이혼, 재산분할은 무엇이 다를까요. 전주이혼변호사가 기여도 판단과 연금·퇴직금, 자료 정리 순서를 실무 관점에서 짚었습니다.</description>
       <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
