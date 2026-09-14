@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 13 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>이혼 소송 중 재산을 처분할까 걱정된다면</title>
+      <link>https://column.taeandkyu.com/blog/divorce-asset-freeze-injunction</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-asset-freeze-injunction</guid>
+      <description>이혼 소송 중 배우자가 부동산이나 예금을 처분하지 못하도록 하는 가압류·처분금지가처분의 차이와 준비 자료, 이미 넘어간 재산을 되돌리는 방법을 전주이혼변호사가 정리했습니다.</description>
+      <pubDate>Sun, 13 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>기소유예를 기대할 수 있는 사건일까</title>
       <link>https://column.taeandkyu.com/blog/criminal-prosecution-suspension-standard</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/civil-lease-restoration-dispute</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-lease-restoration-dispute</guid>
       <description>상가 임대차가 끝날 때 원상복구 범위로 다투는 경우가 많습니다. 전주민사변호사가 복구 의무의 기준과 보증금 공제, 자료 정리 순서를 실무 관점에서 짚었습니다.</description>
-      <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주형사전문변호사가 본 스토킹 신고 대응</title>
-      <link>https://column.taeandkyu.com/blog/criminal-stalking-report-response</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-stalking-report-response</guid>
-      <description>스토킹처벌법 신고를 받았다면 무엇부터 확인해야 할까요. 전주형사전문변호사가 지속·반복성 판단과 초기 진술, 접근금지 결정 대응까지 실무 관점에서 짚었습니다.</description>
       <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
