@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 14 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>윗집 누수, 수리비는 누구에게 청구할까</title>
+      <link>https://column.taeandkyu.com/blog/civil-water-leak-damage-claim</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-water-leak-damage-claim</guid>
+      <description>아파트 누수 피해에서 책임 주체를 가르는 전유부분과 공용부분의 구분, 먼저 확보할 증거와 청구 범위, 상대가 응하지 않을 때의 절차를 전주민사변호사가 순서대로 정리했습니다.</description>
+      <pubDate>Mon, 14 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>이혼 소송 중 재산을 처분할까 걱정된다면</title>
       <link>https://column.taeandkyu.com/blog/divorce-asset-freeze-injunction</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-business-owner-property-division</guid>
       <description>배우자가 자영업이나 사업체를 운영한다면 재산분할은 어떻게 준비할까요. 전주이혼변호사가 사업소득 파악과 명의, 부채 정리를 기준으로 사업하는 배우자와의 재산분할 준비를 짚었습니다.</description>
       <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사가 본 상가 원상복구 분쟁</title>
-      <link>https://column.taeandkyu.com/blog/civil-lease-restoration-dispute</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-lease-restoration-dispute</guid>
-      <description>상가 임대차가 끝날 때 원상복구 범위로 다투는 경우가 많습니다. 전주민사변호사가 복구 의무의 기준과 보증금 공제, 자료 정리 순서를 실무 관점에서 짚었습니다.</description>
-      <pubDate>Tue, 11 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
