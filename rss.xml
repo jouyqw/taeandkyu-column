@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 15 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>구속적부심과 보석은 무엇이 다를까</title>
+      <link>https://column.taeandkyu.com/blog/criminal-bail-and-detention-review</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-bail-and-detention-review</guid>
+      <description>구속영장이 발부된 뒤에도 다시 판단을 구하는 절차가 있습니다. 구속적부심사와 보석의 시기·청구권자·준비 자료의 차이를 전주형사전문변호사가 단계별로 정리했습니다.</description>
+      <pubDate>Tue, 15 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>윗집 누수, 수리비는 누구에게 청구할까</title>
       <link>https://column.taeandkyu.com/blog/civil-water-leak-damage-claim</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/criminal-theft-early-response</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-theft-early-response</guid>
       <description>절도 혐의로 연락을 받았다면 무엇부터 해야 할까요. 전주형사전문변호사가 불법영득의사와 초기 진술, CCTV 자료 정리를 기준으로 절도 사건 초기 대응 순서를 실무 관점에서 정리했습니다.</description>
-      <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주이혼변호사, 사업하는 배우자와 재산분할</title>
-      <link>https://column.taeandkyu.com/blog/divorce-business-owner-property-division</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-business-owner-property-division</guid>
-      <description>배우자가 자영업이나 사업체를 운영한다면 재산분할은 어떻게 준비할까요. 전주이혼변호사가 사업소득 파악과 명의, 부채 정리를 기준으로 사업하는 배우자와의 재산분할 준비를 짚었습니다.</description>
       <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
