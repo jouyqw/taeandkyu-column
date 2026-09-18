@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 17 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>상가 권리금을 회수하지 못하게 됐다면</title>
+      <link>https://column.taeandkyu.com/blog/civil-store-premium-recovery</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-store-premium-recovery</guid>
+      <description>새 임차인을 구했는데 임대인이 계약을 거절해 권리금을 놓쳤을 때, 회수 방해로 볼 수 있는 행위와 남겨야 할 자료, 기간 제한까지 전주민사변호사가 정리했습니다.</description>
+      <pubDate>Thu, 17 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>가사조사 기일, 무엇을 묻고 무엇을 볼까</title>
       <link>https://column.taeandkyu.com/blog/divorce-family-investigation-interview</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-at-fault-spouse-petition</guid>
       <description>혼인이 깨진 책임이 있는 배우자의 이혼 청구는 원칙적으로 어렵지만 예외도 있습니다. 전주이혼변호사가 유책배우자 이혼청구의 기준과 준비 방향을 상담 경험으로 정리했습니다.</description>
       <pubDate>Thu, 13 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주민사변호사가 본 부당이득 반환 청구</title>
-      <link>https://column.taeandkyu.com/blog/civil-unjust-enrichment-return</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-unjust-enrichment-return</guid>
-      <description>잘못 보낸 돈이나 근거 없이 넘어간 이익을 돌려받으려면 어떻게 준비할까요. 전주민사변호사가 법률상 원인, 이익과 손해, 반환 범위를 기준으로 부당이득 반환 청구 준비를 실무 관점에서 정리했습니다.</description>
-      <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
