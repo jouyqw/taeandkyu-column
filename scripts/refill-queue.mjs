@@ -31,7 +31,58 @@ const MAX_ADD = 12;
 const RETRY = 2;
 const BATCH_TIMEOUT = 30 * 60 * 1000;
 const CATS = ['criminal', 'divorce', 'civil'];
-const KEYWORD = { criminal: '전주형사전문변호사', divorce: '전주이혼변호사', civil: '전주민사변호사' };
+
+/**
+ * 분야별 타깃 키워드 풀.
+ *
+ * 예전에는 분야마다 키워드가 하나씩 고정이라, 159편을 써도 노리는 검색어가 셋뿐이었다.
+ * 네이버·구글 웹사이트 영역은 "지역+분야+변호사" 형태로 잘게 갈린 검색어에서 자리가 난다.
+ * 그래서 지역(전주·익산)과 세부 분야(성범죄 등)로 풀을 넓히고, 글마다 돌려 가며 배정한다.
+ * 한 글에 여러 키워드를 욱여넣지 않는다 — 글 하나당 키워드 하나가 원칙이다.
+ *
+ * 주의: "전문변호사" 는 대한변호사협회에 그 분야로 전문 등록을 한 경우에만 자칭할 수 있다.
+ * 형사는 기존부터 써 오던 표기라 그대로 두되, 등록하지 않은 분야는 자칭하지 않는다.
+ * 등록이 없는 분야의 "전문" 검색어는 KEYWORD_INFORMATIONAL 로 따로 다룬다(자칭 대신 안내 각도).
+ */
+// 괄호 안은 네이버 검색광고 API 실측 월간 검색수(2026-09-19).
+// 주변 지역은 분야를 붙이면 검색이 사라진다 — 익산변호사는 330회인데 익산형사변호사는 10회 미만이다.
+// 그래서 전주만 분야를 쪼개고, 익산·군산·정읍·남원은 분야 없는 일반 키워드로 잡는다.
+const KEYWORD = {
+  criminal: [
+    '전주형사전문변호사',   // 610
+    '전주형사변호사',       // 360
+    '전주성범죄변호사',     // 330
+    '익산변호사',           // 330 (분야 무관 — 익산 사건 전반을 다룬다)
+    '전주학교폭력변호사',   // 60 + 전주학폭변호사 60
+  ],
+  divorce: [
+    '전주이혼변호사',       // 550
+    '전주이혼전문변호사',   // 690 — 전문 등록 확인 전이라 자칭 금지(아래 주의 참고)
+    '군산이혼변호사',       // 80
+    '군산변호사',           // 480 (분야 무관 — 군산 사건 전반)
+  ],
+  civil: [
+    '전주민사변호사',       // 180
+    '전주부동산변호사',     // 210
+    '전주교통사고변호사',   // 60 · '전주교통사고' 단독은 1,330
+    '전주상속변호사',       // 75
+    '정읍변호사',           // 80
+  ],
+};
+
+/**
+ * 자칭하면 안 되지만 검색 수요는 있는 키워드.
+ * 제목에 "○○전문변호사, ~" 처럼 붙이지 말고, 그 표현을 찾는 사람에게 설명하는 각도로 쓴다.
+ * (예: "이혼 전문 변호사를 고를 때 무엇을 확인해야 하나")
+ */
+const KEYWORD_INFORMATIONAL = { divorce: ['전주이혼전문변호사'] };
+
+/**
+ * 주변 지역 키워드(익산변호사·군산변호사·정읍변호사)는 분야가 없다.
+ * 그 지역 사람이 "우리 동네 변호사"를 찾는 검색이므로, 글도 그렇게 써야 한다.
+ * 분야 주제를 그대로 쓰면서 지역명만 바꾸면 검색 의도와 어긋나 순위가 안 난다.
+ */
+const REGION_ONLY = new Set(['익산변호사', '군산변호사', '정읍변호사', '남원변호사']);
 
 const CLAUDE = [
   'C:\\Users\\c\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe\\claude.exe',
@@ -98,7 +149,7 @@ function validate(slug, known) {
 /* ---------- 프롬프트 ---------- */
 function prompt(batch, known) {
   const recent = [...known.titles].slice(-40).map((t) => `- ${t}`).join('\n');
-  const rows = batch.map((b) => `- category: ${b.category} / keyword: ${b.keyword} / date(publishAt): ${b.publishAt} / slug 접두사: ${b.category}-`).join('\n');
+  const rows = batch.map((b) => `- category: ${b.category} / keyword: ${b.keyword}${REGION_ONLY.has(b.keyword) ? ' (지역형: 분야를 좁히지 말고 그 지역에서 사건을 맡길 때 확인할 것을 쓴다)' : ''} / date(publishAt): ${b.publishAt} / slug 접두사: ${b.category}-`).join('\n');
   const relatable = [...known.blog].slice(-30).map((s) => `/blog/${s}`).join('\n');
   return `너는 법무법인 태앤규(전주)의 칼럼을 쓴다. column.taeandkyu.com 예약 큐에 ${batch.length}건을 채운다.
 
@@ -123,6 +174,14 @@ ${rows}
   · 인포그래픽: <div class="infographic">...</div> (svg 속성만 홑따옴표, class 는 큰따옴표)
 - 도입부는 상담에서 겪는 구체적 장면 하나로 연다. 짧은 문단(1~2문장), 모바일 가독성 우선.
 - keyword 를 본문에 자연스럽게 4~8회. 결과 보장·승소율·단정 표현 금지.
+- **keyword 의 지역을 실제로 다룬다.** 익산 키워드면 전주 이야기만 쓰지 말고, 익산에서 사건이
+  어디로 가는지(관할 법원·검찰청, 이동 동선, 조사 일정 잡는 법)를 구체적으로 적는다.
+  지역명만 제목에 붙이고 본문은 똑같은 일반론이면 검색엔진이 대량생성으로 보고 걸러낸다.
+  · 전주 → 전주지방법원 / 전주지방검찰청
+  · 익산 → 전주지방법원 군산지원 / 전주지방검찰청 군산지청 (익산은 군산지원 관할이다)
+- **"전문변호사" 를 자칭하지 않는다.** keyword 에 그 표현이 들어 있으면 제목에 그대로 붙이되,
+  본문에서 "저희가 전문입니다" 식으로 쓰지 않는다. 전문 표기는 대한변호사협회 등록 분야에만
+  쓸 수 있다. 자격을 설명해야 할 상황이면 등록 여부를 확인하는 방법을 안내하는 쪽으로 쓴다.
 - related 는 아래 "실제 존재하는 글" 에서만 고른다(깨진 링크 금지):
 ${relatable}
 - slug 은 영문 소문자·하이픈, category 접두사 필수, 날짜 붙이지 말 것. 기존과 중복 금지.
@@ -190,11 +249,39 @@ const known = { blog: blogSlugs(), titles: new Set(), newSlugs: new Set() };
 [...blogSlugs()].forEach(() => {}); // titles 는 blog 제목을 모르므로 큐/생성분만 비교
 queueItems().forEach((f) => { try { known.titles.add(JSON.parse(fs.readFileSync(path.join(QUEUE, f), 'utf8')).title); } catch {} });
 
+/**
+ * 이미 쓴 키워드를 세어 가장 적게 쓴 것부터 배정한다.
+ * 순서대로만 돌리면 새로 넣은 키워드가 맨 뒤로 밀려 몇 주 동안 한 편도 안 나온다.
+ */
+function keywordUsage() {
+  const used = new Map();
+  const bump = (k) => { if (k) used.set(k, (used.get(k) ?? 0) + 1); };
+  for (const dir of [DRAFTS, QUEUE]) {
+    let files = [];
+    try { files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')); } catch { }
+    for (const f of files) {
+      try { bump(JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).keyword); } catch { }
+    }
+  }
+  return used;
+}
+
+const usage = keywordUsage();
+const pickKeyword = (cat) => {
+  const pool = KEYWORD[cat];
+  let best = pool[0];
+  for (const k of pool) if ((usage.get(k) ?? 0) < (usage.get(best) ?? 0)) best = k;
+  usage.set(best, (usage.get(best) ?? 0) + 1);   // 같은 배치 안에서도 겹치지 않게
+  return best;
+};
+
 const batch = [];
 for (let i = 0; i < need; i += 1) {
   const publishAt = addDays(base, i + 1);
-  batch.push({ category: CATS[i % 3], keyword: KEYWORD[CATS[i % 3]], publishAt });
+  const category = CATS[i % 3];
+  batch.push({ category, keyword: pickKeyword(category), publishAt });
 }
+log('배정 키워드: ' + batch.map((b) => b.keyword).join(', '));
 log(`${need}건 보충 시작 → ${batch[0].publishAt} ~ ${batch[batch.length - 1].publishAt}`);
 
 const written = [];
