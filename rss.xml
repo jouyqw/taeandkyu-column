@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 20 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>소송에서 이겼는데 변호사비는 누가 낼까</title>
+      <link>https://column.taeandkyu.com/blog/civil-litigation-cost-recovery</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-litigation-cost-recovery</guid>
+      <description>판결 주문의 소송비용 부담 문구가 실제로 무엇을 뜻하는지, 변호사보수는 어디까지 돌려받는지, 소송비용액확정 신청 절차와 회수 현실을 전주민사변호사가 정리했습니다.</description>
+      <pubDate>Sun, 20 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>빚이 더 많은 부부, 재산분할은 어떻게 될까</title>
       <link>https://column.taeandkyu.com/blog/divorce-marital-debt-division</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-lawsuit-process-timeline</guid>
       <description>협의가 되지 않아 소송으로 가면 절차가 어떻게 흘러가는지, 전주이혼전문변호사가 조정부터 변론과 판결까지의 단계와 기간을 좌우하는 요인을 상담 경험을 바탕으로 정리했습니다.</description>
       <pubDate>Fri, 21 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>재산을 빼돌린 채무자, 사해행위취소란</title>
-      <link>https://column.taeandkyu.com/blog/civil-fraudulent-transfer-cancellation</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-fraudulent-transfer-cancellation</guid>
-      <description>돈을 받아야 하는데 채무자가 재산을 다른 사람 명의로 넘겼다면 사해행위취소를 검토할 수 있습니다. 전주민사변호사가 요건과 기한, 준비 자료를 상담 경험으로 정리했습니다.</description>
-      <pubDate>Thu, 13 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
