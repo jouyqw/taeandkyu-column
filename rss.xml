@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 21 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>고소했다가 무고로 역고소를 당했다면</title>
+      <link>https://column.taeandkyu.com/blog/criminal-false-accusation-counter</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-false-accusation-counter</guid>
+      <description>피해자라고 생각해 고소했는데 상대가 무고로 역고소하는 경우가 있습니다. 무고죄가 성립하는 기준과 일부만 사실일 때의 판단, 조사 전에 정리할 자료를 전주형사전문변호사가 짚었습니다.</description>
+      <pubDate>Mon, 21 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>소송에서 이겼는데 변호사비는 누가 낼까</title>
       <link>https://column.taeandkyu.com/blog/civil-litigation-cost-recovery</link>
@@ -208,13 +215,6 @@
       <link>https://column.taeandkyu.com/blog/criminal-sex-crime-consent-dispute</link>
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-sex-crime-consent-dispute</guid>
       <description>합의가 있었다는 주장과 없었다는 주장이 정면으로 맞설 때 수사기관은 무엇을 보는지, 전주성범죄변호사가 조사 전 정리해야 할 자료와 진술의 순서를 상담 경험을 바탕으로 짚었습니다.</description>
-      <pubDate>Fri, 21 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>이혼 소송, 실제로 얼마나 걸릴까</title>
-      <link>https://column.taeandkyu.com/blog/divorce-lawsuit-process-timeline</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-lawsuit-process-timeline</guid>
-      <description>협의가 되지 않아 소송으로 가면 절차가 어떻게 흘러가는지, 전주이혼전문변호사가 조정부터 변론과 판결까지의 단계와 기간을 좌우하는 요인을 상담 경험을 바탕으로 정리했습니다.</description>
       <pubDate>Fri, 21 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
