@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 23 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>부동산을 다른 사람 이름으로 사 두었다면</title>
+      <link>https://column.taeandkyu.com/blog/civil-title-trust-real-estate</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-title-trust-real-estate</guid>
+      <description>내 돈으로 샀지만 등기는 가족이나 지인 이름으로 해 둔 부동산, 돌려받을 수 있을까요. 명의신탁의 유형별 결론과 과징금·처벌 위험, 자료 정리 순서를 전주민사변호사가 짚었습니다.</description>
+      <pubDate>Wed, 23 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>결혼 전 사실을 숨겼다면 혼인 취소가 될까</title>
       <link>https://column.taeandkyu.com/blog/divorce-marriage-annulment-grounds</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-first-trial-preparation</guid>
       <description>공소장을 받고 첫 재판일이 잡히면 무엇부터 해야 하는지, 전주형사변호사가 공소사실 인부와 증거 동의, 양형자료 준비를 상담 경험을 바탕으로 순서대로 정리했습니다.</description>
       <pubDate>Mon, 24 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>익산·군산 사건, 어느 법원으로 갈까</title>
-      <link>https://column.taeandkyu.com/blog/civil-jeonbuk-court-jurisdiction-guide</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-jeonbuk-court-jurisdiction-guide</guid>
-      <description>소송을 내려는데 어느 법원에 접수해야 하는지 헷갈리신다면, 익산변호사가 전북 지역 관할의 기본 원칙과 실제로 자주 어긋나는 지점을 사례와 함께 정리했습니다.</description>
-      <pubDate>Fri, 21 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
