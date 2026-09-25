@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 24 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>사건이 검찰로 넘어갔다는 연락을 받았다면</title>
+      <link>https://column.taeandkyu.com/blog/criminal-prosecution-transfer-response</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-prosecution-transfer-response</guid>
+      <description>경찰 조사가 끝나고 사건이 검찰로 송치되면 무엇이 달라지는지, 검사실 조사 전 확인할 서류와 제출할 자료, 처분 통지를 받은 뒤의 기한까지 전주형사전문변호사가 실무 기준으로 정리했습니다.</description>
+      <pubDate>Thu, 24 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>부동산을 다른 사람 이름으로 사 두었다면</title>
       <link>https://column.taeandkyu.com/blog/civil-title-trust-real-estate</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-appeal-decision-guide</guid>
       <description>1심 선고를 받고 항소할지 고민이라면 항소기간 7일과 항소이유서 20일, 불이익변경금지의 범위를 먼저 확인해야 합니다. 전주형사전문변호사가 판단 순서를 정리했습니다.</description>
       <pubDate>Sat, 29 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>첫 공판을 앞두고 무엇을 준비하나</title>
-      <link>https://column.taeandkyu.com/blog/criminal-first-trial-preparation</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-first-trial-preparation</guid>
-      <description>공소장을 받고 첫 재판일이 잡히면 무엇부터 해야 하는지, 전주형사변호사가 공소사실 인부와 증거 동의, 양형자료 준비를 상담 경험을 바탕으로 순서대로 정리했습니다.</description>
-      <pubDate>Mon, 24 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

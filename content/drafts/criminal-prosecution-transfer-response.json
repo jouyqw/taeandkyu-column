@@ -22,8 +22,13 @@
     }
   ],
   "related": [
-    { "href": "/blog/jeonju-criminal-lawyer-police-investigation-manual", "label": "경찰 조사 대응 매뉴얼" },
-    { "href": "/blog/jeonju-criminal-lawyer-early-response", "label": "형사사건 초기 대응에서 챙길 것" }
-  ],
-  "publishAt": "2026-09-25"
+    {
+      "href": "/blog/jeonju-criminal-lawyer-police-investigation-manual",
+      "label": "경찰 조사 대응 매뉴얼"
+    },
+    {
+      "href": "/blog/jeonju-criminal-lawyer-early-response",
+      "label": "형사사건 초기 대응에서 챙길 것"
+    }
+  ]
 }
