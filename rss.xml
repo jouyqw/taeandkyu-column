@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 25 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>학교폭력 심의위원회 통지를 받았다면</title>
+      <link>https://column.taeandkyu.com/blog/criminal-school-violence-response</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-school-violence-response</guid>
+      <description>전주 지역 학교폭력 사안은 누가 조사하고 어디에서 결정되는지, 1호부터 9호까지 조치가 생활기록부에 어떻게 남는지, 불복 기한과 형사 절차까지 전주학교폭력변호사가 정리했습니다.</description>
+      <pubDate>Fri, 25 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>사건이 검찰로 넘어갔다는 연락을 받았다면</title>
       <link>https://column.taeandkyu.com/blog/criminal-prosecution-transfer-response</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-parental-authority-change</guid>
       <description>이혼할 때 정한 양육자를 나중에 바꿀 수 있는지, 어떤 사정이 필요하고 절차는 어떻게 되는지 전주이혼변호사가 상담에서 자주 받는 질문을 중심으로 정리했습니다.</description>
       <pubDate>Sun, 30 Aug 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>1심 판결 뒤 항소를 정하는 기준</title>
-      <link>https://column.taeandkyu.com/blog/criminal-appeal-decision-guide</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-appeal-decision-guide</guid>
-      <description>1심 선고를 받고 항소할지 고민이라면 항소기간 7일과 항소이유서 20일, 불이익변경금지의 범위를 먼저 확인해야 합니다. 전주형사전문변호사가 판단 순서를 정리했습니다.</description>
-      <pubDate>Sat, 29 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
