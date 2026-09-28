@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 27 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>노동전문변호사가 짚는 임금·해고 대응 순서</title>
+      <link>https://column.taeandkyu.com/blog/civil-labor-case-route-map</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-labor-case-route-map</guid>
+      <description>임금과 퇴직금은 법원, 부당해고는 노동위원회, 산재는 근로복지공단으로 갑니다. 사건마다 가는 곳과 기한이 다른 이유를 노동전문변호사가 절차별로 정리했습니다.</description>
+      <pubDate>Sun, 27 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>군산에서 사건을 맡기기 전에 확인할 것</title>
       <link>https://column.taeandkyu.com/blog/divorce-gunsan-case-venue-guide</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-probation-period-new-case</guid>
       <description>집행유예 기간에 새 사건이 생기면 앞선 형까지 함께 문제가 됩니다. 실효와 취소의 차이, 초기 대응에서 무엇을 확인해야 하는지 전주형사전문변호사가 정리했습니다.</description>
       <pubDate>Tue, 01 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>3천만원 이하 소액사건은 어떻게 진행되나</title>
-      <link>https://column.taeandkyu.com/blog/civil-small-claim-procedure</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-small-claim-procedure</guid>
-      <description>소가 3천만원 이하 소액사건의 절차와 이행권고결정, 가족의 소송대리, 1회 변론 원칙까지 전주민사변호사가 실제 상담에서 자주 나오는 순서대로 정리했습니다.</description>
-      <pubDate>Mon, 31 Aug 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
