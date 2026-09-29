@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 28 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>국민참여재판, 신청할지 정하기 전에</title>
+      <link>https://column.taeandkyu.com/blog/criminal-jury-trial-decision</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-jury-trial-decision</guid>
+      <description>국민참여재판 의사확인서는 공소장을 받은 날부터 7일 안에 회신해야 합니다. 전주지방법원에서 참여재판이 어떻게 하루에 진행되는지, 신청을 검토할 사건과 다시 생각해 볼 사건을 전주형사변호사가 정리했습니다.</description>
+      <pubDate>Mon, 28 Sep 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>노동전문변호사가 짚는 임금·해고 대응 순서</title>
       <link>https://column.taeandkyu.com/blog/civil-labor-case-route-map</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-international-marriage-guide</guid>
       <description>외국인 배우자와 이혼할 때 어느 나라 법원에서 어떤 법으로 진행되는지, 체류자격과 자녀 문제는 어떻게 정리하는지 전주이혼변호사가 상담 사례를 바탕으로 설명합니다.</description>
       <pubDate>Wed, 02 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>집행유예 기간 중 사건이 또 생겼다면</title>
-      <link>https://column.taeandkyu.com/blog/criminal-probation-period-new-case</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-probation-period-new-case</guid>
-      <description>집행유예 기간에 새 사건이 생기면 앞선 형까지 함께 문제가 됩니다. 실효와 취소의 차이, 초기 대응에서 무엇을 확인해야 하는지 전주형사전문변호사가 정리했습니다.</description>
-      <pubDate>Tue, 01 Sep 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
