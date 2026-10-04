@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 03 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>이혼 소장을 받았다면 30일 안에 할 일</title>
+      <link>https://column.taeandkyu.com/blog/divorce-gunsan-answer-response</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-gunsan-answer-response</guid>
+      <description>이혼 소장을 받으면 송달일부터 30일 안에 답변서를 내야 합니다. 전주지방법원 군산지원의 답변서 제출과 반소, 조정기일 준비까지 소장을 받은 쪽이 챙길 순서를 군산이혼변호사가 정리했습니다.</description>
+      <pubDate>Sat, 03 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>익산에서 사건이 시작되면 어디로 가나</title>
       <link>https://column.taeandkyu.com/blog/criminal-iksan-case-route-guide</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-land-boundary-dispute</guid>
       <description>토지 경계 분쟁에서 측량부터 경계확정의 소, 철거 청구와 점유취득시효까지 무엇을 순서대로 확인해야 하는지 전주민사변호사가 실제 상담 흐름대로 정리했습니다.</description>
       <pubDate>Thu, 03 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>빚만 남기고 떠난 가족, 3개월이 갈림길입니다</title>
-      <link>https://column.taeandkyu.com/blog/civil-inheritance-renunciation-guide</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-inheritance-renunciation-guide</guid>
-      <description>부모님이 남긴 것이 재산이 아니라 빚이라면 상속포기와 한정승인을 검토해야 합니다. 전주상속변호사가 3개월이라는 기간, 두 제도의 차이, 손자녀까지 이어지는 연쇄 문제를 정리했습니다.</description>
-      <pubDate>Wed, 02 Sep 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
