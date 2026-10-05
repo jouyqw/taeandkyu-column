@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 04 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>퇴직금이 적게 나왔다면 어디부터 볼까</title>
+      <link>https://column.taeandkyu.com/blog/civil-severance-pay-calculation</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-severance-pay-calculation</guid>
+      <description>퇴직금은 평균임금 30일분에 근속연수를 곱해 계산합니다. 상여금과 연차수당이 빠졌는지, 근속기간이 언제부터 계산됐는지 확인하는 방법을 노동법변호사가 청구 절차와 함께 정리했습니다.</description>
+      <pubDate>Sun, 04 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>이혼 소장을 받았다면 30일 안에 할 일</title>
       <link>https://column.taeandkyu.com/blog/divorce-gunsan-answer-response</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-victim-objection-guide</guid>
       <description>고소인이 불송치 통지를 받았을 때 이의신청 방법과 기한, 검사의 불기소 이후 항고·재정신청까지 이어지는 단계를 전주형사전문변호사가 순서대로 정리했습니다.</description>
       <pubDate>Fri, 04 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>옆집 담장이 우리 땅을 넘었다면</title>
-      <link>https://column.taeandkyu.com/blog/civil-land-boundary-dispute</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-land-boundary-dispute</guid>
-      <description>토지 경계 분쟁에서 측량부터 경계확정의 소, 철거 청구와 점유취득시효까지 무엇을 순서대로 확인해야 하는지 전주민사변호사가 실제 상담 흐름대로 정리했습니다.</description>
-      <pubDate>Thu, 03 Sep 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
