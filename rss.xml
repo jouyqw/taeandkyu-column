@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 07 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>정읍 사건은 어디까지 정읍에서 끝나나</title>
+      <link>https://column.taeandkyu.com/blog/civil-jeongeup-court-venue-check</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-jeongeup-court-venue-check</guid>
+      <description>정읍·고창·부안 사건은 전주지방법원 정읍지원과 전주지방검찰청 정읍지청에서 시작합니다. 처음부터 전주 본원으로 가는 사건, 군법원에서 끝나는 사건, 토지 분쟁에서 먼저 뗄 서류까지 정읍변호사를 찾기 전 확인할 점을 정리했습니다.</description>
+      <pubDate>Wed, 07 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>이혼 소송 중 아이는 누가 데리고 있나</title>
       <link>https://column.taeandkyu.com/blog/divorce-interim-custody-order</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-eviction-lawsuit-guide</guid>
       <description>차임 연체로 계약을 해지하고 건물 인도를 구할 때 해지 통보와 점유이전금지가처분, 밀린 월세 청구와 인도집행까지 이어지는 순서를 전주민사변호사가 실무 기준으로 정리했습니다.</description>
       <pubDate>Tue, 08 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>사실혼도 재산분할을 청구할 수 있을까</title>
-      <link>https://column.taeandkyu.com/blog/divorce-common-law-dissolution</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-common-law-dissolution</guid>
-      <description>혼인신고 없이 함께 살다 헤어질 때 사실혼 인정 기준과 재산분할·위자료 청구, 자녀 문제와 상속·연금까지 전주이혼변호사가 상담에서 자주 받는 순서대로 정리했습니다.</description>
-      <pubDate>Mon, 07 Sep 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
