@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 10 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>군산변호사 선임계약, 어디까지 포함되나</title>
+      <link>https://column.taeandkyu.com/blog/divorce-gunsan-retainer-scope-check</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-gunsan-retainer-scope-check</guid>
+      <description>선임계약은 보통 1심까지입니다. 항소하면 다시 계약해야 하고, 그때는 전주 본원이나 광주고등법원 전주재판부로 올라갑니다. 기일에 누가 나가는지, 실비는 어디까지인지 군산변호사를 정하기 전에 확인할 항목을 정리했습니다.</description>
+      <pubDate>Sat, 10 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주성범죄변호사, 조사와 직장 징계가 겹칠 때</title>
       <link>https://column.taeandkyu.com/blog/criminal-sex-crime-workplace-discipline</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-inheritance-division-trial</guid>
       <description>상속인 사이 협의가 깨졌을 때 상속재산분할 심판으로 넘어가는 순서와 생전 증여·기여분이 계산에 들어가는 방식, 나누기 어려운 부동산의 처리 방법을 전주민사변호사가 정리했습니다.</description>
       <pubDate>Fri, 11 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>이혼은 했는데 재산분할을 못 했다면</title>
-      <link>https://column.taeandkyu.com/blog/divorce-post-divorce-property-claim</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-post-divorce-property-claim</guid>
-      <description>이혼 후에 재산분할을 청구할 때 남아 있는 2년의 기간과 기산점, 이미 합의한 경우의 한계, 빠진 재산이 뒤늦게 확인됐을 때의 정리 순서를 전주이혼변호사가 상담 사례를 바탕으로 설명합니다.</description>
-      <pubDate>Thu, 10 Sep 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
