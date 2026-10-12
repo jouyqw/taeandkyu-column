@@ -6,7 +6,14 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 11 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>노동전문변호사가 보는 징계해고의 정당성</title>
+      <link>https://column.taeandkyu.com/blog/civil-disciplinary-dismissal-review</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-disciplinary-dismissal-review</guid>
+      <description>징계해고는 사유·양정·절차 세 축으로 따집니다. 취업규칙에 적혀 있어도 사실이 증명되지 않으면 사유가 서지 않고, 절차만 어겨도 해고가 무효가 될 수 있습니다. 노동전문변호사가 해고일부터 3개월 기한과 함께 정리했습니다.</description>
+      <pubDate>Sun, 11 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>군산변호사 선임계약, 어디까지 포함되나</title>
       <link>https://column.taeandkyu.com/blog/divorce-gunsan-retainer-scope-check</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-prosecution-suspension-standard</guid>
       <description>혐의는 인정되지만 재판에 넘기지 않는 기소유예, 어떤 사건에서 검토되고 처분 전에 무엇을 내야 하며 수사경력은 어떻게 남는지 전주형사전문변호사가 상담 경험을 바탕으로 정리했습니다.</description>
       <pubDate>Sat, 12 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>상속재산, 형제끼리 협의가 안 될 때</title>
-      <link>https://column.taeandkyu.com/blog/civil-inheritance-division-trial</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-inheritance-division-trial</guid>
-      <description>상속인 사이 협의가 깨졌을 때 상속재산분할 심판으로 넘어가는 순서와 생전 증여·기여분이 계산에 들어가는 방식, 나누기 어려운 부동산의 처리 방법을 전주민사변호사가 정리했습니다.</description>
-      <pubDate>Fri, 11 Sep 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
