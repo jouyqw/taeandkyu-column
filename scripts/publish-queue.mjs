@@ -46,11 +46,14 @@ if (!due.length) {
   process.exit(0);
 }
 
-// 밀린 날짜가 여러 개여도 하루에 한 편만 낸다. 한꺼번에 쏟으면 대량생성 신호가 된다.
-due.sort((a, b) => a.at.localeCompare(b.at));
-const publishNow = due.slice(0, 1);
-if (due.length > 1) {
-  console.log(`발행일이 지난 글이 ${due.length}편입니다. 오늘은 가장 오래된 1편만 냅니다.`);
+// 같은 날짜로 예약된 글은 함께 낸다(2026-10-15 부터 평일 2편).
+// 다만 밀린 날짜까지 한꺼번에 쏟지는 않는다 — 대량생성 신호가 된다.
+// 그래서 "가장 오래된 하루치" 만 내고 나머지 날짜는 다음 실행으로 넘긴다.
+due.sort((a, b) => a.at.localeCompare(b.at) || a.file.localeCompare(b.file));
+const oldest = due[0].at;
+const publishNow = due.filter((x) => x.at === oldest);
+if (due.length > publishNow.length) {
+  console.log(`발행일이 지난 글이 ${due.length}편입니다. 오늘은 ${oldest} 자 ${publishNow.length}편만 냅니다.`);
 }
 
 fs.mkdirSync(DRAFTS, { recursive: true });
@@ -64,7 +67,11 @@ for (const { file, draft, at } of publishNow) {
   }
 
   const { publishAt, ...rest } = draft;
-  const final = { ...rest, date: rest.date || at };
+  // date 는 publishAt 을 따른다. rest.date 를 우선하면 안 된다.
+  // 예약일을 옮기면 publishAt 만 바뀌고 date 는 초안 쓴 날로 남아, 새 글이 옛 날짜로
+  // 올라간다. 그러면 검색엔진이 새 글로 보지 않고 사이트맵 lastmod 도 안 움직인다
+  // (2026-10-13 전주개인회생에서 실제로 그렇게 됐다).
+  const final = { ...rest, date: at || rest.date };
   const html = renderArticle(final);
 
   if (DRY) {

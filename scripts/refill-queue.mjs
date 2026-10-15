@@ -25,8 +25,8 @@ const LOG = path.join(ROOT, 'refill.log');
 const LOCK = path.join(ROOT, '.refill.lock');
 const DESK = path.join(process.env.USERPROFILE || '', 'Desktop', '태앤규칼럼_보충_실패.txt');
 
-const THRESHOLD = 6;    // 큐가 이 미만이면 채운다
-const TARGET = 12;      // 목표(약 12일치)
+const THRESHOLD = 10;   // 큐가 이 미만이면 채운다 (평일 2편 → 1주치)
+const TARGET = 20;      // 목표(평일 2편 기준 2주치)
 const MAX_ADD = 12;
 const RETRY = 2;
 const BATCH_TIMEOUT = 30 * 60 * 1000;
@@ -293,11 +293,19 @@ const pickKeyword = (cat) => {
   return best;
 };
 
+// 평일에만 하루 PER_DAY 편(2026-10-15). 주말 발행은 유입이 적은데 소재만 소비된다.
+const PER_DAY = 2;
+const isWeekend = (iso) => [0, 6].includes(new Date(`${iso}T00:00:00Z`).getUTCDay());
+const nextWeekday = (iso) => { let d = addDays(iso, 1); while (isWeekend(d)) d = addDays(d, 1); return d; };
+
 const batch = [];
+let day = base;
+let slots = 0;
 for (let i = 0; i < need; i += 1) {
-  const publishAt = addDays(base, i + 1);
+  if (slots === 0 || slots >= PER_DAY) { day = nextWeekday(day); slots = 0; }
+  slots += 1;
   const category = CATS[i % 3];
-  batch.push({ category, keyword: pickKeyword(category), publishAt });
+  batch.push({ category, keyword: pickKeyword(category), publishAt: day });
 }
 log('배정 키워드: ' + batch.map((b) => b.keyword).join(', '));
 log(`${need}건 보충 시작 → ${batch[0].publishAt} ~ ${batch[batch.length - 1].publishAt}`);
