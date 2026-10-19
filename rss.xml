@@ -6,7 +6,21 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 18 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>전주부동산변호사, 중개사 설명이 빠졌을 때</title>
+      <link>https://column.taeandkyu.com/blog/civil-real-estate-broker-liability</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-real-estate-broker-liability</guid>
+      <description>선순위 보증금이나 권리관계를 듣지 못한 채 계약하는 일이 생깁니다. 확인·설명서에서 볼 칸, 손해 계산과 과실상계, 공제금 청구와 전주지방법원 소송 순서를 전주부동산변호사의 시선으로 정리했습니다.</description>
+      <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>전주이혼전문변호사, 재산분할 기준시점은 언제인가</title>
+      <link>https://column.taeandkyu.com/blog/divorce-property-division-base-date</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-property-division-base-date</guid>
+      <description>같은 재산이라도 어느 날짜로 끊느냐에 따라 분할 대상과 금액이 달라집니다. 변론종결일과 별거 시점, 집값 변동과 퇴직금 산정, 전주지방법원에 낼 자료를 전주이혼전문변호사의 시선으로 정리했습니다.</description>
+      <pubDate>Sun, 18 Oct 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주형사변호사, 수사기록은 언제 볼 수 있나</title>
       <link>https://column.taeandkyu.com/blog/criminal-case-record-inspection-copy</link>
@@ -202,20 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-litigation-cost-recovery</guid>
       <description>판결 주문의 소송비용 부담 문구가 실제로 무엇을 뜻하는지, 변호사보수는 어디까지 돌려받는지, 소송비용액확정 신청 절차와 회수 현실을 전주민사변호사가 정리했습니다.</description>
       <pubDate>Sun, 20 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>빚이 더 많은 부부, 재산분할은 어떻게 될까</title>
-      <link>https://column.taeandkyu.com/blog/divorce-marital-debt-division</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-marital-debt-division</guid>
-      <description>대출과 카드빚이 재산보다 많은 이혼 사건에서 공동 채무와 개인 채무를 가르는 기준, 채무 초과일 때의 분할 청구, 명의 변경의 한계를 전주이혼변호사가 정리했습니다.</description>
-      <pubDate>Sat, 19 Sep 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>피해자가 합의를 거부할 때 형사공탁은</title>
-      <link>https://column.taeandkyu.com/blog/criminal-deposit-without-settlement</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-deposit-without-settlement</guid>
-      <description>연락이 닿지 않는 피해자, 합의서를 받을 수 없는 사건에서 형사공탁 특례로 할 수 있는 일과 금액·시점·제출 자료까지 전주형사전문변호사가 실무 순서대로 정리했습니다.</description>
-      <pubDate>Fri, 18 Sep 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
