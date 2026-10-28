@@ -79,7 +79,17 @@ export function renderArticle(draft) {
         headline: title,
         description,
         image: `${site}${group.image}`,
-        author: { '@type': 'Organization', name: '법무법인 태앤규', url: officialHome },
+        // 글쓴이를 사람으로 밝힌다.
+        //
+        // 조직 이름만 적힌 글보다 실명·직함이 있는 글이 검색과 AI 답변 양쪽에서 신뢰를 얻는다(E-E-A-T).
+        // 법률 글은 구글이 YMYL 로 분류해 저자 신뢰도를 특히 본다.
+        // 본문에는 이미 김기태 변호사 이름으로 쓰고 있었는데 구조화 데이터만 조직으로 남아 있었다.
+        author: {
+          '@type': 'Person',
+          name: '김기태',
+          jobTitle: '변호사',
+          worksFor: { '@type': 'LegalService', name: '법무법인 태앤규', url: officialHome },
+        },
         publisher: { '@id': 'https://taeandkyu.com/#legalservice' },
         datePublished: publishDate,
         dateModified: publishDate,
