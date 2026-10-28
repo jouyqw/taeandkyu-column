@@ -249,6 +249,36 @@ if (GIT) {
 
 let qn = queueItems().length;
 log(`─── 큐 점검 (KST ${TODAY}) ─── 큐 ${qn}편 · 발행글 ${blogSlugs().size}편`);
+
+/**
+ * 배정표가 마르기 전에 알린다.
+ *
+ * 주제가 떨어지면 보충은 실패가 아니라 "쓸 주제 없음" 으로 조용히 끝나 알림이 안 뜬다.
+ * 2026-10-28 에 확인해 보니 분야 셋을 합쳐 남은 주제가 4편뿐이었다.
+ * 바닥나고 나서 알면 이미 발행이 끊긴 뒤다.
+ */
+{
+  const bank = JSON.parse(fs.readFileSync(path.join(ROOT, 'content', 'topic-bank.json'), 'utf8'));
+  const done = new Set([...blogSlugs(), ...queueItems().map((f) => f.replace(/\.json$/, ''))]);
+  const per = CATS.map((c) => [c, (bank[c]?.topics || []).filter((t) => !done.has(t.slug)).length]);
+  const left = per.reduce((a, [, n]) => a + n, 0);
+  log(`배정표 남은 주제 ${left}편 (${per.map(([c, n]) => `${c} ${n}`).join(' · ')})`);
+  // 분야를 돌려 쓰므로 한 분야만 비어도 그 분야 글이 끊긴다. 합계와 분야별을 함께 본다.
+  const thin = per.filter(([, n]) => n < 4).map(([c]) => c);
+  if (left < 12 || thin.length) {
+    log(`!! 배정표가 모자랍니다 — content/topic-bank.json 에 주제를 더 넣어야 합니다`);
+    try {
+      fs.writeFileSync(path.join(process.env.USERPROFILE || '', 'Desktop', '태앤규칼럼_주제부족.txt'),
+        `${stamp()}\ncolumn.taeandkyu.com 칼럼 배정표가 모자랍니다.\n\n`
+        + `남은 주제: ${left}편 (${per.map(([c, n]) => `${c} ${n}`).join(' · ')})\n`
+        + (thin.length ? `특히 부족한 분야: ${thin.join(', ')}\n` : '')
+        + `\ncontent/topic-bank.json 의 각 분야 topics 에 주제를 추가해 주세요.\n`);
+    } catch { }
+  } else {
+    try { fs.rmSync(path.join(process.env.USERPROFILE || '', 'Desktop', '태앤규칼럼_주제부족.txt')); } catch { }
+  }
+}
+
 if (CHECK) {
   queueItems().sort().forEach((f) => { const d = JSON.parse(fs.readFileSync(path.join(QUEUE, f), 'utf8')); console.log(`  ${d.publishAt}  ${d.category}  ${d.title}`); });
   process.exit(0);
