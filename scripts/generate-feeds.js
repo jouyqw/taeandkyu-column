@@ -93,8 +93,8 @@ const indexHtml = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>전주변호사 법률칼럼 | 법무법인 태앤규</title>
-<meta name="description" content="전주변호사가 형사·민사·이혼 사건의 준비 자료와 대응 순서를 설명합니다. 전주·완주·군산·익산 법률상담 정보를 확인하세요.">
+<title>전주변호사 상담 — 형사 · 이혼 · 민사 | 법무법인 태앤규</title>
+<meta name="description" content="전주 변호사 김기태. 형사·이혼·민사 사건의 준비 자료와 대응 순서를 사건별로 정리했습니다. 전주지방법원 관할, 익산·군산·정읍까지 상담합니다.">
 <meta name="google-site-verification" content="HfEaRDFGS9DffVHcE_ozGQFs3_G7P80xUwlJF6R12PU">
 <meta name="naver-site-verification" content="2d925953126d9adbdf1535529dc2920148be222c">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -104,8 +104,8 @@ const indexHtml = `<!DOCTYPE html>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="법무법인 태앤규 법률칼럼">
-<meta property="og:title" content="전주변호사 법률칼럼 | 법무법인 태앤규">
-<meta property="og:description" content="전주 지역 형사·민사·이혼 사건에서 자주 묻는 준비 자료와 대응 순서를 정리합니다.">
+<meta property="og:title" content="전주변호사 상담 — 형사 · 이혼 · 민사 | 법무법인 태앤규">
+<meta property="og:description" content="전주 변호사 김기태. 형사·이혼·민사 사건의 준비 자료와 대응 순서를 사건별로 정리했습니다. 전주지방법원 관할, 익산·군산·정읍까지 상담합니다.">
 <meta property="og:url" content="${site}/">
 <meta property="og:image" content="${site}/assets/lawyer-office-police-investigation.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -227,7 +227,7 @@ const rss = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
   '  <channel>',
-  '    <title>전주변호사 법률칼럼 | 법무법인 태앤규</title>',
+  '    <title>전주변호사 상담 — 형사 · 이혼 · 민사 | 법무법인 태앤규</title>',
   `    <link>${site}/</link>`,
   `    <atom:link href="${site}/rss.xml" rel="self" type="application/rss+xml" />`,
   '    <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>',
