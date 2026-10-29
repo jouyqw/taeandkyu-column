@@ -1,0 +1,31 @@
+name: GSC performance
+
+# 색인이 아니라 순위를 본다.
+# 어떤 검색어가 몇 위에 걸려 있는지 알아야 무엇을 고칠지 정할 수 있다.
+
+on:
+  workflow_dispatch:
+    inputs:
+      sites:
+        description: "쉼표로 구분한 사이트 목록"
+        required: false
+        default: "https://column.taeandkyu.com/,https://column.lawfirmyeyul.com/,https://ulsanlawyer.kr/"
+      days:
+        description: "조회 기간(일)"
+        required: false
+        default: "28"
+
+permissions:
+  contents: read
+
+jobs:
+  performance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Query search performance
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITES: ${{ github.event.inputs.sites || 'https://column.taeandkyu.com/,https://column.lawfirmyeyul.com/,https://ulsanlawyer.kr/' }}
+          GSC_DAYS: ${{ github.event.inputs.days || '28' }}
+        run: node scripts/gsc-performance.mjs
