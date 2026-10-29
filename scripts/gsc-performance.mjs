@@ -96,3 +96,31 @@ for (const site of sites) {
       `    ${String(Math.round(r.impressions)).padStart(5)}회  ${r.position.toFixed(1).padStart(5)}위  ${r.keys[0]}`));
   }
 }
+
+/*
+ * 순위는 높은데 클릭이 0인 검색어는 "어느 페이지가 걸렸는지" 를 봐야 한다.
+ *
+ * 변호사를 찾는 검색어에 칼럼이 걸리면 사람들은 안 누른다.
+ * 그 자리에는 사무실 소개나 분야 안내 페이지가 걸려야 한다.
+ * 제목을 고칠 문제인지, 걸리는 페이지 자체를 바꿀 문제인지는 이걸 봐야 갈린다.
+ */
+for (const site of sites) {
+  const r = await fetch(
+    `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/searchAnalytics/query`,
+    {
+      method: 'POST',
+      headers: { authorization: `Bearer ${tk}`, 'content-type': 'application/json' },
+      body: JSON.stringify({
+        startDate: iso(start), endDate: iso(end),
+        dimensions: ['query', 'page'], rowLimit: 500,
+      }),
+    });
+  if (!r.ok) continue;
+  const rows = (await r.json()).rows || [];
+  const hot = rows.filter((x) => x.impressions >= 10 && x.clicks === 0 && x.position <= 10)
+    .sort((a, b) => b.impressions - a.impressions);
+  if (!hot.length) continue;
+  console.log(`\n===== ${site} — 1페이지인데 클릭 0 =====`);
+  hot.slice(0, 12).forEach((x) => console.log(
+    `  ${String(Math.round(x.impressions)).padStart(4)}회 ${x.position.toFixed(1).padStart(5)}위  ${x.keys[0]}\n        ${decodeURIComponent(x.keys[1]).replace(/^https?:\/\/[^/]+/, '')}`));
+}
