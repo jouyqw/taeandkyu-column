@@ -78,6 +78,20 @@ for (const site of sites) {
   const q = await call(['query'], 500);
   const sorted = [...q].sort((a, b) => b.impressions - a.impressions);
 
+  // 검색어만 알면 "뭘 고쳐야 하나" 에서 막힌다. 그 검색어로 실제 올라오는 주소를
+  // 같이 봐야 손댈 자리가 정해진다. 홈이 올라오는지, 글이 올라오는지가 특히 갈린다.
+  const byQuery = new Map();
+  for (const r of await call(['query', 'page'], 1000)) {
+    const [kw, url] = r.keys;
+    const prev = byQuery.get(kw);
+    if (!prev || r.impressions > prev.impressions) byQuery.set(kw, { url, impressions: r.impressions });
+  }
+  const pageOf = (kw) => {
+    const hit = byQuery.get(kw);
+    if (!hit) return '';
+    return '\n          ' + hit.url.replace(/^https?:\/\/[^/]+/, '');
+  };
+
   console.log('\n  — 노출 많은 검색어 10개 —');
   sorted.slice(0, 10).forEach((r) => console.log(
     `    ${String(Math.round(r.impressions)).padStart(5)}회  ${r.position.toFixed(1).padStart(5)}위  클릭 ${String(r.clicks).padStart(3)}  ${r.keys[0]}`));
@@ -86,7 +100,7 @@ for (const site of sites) {
   const near = sorted.filter((r) => r.position > 10 && r.position <= 30 && r.impressions >= 5);
   console.log(`\n  — 1페이지 문턱(11~30위) ${near.length}개 —`);
   near.slice(0, 15).forEach((r) => console.log(
-    `    ${String(Math.round(r.impressions)).padStart(5)}회  ${r.position.toFixed(1).padStart(5)}위  ${r.keys[0]}`));
+    `    ${String(Math.round(r.impressions)).padStart(5)}회  ${r.position.toFixed(1).padStart(5)}위  ${r.keys[0]}${pageOf(r.keys[0])}`));
 
   // 노출은 큰데 클릭이 없는 것 = 제목·설명이 안 먹히는 자리
   const noClick = sorted.filter((r) => r.impressions >= 20 && r.clicks === 0 && r.position <= 20);
