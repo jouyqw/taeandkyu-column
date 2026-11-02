@@ -7,6 +7,23 @@ const notices = [];
 
 const read = (file) => readFileSync(file, 'utf8');
 const match = (html, regex) => (html.match(regex) || [])[1]?.trim() || '';
+
+// 엔티티를 되돌려 놓고 센다. &#39; 를 그대로 세면 한 글자가 다섯 글자로 잡힌다
+const decodeEnt = (value = '') => String(value)
+  .replaceAll('&#39;', "'")
+  .replaceAll('&quot;', '"')
+  .replaceAll('&lt;', '<')
+  .replaceAll('&gt;', '>')
+  .replaceAll('&amp;', '&');
+
+// 속성값은 열린 따옴표와 같은 종류에서만 끊어야 한다.
+// [^"'] 로 뭉쳐 두면 값 안의 작은따옴표에서 잘려 길이를 잘못 센다
+const metaAttr = (html, kind, name) => {
+  const re = new RegExp(
+    `<meta\\s+${kind}=["']${name}["']\\s+content=(?:"([^"]*)"|'([^']*)')`, 'i');
+  const m = html.match(re);
+  return decodeEnt((m?.[1] ?? m?.[2] ?? '').trim());
+};
 const stripHtml = (value = '') => String(value)
   .replace(/<script[\s\S]*?<\/script>/gi, ' ')
   .replace(/<style[\s\S]*?<\/style>/gi, ' ')
@@ -63,13 +80,13 @@ for (const page of publicPages) {
 
   const html = read(page.file);
   const title = stripHtml(match(html, /<title>([\s\S]*?)<\/title>/i));
-  const description = match(html, /<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i);
+  const description = metaAttr(html, 'name', 'description');
   const canonical = match(html, /<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
-  const robots = match(html, /<meta\s+name=["']robots["']\s+content=["']([^"']+)["']/i);
-  const ogTitle = match(html, /<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']/i);
-  const ogDescription = match(html, /<meta\s+property=["']og:description["']\s+content=["']([^"']+)["']/i);
-  const ogUrl = match(html, /<meta\s+property=["']og:url["']\s+content=["']([^"']+)["']/i);
-  const ogImage = match(html, /<meta\s+property=["']og:image["']\s+content=["']([^"']+)["']/i);
+  const robots = metaAttr(html, 'name', 'robots');
+  const ogTitle = metaAttr(html, 'property', 'og:title');
+  const ogDescription = metaAttr(html, 'property', 'og:description');
+  const ogUrl = metaAttr(html, 'property', 'og:url');
+  const ogImage = metaAttr(html, 'property', 'og:image');
   const body = match(html, /<body[^>]*>([\s\S]*?)<\/body>/i);
   const bodyText = stripHtml(body);
   const h1Count = (html.match(/<h1\b/gi) || []).length;

@@ -12,7 +12,9 @@ const esc = (value = '') => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
   .replaceAll('>', '&gt;')
-  .replaceAll('"', '&quot;');
+  .replaceAll('"', '&quot;')
+  // 작은따옴표도 막아야 한다. 안 막으면 속성값이 거기서 끊긴 것처럼 읽히는 도구가 있다
+  .replaceAll("'", '&#39;');
 
 const groups = [
   {
