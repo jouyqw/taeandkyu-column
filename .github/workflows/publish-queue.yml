@@ -36,6 +36,12 @@ jobs:
         id: promote
         run: node scripts/publish-queue.mjs
 
+      # 새로 나간 글도 자기 분야 허브를 가리켜야 한다.
+      # 빼먹으면 허브로 모이는 링크가 그날부터 안 늘어난다.
+      - name: 분야 허브 링크 연결
+        if: steps.promote.outputs.published != '0'
+        run: node scripts/link-hubs.mjs --write
+
       - name: 피드 재생성
         if: steps.promote.outputs.published != '0'
         run: node scripts/generate-feeds.js
