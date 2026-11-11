@@ -74,13 +74,25 @@ for (const f of files) {
 
   const file = path.join(BLOG, f);
   let s = fs.readFileSync(file, 'utf8');
+
+  // 2026-11-10 처음에는 </main> 바로 앞에 넣었다. 그 자리는 article·site-wrap 바깥이라
+  // 최대폭도 좌우 여백도 안 받는다. 화면 맨 왼쪽에 파란 밑줄 링크가 덩그러니 붙었다.
+  // 이미 붙여 놓은 것을 먼저 걷어내고 본문 안으로 다시 넣는다.
+  s = s.replace(/\n?<!-- hub-link -->\n<p class="hub-link"[\s\S]*?<\/p>\n?/g, '');
   if (s.includes(MARK)) { skipped += 1; continue; }
 
-  const i = s.lastIndexOf('</main>');
-  if (i < 0) { noHub.push(`${slug} (main 없음)`); continue; }
+  const block = `${MARK}\n<div class="related-card">`
+    + `<span class="label">분야 안내</span><br>`
+    + `<a href="/blog/${hub.slug}">${hub.label}</a></div>\n`;
 
-  const block = `${MARK}\n<p class="hub-link" style="margin:28px 0 0">`
-    + `<a href="/blog/${hub.slug}"><strong>${hub.label}</strong></a></p>\n`;
+  // 면책 문구 바로 앞에 둔다 — 상담 안내 다음, 면책 앞이 읽는 순서로 자연스럽다.
+  // 면책 문구가 없는 옛 글은 article 닫기 직전에 넣는다.
+  let i = s.indexOf('<p class="disclaimer">');
+  if (i < 0) i = s.lastIndexOf('</article>');
+  // 옛 형식 글 두 편은 article 도 면책 문구도 없이 main 안에 바로 본문이 있다.
+  // 그 글들은 .cta 가 main 바로 아래에 놓여 있으니 같은 자리면 폭을 받는다.
+  if (i < 0) i = s.lastIndexOf('</main>');
+  if (i < 0) { noHub.push(`${slug} (넣을 자리를 못 찾음)`); continue; }
   s = s.slice(0, i) + block + s.slice(i);
   if (WRITE) fs.writeFileSync(file, s);
   touched += 1;
