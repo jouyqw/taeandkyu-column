@@ -78,7 +78,9 @@ for (const f of files) {
   // 2026-11-10 처음에는 </main> 바로 앞에 넣었다. 그 자리는 article·site-wrap 바깥이라
   // 최대폭도 좌우 여백도 안 받는다. 화면 맨 왼쪽에 파란 밑줄 링크가 덩그러니 붙었다.
   // 이미 붙여 놓은 것을 먼저 걷어내고 본문 안으로 다시 넣는다.
-  s = s.replace(/\n?<!-- hub-link -->\n<p class="hub-link"[\s\S]*?<\/p>\n?/g, '');
+  // 줄바꿈 자리에 기대면 안 된다. 워크플로가 만든 파일은 CRLF 이고 MARK 와 <p> 가
+  // 같은 줄에 붙어 있어서, \n 을 끼워 넣은 정규식이 6편을 그냥 지나쳤다.
+  s = s.replace(/\s*<!-- hub-link -->\s*<p class="hub-link"[\s\S]*?<\/p>/g, '');
   if (s.includes(MARK)) { skipped += 1; continue; }
 
   const block = `${MARK}\n<div class="related-card">`
