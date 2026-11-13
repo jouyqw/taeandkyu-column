@@ -1,0 +1,21 @@
+name: 무엇이 올라가는지 배우기
+on:
+  workflow_dispatch:
+    inputs:
+      sites: { description: 사이트, required: false }
+      days:  { description: 기간(일), required: false }
+  schedule:
+    - cron: '0 20 1 * *'
+jobs:
+  learn:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: 특징별 노출 비교
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITES: ${{ github.event.inputs.sites || 'https://column.taeandkyu.com/' }}
+          GSC_DAYS: ${{ github.event.inputs.days || '90' }}
+        run: node scripts/learn-from-gsc.mjs
