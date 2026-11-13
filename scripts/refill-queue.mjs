@@ -145,6 +145,18 @@ function validate(slug, known) {
   const h2 = (String(d.bodyHtml).match(/<h2/g) || []).length;
   if (h2 < 4) e.push(`h2 ${h2}개(최소 4)`);
   if (!/class=['"]?(infographic|table-wrap|callout|warning)/.test(d.bodyHtml)) e.push('비주얼 블록 없음');
+
+  // 2026-11-13 표를 따로 본다. "비주얼 아무거나 하나" 로 두니 227편 중 90편에 표가 없었다.
+  // 표는 "어느 쪽인지" 를 한눈에 보여 주는 자리라 글에서 가장 많이 읽힌다.
+  if (!/class=['"]?table-wrap/.test(d.bodyHtml)) {
+    e.push('표(table-wrap)가 없습니다 — 비교·기준을 표로 한 번은 보여 줘야 합니다');
+  }
+  // 열이 넷을 넘으면 휴대폰에서 한 칸이 60px 남짓이라 글자가 한 자씩 끊겨 내려간다.
+  const tableCols = [...String(d.bodyHtml).matchAll(/<tr>([\s\S]*?)<\/tr>/g)]
+    .map((m) => (m[1].match(/<t[hd][\s>]/g) || []).length);
+  if (tableCols.some((n) => n >= 4)) {
+    e.push('표가 4열 이상입니다 — 휴대폰에서 글자가 끊깁니다. 2~3열로 짜세요');
+  }
   for (const w of BANNED) if (String(d.bodyHtml).includes(w) || String(d.title).includes(w)) e.push(`금지표현: ${w}`);
   if (known.titles.has(d.title)) e.push('제목 중복');
   // related 실존
@@ -180,7 +192,12 @@ ${rows}
 
 ## 품질(발행일 seo-audit 을 반드시 통과해야 하니 미리 지킨다)
 - 본문 텍스트 2,400~3,000자. <h2> 5~6개(질문형, 첫 문단은 요지부터).
-- 비주얼 2종 이상을 bodyHtml 에 반드시 넣는다. 아래 형태 그대로(class 이름 유지):
+- **표(table-wrap)를 반드시 1개 넣고**, 그 외 비주얼을 1종 이상 더 넣는다.
+  표가 없는 글이 227편 중 90편이었다. 표는 "어느 쪽인지" 를 한눈에 보여 주는 자리라
+  글에서 가장 많이 읽히고, 2~3열이면 휴대폰에서도 그대로 읽힌다.
+  · 표는 **2~3열**로 짠다. 4열이 넘으면 휴대폰에서 글자가 한 자씩 끊겨 내려간다.
+  · 비교 축이 분명해야 한다 — "이런 경우 / 저런 경우", "기준 / 내용" 처럼.
+  아래 형태 그대로 쓴다(class 이름 유지):
   · 강조: <div class="callout"><span class="label">핵심</span><p>내용</p></div>
   · 주의: <div class="warning"><span class="label">주의</span><p>내용</p></div>
   · 표:   <div class="table-wrap"><table>...</table></div>
