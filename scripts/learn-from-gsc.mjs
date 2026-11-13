@@ -35,7 +35,11 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = process.env.GSC_SITES || 'https://column.taeandkyu.com/';
 const DAYS = Number(process.env.GSC_DAYS || 90);
-const BLOG = path.join(ROOT, 'blog');
+// 글 파일이 있는 폴더와 주소 접두사. 다른 저장소로 복사해 쓸 때 환경변수로 바꾼다.
+// 이 도구는 **자기 저장소의 글만** 읽을 수 있다 — 울산 사이트를 여기서 돌리면
+// 주소는 169개 나오는데 파일이 없어 0편으로 끝난다(2026-11-13 실제로 그랬다).
+const BLOG = path.join(ROOT, process.env.ARTICLE_DIR || 'blog');
+const URL_PREFIX = process.env.ARTICLE_URL_PREFIX || '/blog/';
 
 const sa = JSON.parse(process.env.GSC_SERVICE_ACCOUNT_JSON || '{}');
 if (!sa.private_key) { console.error('GSC_SERVICE_ACCOUNT_JSON 이 없습니다'); process.exit(1); }
@@ -89,7 +93,10 @@ console.log(`${SITE}  (${iso(start)} ~ ${iso(end)}, ${DAYS}일)`);
 console.log(`노출이 잡힌 주소 ${rows.length}개\n`);
 
 /** 주소 → 글 파일 */
-const slugOf = (url) => decodeURIComponent(url).replace(/^https?:\/\/[^/]+\/blog\//, '').replace(/\/$/, '');
+const slugOf = (url) => decodeURIComponent(url)
+  .replace(/^https?:\/\/[^/]+/, '')
+  .replace(URL_PREFIX, '')
+  .replace(/\/$/, '');
 const stats = new Map();
 for (const r of rows) {
   const s = slugOf(r.keys[0]);
