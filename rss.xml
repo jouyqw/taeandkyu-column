@@ -6,7 +6,21 @@
     <atom:link href="https://column.taeandkyu.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>전주변호사가 정리한 형사·민사·이혼 사건의 준비 자료와 대응 순서</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 17 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 15:00:00 GMT</lastBuildDate>
+    <item>
+      <title>전주형사변호사, 고소 취소가 되는 시점</title>
+      <link>https://column.taeandkyu.com/blog/criminal-complaint-withdrawal-timing</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/criminal-complaint-withdrawal-timing</guid>
+      <description>고소 취소와 처벌불원 의사표시는 제1심 판결 선고 전까지만 할 수 있고, 한 번 취소하면 다시 고소하지 못합니다. 친고죄와 반의사불벌죄의 구분, 서류를 내는 곳까지 전주형사변호사가 전주지방법원 기준으로 정리했습니다.</description>
+      <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>군산이혼변호사, 소송 중 이사하게 되면</title>
+      <link>https://column.taeandkyu.com/blog/divorce-gunsan-moving-during-lawsuit</link>
+      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-gunsan-moving-during-lawsuit</guid>
+      <description>이혼 소송 중에 이사를 해도 사건은 처음 접수한 법원에서 계속 진행됩니다. 송달장소 변경신고와 자녀 전학, 양육환경 조사까지 군산이혼변호사가 전주지방법원 군산지원 절차를 기준으로 정리했습니다.</description>
+      <pubDate>Wed, 18 Nov 2026 15:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>전주부동산변호사, 계약 전 등기부 보는 법</title>
       <link>https://column.taeandkyu.com/blog/civil-real-estate-registry-pre-check</link>
@@ -202,20 +216,6 @@
       <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-unpaid-wage-recovery-order</guid>
       <description>임금과 퇴직금이 밀렸을 때 어디부터 가야 하는지 순서대로 정리했습니다. 노동청 진정과 민사소송의 역할 차이, 체불 확인서 이후의 절차, 회사에 돈이 없을 때의 선택까지 노동전문변호사의 시선으로 짚었습니다.</description>
       <pubDate>Wed, 28 Oct 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>군산변호사, 자료는 어디서 떼어 오나</title>
-      <link>https://column.taeandkyu.com/blog/divorce-gunsan-lawyer-document-sources</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/divorce-gunsan-lawyer-document-sources</guid>
-      <description>군산에서 사건을 맡기기 전에 어떤 서류를 어디서 발급받는지 정리했습니다. 가족관계 서류와 등기·대장, 소득과 금융 자료, 상대방 명의 재산을 법원을 통해 확인하는 방법까지 군산변호사의 시선으로 발급처와 순서를 짚었습니다.</description>
-      <pubDate>Wed, 28 Oct 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>전주교통사고변호사, 보험사 합의 전에 확인할 것</title>
-      <link>https://column.taeandkyu.com/blog/civil-traffic-accident-settlement-check</link>
-      <guid isPermaLink="true">https://column.taeandkyu.com/blog/civil-traffic-accident-settlement-check</guid>
-      <description>보험사가 보내온 합의금은 약관 지급기준으로 계산된 금액입니다. 합의금을 이루는 항목과 치료 종결 전 서명이 위험한 이유, 과실비율을 다투는 경로, 전주지방법원 손해배상 소송의 흐름을 전주교통사고변호사의 시선으로 짚었습니다.</description>
-      <pubDate>Tue, 27 Oct 2026 15:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
