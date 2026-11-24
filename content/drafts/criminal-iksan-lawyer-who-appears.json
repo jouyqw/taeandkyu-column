@@ -22,8 +22,13 @@
     }
   ],
   "related": [
-    { "href": "/blog/jeonju-criminal-lawyer-police-investigation-manual", "label": "경찰 조사, 무엇을 준비해 두면 되나" },
-    { "href": "/blog/police-investigation-first-response", "label": "수사 연락을 받은 날의 첫 대응" }
-  ],
-  "publishAt": "2026-11-24"
+    {
+      "href": "/blog/jeonju-criminal-lawyer-police-investigation-manual",
+      "label": "경찰 조사, 무엇을 준비해 두면 되나"
+    },
+    {
+      "href": "/blog/police-investigation-first-response",
+      "label": "수사 연락을 받은 날의 첫 대응"
+    }
+  ]
 }

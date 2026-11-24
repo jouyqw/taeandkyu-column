@@ -22,8 +22,13 @@
     }
   ],
   "related": [
-    { "href": "/blog/jeonju-divorce-lawyer-property-custody", "label": "재산분할과 양육 문제를 함께 볼 때" },
-    { "href": "/blog/divorce-special-property-division", "label": "특유재산이 섞여 있는 경우의 정리" }
-  ],
-  "publishAt": "2026-11-24"
+    {
+      "href": "/blog/jeonju-divorce-lawyer-property-custody",
+      "label": "재산분할과 양육 문제를 함께 볼 때"
+    },
+    {
+      "href": "/blog/divorce-special-property-division",
+      "label": "특유재산이 섞여 있는 경우의 정리"
+    }
+  ]
 }
