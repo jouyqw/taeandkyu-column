@@ -22,8 +22,13 @@
     }
   ],
   "related": [
-    { "href": "/blog/jeonju-criminal-lawyer-early-response", "label": "사고로 형사 절차가 함께 걸렸을 때" },
-    { "href": "/blog/police-investigation-first-response", "label": "경찰 조사 연락을 받은 날 할 일" }
-  ],
-  "publishAt": "2026-11-26"
+    {
+      "href": "/blog/jeonju-criminal-lawyer-early-response",
+      "label": "사고로 형사 절차가 함께 걸렸을 때"
+    },
+    {
+      "href": "/blog/police-investigation-first-response",
+      "label": "경찰 조사 연락을 받은 날 할 일"
+    }
+  ]
 }
