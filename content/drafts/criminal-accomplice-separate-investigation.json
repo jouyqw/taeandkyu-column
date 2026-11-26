@@ -22,8 +22,13 @@
     }
   ],
   "related": [
-    { "href": "/blog/jeonju-criminal-lawyer-police-investigation-manual", "label": "경찰 조사 단계에서 챙길 것" },
-    { "href": "/blog/police-investigation-first-response", "label": "첫 연락을 받은 날의 대응" }
-  ],
-  "publishAt": "2026-11-27"
+    {
+      "href": "/blog/jeonju-criminal-lawyer-police-investigation-manual",
+      "label": "경찰 조사 단계에서 챙길 것"
+    },
+    {
+      "href": "/blog/police-investigation-first-response",
+      "label": "첫 연락을 받은 날의 대응"
+    }
+  ]
 }

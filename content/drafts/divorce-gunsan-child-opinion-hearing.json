@@ -22,8 +22,13 @@
     }
   ],
   "related": [
-    { "href": "/blog/divorce-visitation-rights-guide", "label": "면접교섭을 정할 때 보는 기준" },
-    { "href": "/blog/jeonju-divorce-lawyer-property-custody", "label": "재산분할과 양육을 함께 다툴 때" }
-  ],
-  "publishAt": "2026-11-27"
+    {
+      "href": "/blog/divorce-visitation-rights-guide",
+      "label": "면접교섭을 정할 때 보는 기준"
+    },
+    {
+      "href": "/blog/jeonju-divorce-lawyer-property-custody",
+      "label": "재산분할과 양육을 함께 다툴 때"
+    }
+  ]
 }
